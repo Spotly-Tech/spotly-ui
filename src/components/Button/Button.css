@@ -1,0 +1,325 @@
+:root {
+    /* Primary Colors */
+    --spotly-ui-primary: #edff00;
+    --spotly-ui-primary-light: #f1ff33;
+    --spotly-ui-primary-dark: #a3b200;
+    --spotly-ui-primary-low-opacity: #eeff0024;
+
+    /* Secondary Colors */
+    --spotly-ui-secondary: #21499f;
+    --spotly-ui-secondary-light: #3f68c2;
+    --spotly-ui-secondary-dark: #0c2353;
+    --spotly-ui-secondary-low-opacity: #143a8b26;
+
+    /* Danger Colors */
+    --spotly-ui-danger: #a3142a;
+    --spotly-ui-danger-light: #ac2c3f;
+    --spotly-ui-danger-lighter: #c8727f;
+    --spotly-ui-danger-dark: #721c24;
+    --spotly-ui-danger-low-opacity: #dc354627;
+
+    /* Disabled Colors */
+    --spotly-ui-disabled-bg: #e9ecef;
+    --spotly-ui-disabled-text: #adb5bd;
+    --spotly-ui-disabled-border: #ced4da;
+
+    /* Default Colors */
+    --spotly-ui-default-dark: #161316;
+    --spotly-ui-default-light: #fffcf5;
+    --spotly-ui-default-light-dark: #fbfbfb;
+    --spotly-ui-default-light-low-opacity: #fffcf52d;
+
+    /* Small Buttons */
+    --spotly-ui-btn-sm-fs: 0.875rem;
+    --spotly-ui-btn-sm-radius: 0.25rem;
+    --spotly-ui-btn-sm-padding: 0.25rem 0.5rem;
+
+    /* Medium Buttons */
+    --spotly-ui-btn-md-fs: 1rem;
+    --spotly-ui-btn-md-radius: 0.375rem;
+    --spotly-ui-btn-md-padding: 0.5rem 1rem;
+
+    /* Large Buttons */
+    --spotly-ui-btn-lg-fs: 1.125rem;
+    --spotly-ui-btn-lg-radius: 0.5rem;
+    --spotly-ui-btn-lg-padding: 0.75rem 1.5rem;
+}
+
+/* BASE BUTTON */
+.SpotlyUI-btn {
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease,
+        border-color 0.2s ease;
+    border: none;
+}
+
+/* VARIANTS */
+.SpotlyUI-btn--ghost {
+    background-color: transparent;
+    border: none;
+}
+.SpotlyUI-btn--solid {
+    border: none;
+}
+.SpotlyUI-btn--outlined {
+    background-color: transparent;
+}
+
+/* SIZES */
+.SpotlyUI-btn--small {
+    padding: var(--spotly-ui-btn-sm-padding);
+    font-size: var(--spotly-ui-btn-sm-fs);
+    border-radius: var(--spotly-ui-btn-sm-radius);
+}
+.SpotlyUI-btn--medium {
+    padding: var(--spotly-ui-btn-md-padding);
+    font-size: var(--spotly-ui-btn-md-fs);
+    border-radius: var(--spotly-ui-btn-md-radius);
+}
+.SpotlyUI-btn--large {
+    padding: var(--spotly-ui-btn-lg-padding);
+    font-size: var(--spotly-ui-btn-lg-fs);
+    border-radius: var(--spotly-ui-btn-lg-radius);
+}
+.SpotlyUI-btn--fullwidth {
+    width: 100%;
+}
+
+/* DEFAULT */
+/* Ghost */
+.SpotlyUI-btn--default.SpotlyUI-btn--ghost {
+    color: var(--spotly-ui-default-light);
+    background-color: transparent;
+}
+.SpotlyUI-btn--default.SpotlyUI-btn--ghost:hover {
+    color: #fff;
+    background-color: var(--spotly-ui-default-light-low-opacity);
+}
+.SpotlyUI-btn--default.SpotlyUI-btn--ghost.SpotlyUI-btn--disabled,
+.SpotlyUI-btn--default.SpotlyUI-btn--ghost.SpotlyUI-btn--loading {
+    color: var(--spotly-ui-disabled-text);
+    background-color: transparent;
+}
+
+/* Solid */
+.SpotlyUI-btn--default.SpotlyUI-btn--solid {
+    background-color: var(--spotly-ui-default-light);
+    color: var(--spotly-ui-default-dark);
+}
+.SpotlyUI-btn--default.SpotlyUI-btn--solid:hover {
+    background-color: var(--spotly-ui-default-light-dark);
+}
+.SpotlyUI-btn--default.SpotlyUI-btn--solid.SpotlyUI-btn--disabled,
+.SpotlyUI-btn--default.SpotlyUI-btn--solid.SpotlyUI-btn--loading {
+    color: var(--spotly-ui-disabled-text);
+    background-color: var(--spotly-ui-disabled-bg);
+    border-color: var(--spotly-ui-disabled-border);
+}
+
+/* Outlined */
+.SpotlyUI-btn--default.SpotlyUI-btn--outlined {
+    background-color: transparent;
+    color: var(--spotly-ui-default-light);
+    border: 1px solid var(--spotly-ui-default-light);
+}
+.SpotlyUI-btn--default.SpotlyUI-btn--outlined:hover {
+    color: var(--spotly-ui-default-light);
+    background-color: var(--spotly-ui-default-light-low-opacity);
+}
+.SpotlyUI-btn--default.SpotlyUI-btn--outlined.SpotlyUI-btn--disabled,
+.SpotlyUI-btn--default.SpotlyUI-btn--outlined.SpotlyUI-btn--loding {
+    color: var(--spotly-ui-disabled-text);
+    border-color: var(--spotly-ui-disabled-border);
+    background-color: transparent;
+}
+
+/* PRIMARY */
+/* Ghost */
+.SpotlyUI-btn--primary.SpotlyUI-btn--ghost {
+    color: var(--spotly-ui-primary);
+    background-color: transparent;
+}
+.SpotlyUI-btn--primary.SpotlyUI-btn--ghost:hover {
+    color: var(--spotly-ui-primary);
+    background-color: var(--spotly-ui-primary-low-opacity);
+}
+.SpotlyUI-btn--primary.SpotlyUI-btn--ghost.SpotlyUI-btn--disabled,
+.SpotlyUI-btn--primary.SpotlyUI-btn--ghost.SpotlyUI-btn--loading {
+    color: var(--spotly-ui-primary-dark);
+    background-color: transparent;
+}
+
+/* Solid */
+.SpotlyUI-btn--primary.SpotlyUI-btn--solid {
+    background-color: var(--spotly-ui-primary);
+    color: var(--spotly-ui-default-dark);
+}
+.SpotlyUI-btn--primary.SpotlyUI-btn--solid:hover {
+    background-color: var(--spotly-ui-primary-light);
+}
+.SpotlyUI-btn--primary.SpotlyUI-btn--solid.SpotlyUI-btn--disabled,
+.SpotlyUI-btn--primary.SpotlyUI-btn--solid.SpotlyUI-btn--loading {
+    color: var(--spotly-ui-primary-dark);
+    background-color: var(--spotly-ui-primary-low-opacity);
+}
+
+/* Outlined */
+.SpotlyUI-btn--primary.SpotlyUI-btn--outlined {
+    background-color: transparent;
+    color: var(--spotly-ui-primary);
+    border: 1px solid var(--spotly-ui-primary);
+}
+.SpotlyUI-btn--primary.SpotlyUI-btn--outlined:hover {
+    color: var(--spotly-ui-primary);
+    background-color: var(--spotly-ui-primary-low-opacity);
+}
+.SpotlyUI-btn--primary.SpotlyUI-btn--outlined.SpotlyUI-btn--disabled,
+.SpotlyUI-btn--primary.SpotlyUI-btn--outlined.SpotlyUI-btn--loading {
+    color: var(--spotly-ui-primary-dark);
+    border-color: var(--spotly-ui-primary-dark);
+    background-color: transparent;
+}
+
+/* SECONDARY */
+/* Ghost */
+.SpotlyUI-btn--secondary.SpotlyUI-btn--ghost {
+    color: var(--spotly-ui-secondary);
+    background-color: transparent;
+}
+.SpotlyUI-btn--secondary.SpotlyUI-btn--ghost:hover {
+    color: var(--spotly-ui-secondary);
+    background-color: var(--spotly-ui-secondary-low-opacity);
+}
+.SpotlyUI-btn--secondary.SpotlyUI-btn--ghost.SpotlyUI-btn--disabled,
+.SpotlyUI-btn--secondary.SpotlyUI-btn--ghost.SpotlyUI-btn--loading {
+    color: var(--spotly-ui-secondary-dark);
+    background-color: transparent;
+}
+
+/* Solid */
+.SpotlyUI-btn--secondary.SpotlyUI-btn--solid {
+    background-color: var(--spotly-ui-secondary);
+    color: var(--spotly-ui-default-light);
+}
+.SpotlyUI-btn--secondary.SpotlyUI-btn--solid:hover {
+    background-color: var(--spotly-ui-secondary-light);
+}
+.SpotlyUI-btn--secondary.SpotlyUI-btn--solid.SpotlyUI-btn--disabled,
+.SpotlyUI-btn--secondary.SpotlyUI-btn--solid.SpotlyUI-btn--loading {
+    color: var(--spotly-ui-secondary-light);
+    background-color: var(--spotly-ui-secondary-dark);
+}
+
+/* Outlined */
+.SpotlyUI-btn--secondary.SpotlyUI-btn--outlined {
+    background-color: transparent;
+    color: var(--spotly-ui-secondary);
+    border: 1px solid var(--spotly-ui-secondary);
+}
+.SpotlyUI-btn--secondary.SpotlyUI-btn--outlined:hover {
+    color: var(--spotly-ui-secondary);
+    background-color: var(--spotly-ui-secondary-low-opacity);
+}
+.SpotlyUI-btn--secondary.SpotlyUI-btn--outlined.SpotlyUI-btn--disabled,
+.SpotlyUI-btn--secondary.SpotlyUI-btn--outlined.SpotlyUI-btn--loading {
+    color: var(--spotly-ui-secondary-dark);
+    border-color: var(--spotly-ui-secondary-dark);
+    background-color: transparent;
+}
+
+/* DANGER */
+/* Ghost */
+.SpotlyUI-btn--danger.SpotlyUI-btn--ghost {
+    color: var(--spotly-ui-danger);
+    background-color: transparent;
+}
+.SpotlyUI-btn--danger.SpotlyUI-btn--ghost:hover {
+    background-color: var(--spotly-ui-danger-low-opacity);
+}
+.SpotlyUI-btn--danger.SpotlyUI-btn--ghost.SpotlyUI-btn--disabled,
+.SpotlyUI-btn--danger.SpotlyUI-btn--ghost.SpotlyUI-btn--loading {
+    color: var(--spotly-ui-danger-dark);
+    background-color: transparent;
+}
+
+/* Solid */
+.SpotlyUI-btn--danger.SpotlyUI-btn--solid {
+    background-color: var(--spotly-ui-danger);
+    color: var(--spotly-ui-danger-lighter);
+}
+.SpotlyUI-btn--danger.SpotlyUI-btn--solid:hover {
+    background-color: var(--spotly-ui-danger-light);
+}
+.SpotlyUI-btn--danger.SpotlyUI-btn--solid.SpotlyUI-btn--disabled,
+.SpotlyUI-btn--danger.SpotlyUI-btn--solid.SpotlyUI-btn--loading {
+    color: var(--spotly-ui-danger-light);
+    background-color: var(--spotly-ui-danger-dark);
+}
+
+/* Outlined */
+.SpotlyUI-btn--danger.SpotlyUI-btn--outlined {
+    background-color: transparent;
+    color: var(--spotly-ui-danger);
+    border: 1px solid var(--spotly-ui-danger);
+}
+.SpotlyUI-btn--danger.SpotlyUI-btn--outlined:hover {
+    color: var(--spotly-ui-danger);
+    background-color: var(--spotly-ui-danger-low-opacity);
+}
+.SpotlyUI-btn--danger.SpotlyUI-btn--outlined.SpotlyUI-btn--disabled,
+.SpotlyUI-btn--danger.SpotlyUI-btn--outlined.SpotlyUI-btn--loading {
+    color: var(--spotly-ui-danger-dark);
+    border-color: var(--spotly-ui-danger-dark);
+    background-color: transparent;
+}
+
+/* ICON */
+.SpotlyUI-btn--icon {
+    padding: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.SpotlyUI-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.SpotlyUI-btn__startIcon {
+    margin-right: 0.5rem;
+}
+.SpotlyUI-btn__endIcon {
+    margin-left: 0.5rem;
+}
+
+/* SQUARE ICON SIZES */
+.SpotlyUI-btn--square.SpotlyUI-btn--icon.SpotlyUI-btn--small {
+    border-radius: 0.25rem;
+}
+.SpotlyUI-btn--square.SpotlyUI-btn--icon.SpotlyUI-btn--medium {
+    border-radius: 0.5rem;
+}
+.SpotlyUI-btn--square.SpotlyUI-btn--icon.SpotlyUI-btn--large {
+    border-radius: 0.75rem;
+}
+
+/* CIRCLE ICON */
+.SpotlyUI-btn--icon.SpotlyUI-btn--circle {
+    border-radius: 50%;
+}
+
+/* DISABLED AND LOADING COMMON STYLES */
+.SpotlyUI-btn--disabled,
+.SpotlyUI-btn--loading {
+    pointer-events: none;
+}
