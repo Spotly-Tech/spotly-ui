@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Run tests before commit
+npm test -- --run
+
+# Run lint before commit
+npm run lint
+
