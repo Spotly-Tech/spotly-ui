@@ -303,6 +303,12 @@
 }
 
 /* SQUARE ICON SIZES */
+.SpotlyUI-btn--square.SpotlyUI-btn--icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .SpotlyUI-btn--square.SpotlyUI-btn--icon.SpotlyUI-btn--small {
     border-radius: 0.25rem;
 }

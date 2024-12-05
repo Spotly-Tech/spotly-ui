@@ -1,6 +1,8 @@
-import { motion, MotionProps } from "framer-motion";
 import type { ReactNode } from "react";
 import { ButtonHTMLAttributes, forwardRef } from "react";
+
+import { motion, MotionProps } from "framer-motion";
+
 import "./Button.css";
 
 type MotionButtonProps = MotionProps & ButtonHTMLAttributes<HTMLButtonElement>;
@@ -38,10 +40,7 @@ interface IWithIconButtonProps extends IButtonBaseProps {
     children: ReactNode;
 }
 
-type IButtonProps =
-    | IButtonDefaultProps
-    | IIconButtonProps
-    | IWithIconButtonProps;
+type IButtonProps = IButtonDefaultProps | IIconButtonProps | IWithIconButtonProps;
 
 export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
     (
@@ -75,9 +74,7 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
             whileTap: { scale: 0.98 },
         };
 
-        const animationProps = animated
-            ? { ...defaultAnimations, ...animation }
-            : {};
+        const animationProps = animated ? { ...defaultAnimations, ...animation } : {};
         return (
             <motion.button
                 ref={ref}
@@ -86,18 +83,17 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
                 }`}
                 disabled={disabled || isLoading}
                 {...animationProps}
-                {...props}>
+                {...props}
+            >
                 {isLoading ? (
                     loadingText
                 ) : (
                     <>
-                        {isWithIconButton &&
-                            icon &&
-                            iconPosition === "start" && (
-                                <span className="SpotlyUI-icon SpotlyUI-btn__startIcon">
-                                    {icon}
-                                </span>
-                            )}
+                        {isWithIconButton && icon && iconPosition === "start" && (
+                            <span className="SpotlyUI-icon SpotlyUI-btn__startIcon">
+                                {icon}
+                            </span>
+                        )}
                         {!isIconButton && children}
                         {isWithIconButton && icon && iconPosition === "end" && (
                             <span className="SpotlyUI-icon SpotlyUI-btn__endIcon">
