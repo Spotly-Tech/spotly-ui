@@ -5,4 +5,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+export { Text } from "./Text";
+
 export { Button } from "./Button";
