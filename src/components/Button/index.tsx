@@ -5,51 +5,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import type { ReactNode } from "react";
-import { ButtonHTMLAttributes, forwardRef } from "react";
+import { forwardRef } from "react";
 
+import { ButtonProps } from "@/utils/types/button";
 import { motion, MotionProps } from "framer-motion";
 
 import "./Button.css";
 
-type MotionButtonProps = MotionProps & ButtonHTMLAttributes<HTMLButtonElement>;
-
-interface IButtonBaseProps extends MotionButtonProps {
-    variant?: "ghost" | "solid" | "outlined";
-    size?: "small" | "medium" | "large" | "fullwidth";
-    color?: "default" | "primary" | "secondary" | "danger";
-    shape?: "square" | "circle";
-    isLoading?: boolean;
-    loadingText?: string;
-    children?: ReactNode;
-    disabled?: boolean;
-    animated?: boolean;
-    animation?: MotionProps;
-}
-
-interface IButtonDefaultProps extends IButtonBaseProps {
-    btnType?: "button";
-    icon?: never;
-    iconPosition?: never;
-}
-
-interface IIconButtonProps extends IButtonBaseProps {
-    btnType: "icon";
-    icon: ReactNode;
-    children?: never;
-    iconPosition?: never;
-}
-
-interface IWithIconButtonProps extends IButtonBaseProps {
-    btnType: "with-icon";
-    icon: ReactNode;
-    iconPosition: "start" | "end";
-    children: ReactNode;
-}
-
-type IButtonProps = IButtonDefaultProps | IIconButtonProps | IWithIconButtonProps;
-
-export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     (
         {
             variant = "solid",
