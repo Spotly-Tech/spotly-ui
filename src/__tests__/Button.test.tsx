@@ -7,9 +7,8 @@
 
 import "@testing-library/jest-dom";
 
+import { Button } from "@/components";
 import { render } from "@testing-library/react";
-
-import { Button } from "../components/Button";
 
 describe("Button", () => {
     it("renders button with children", () => {
