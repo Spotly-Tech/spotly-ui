@@ -1,10 +1,23 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 export type PolymorphicComponentProps<
-	C extends React.ElementType,
-	// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-	Props = {},
-> = React.PropsWithChildren<Props & AsProp<C>> & Omit<React.ComponentPropsWithoutRef<C>, PropsToOmit<C, Props>>;
+    C extends React.ElementType,
+    Props = {},
+> = React.PropsWithChildren<Props & AsProp<C>> &
+    Omit<React.ComponentPropsWithoutRef<C>, PropsToOmit<C, Props>>;
+
+export type PolymorphicComponentPropsWithRef<
+    C extends React.ElementType,
+    Props = {},
+> = PolymorphicComponentProps<C, Props> & { ref?: PolymorphicRef<C> };
 
 type AsProp<C extends React.ElementType> = {
-	as?: C;
+    /**
+     * An override of the default HTML tag.
+     * Also can be React component
+     */
+    as?: C;
 };
-type PropsToOmit<C extends React.ElementType, P> = keyof (AsProp<C> & P)
+type PropsToOmit<C extends React.ElementType, P> = keyof (AsProp<C> & P);
+
+export type PolymorphicRef<C extends React.ElementType> =
+    React.ComponentPropsWithRef<C>["ref"];
