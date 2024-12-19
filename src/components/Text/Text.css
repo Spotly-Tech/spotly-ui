@@ -1,0 +1,152 @@
+/*
+ * Copyright (c) Spotly Tech
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+    /* Colors */
+    --spotly-ui-color-default: #fffcf5;
+    --spotly-ui-color-default-gradient-start: #fffcf5;
+    --spotly-ui-color-default-gradient-base: #cccac4;
+    --spotly-ui-color-default-gradient-mid: #999793;
+    --spotly-ui-color-default-gradient-end: #333231;
+    --spotly-ui-color-primary: #edff00;
+    --spotly-ui-color-secondary: #3f68c2;
+    --spotly-ui-color-danger: #a3142a;
+    --spotly-ui-color-warning: #ffd255;
+    --spotly-ui-color-info: #3e6ccf;
+
+    /* Font Sizes */
+    --spotly-ui-font-size-2xs: 0.625rem; /* 10px */
+    --spotly-ui-font-size-xs: 0.75rem; /* 12px */
+    --spotly-ui-font-size-sm: 0.875rem; /* 14px */
+    --spotly-ui-font-size-base: 1rem; /* 16px */
+    --spotly-ui-font-size-lg: 1.125rem; /* 18px */
+    --spotly-ui-font-size-xl: 1.25rem; /* 20px */
+    --spotly-ui-font-size-2xl: 1.5rem; /* 24px */
+    --spotly-ui-font-size-3xl: 1.875rem; /* 30px */
+
+    /* Font Weights */
+    --spotly-ui-font-weight-thin: 100;
+    --spotly-ui-font-weight-normal: 400;
+    --spotly-ui-font-weight-medium: 500;
+    --spotly-ui-font-weight-semibold: 600;
+    --spotly-ui-font-weight-bold: 700;
+    --spotly-ui-font-weight-black: 900;
+
+    /* Line Heights */
+    --spotly-ui-line-height-tight: 1.2;
+    --spotly-ui-line-height-normal: 1.5;
+    --spotly-ui-line-height-loose: 1.8;
+}
+
+/* BASE TEXT */
+.SpotlyUI-text {
+    display: inline;
+    font-size: var(--spotly-ui-font-size-base);
+    font-weight: var(--spotly-ui-font-weight-normal);
+    line-height: var(--spotly-ui-line-height-normal);
+    text-align: left;
+    font-family: "Rubik", sans-serif;
+}
+
+/* COLORS */
+.SpotlyUI-text--color-default {
+    color: var(--spotly-ui-color-default);
+}
+
+.SpotlyUI-text--color-default-gradient {
+    background: linear-gradient(
+        135deg,
+        var(--spotly-ui-color-default-gradient-start),
+        var(--spotly-ui-color-default-gradient-base),
+        var(--spotly-ui-color-default-gradient-mid),
+        var(--spotly-ui-color-default-gradient-end)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.SpotlyUI-text--color-primary {
+    color: var(--spotly-ui-color-primary);
+}
+
+.SpotlyUI-text--color-secondary {
+    color: var(--spotly-ui-color-secondary);
+}
+
+.SpotlyUI-text--color-danger {
+    color: var(--spotly-ui-color-danger);
+}
+
+.SpotlyUI-text--color-warning {
+    color: var(--spotly-ui-color-warning);
+}
+
+.SpotlyUI-text--color-info {
+    color: var(--spotly-ui-color-info);
+}
+
+/* SIZES */
+.SpotlyUI-text--size-2xs {
+    font-size: var(--spotly-ui-font-size-2xs);
+}
+
+.SpotlyUI-text--size-xs {
+    font-size: var(--spotly-ui-font-size-xs);
+}
+
+.SpotlyUI-text--size-sm {
+    font-size: var(--spotly-ui-font-size-sm);
+}
+
+.SpotlyUI-text--size-base {
+    font-size: var(--spotly-ui-font-size-base);
+}
+
+.SpotlyUI-text--size-lg {
+    font-size: var(--spotly-ui-font-size-lg);
+}
+
+.SpotlyUI-text--size-xl {
+    font-size: var(--spotly-ui-font-size-xl);
+}
+
+.SpotlyUI-text--size-2xl {
+    font-size: var(--spotly-ui-font-size-2xl);
+}
+
+.SpotlyUI-text--size-3xl {
+    font-size: var(--spotly-ui-font-size-3xl);
+}
+
+/* WEIGHTS */
+.SpotlyUI-text--weight-thin {
+    font-weight: var(--spotly-ui-font-weight-thin);
+}
+
+.SpotlyUI-text--weight-normal {
+    font-weight: var(--spotly-ui-font-weight-normal);
+}
+
+.SpotlyUI-text--weight-medium {
+    font-weight: var(--spotly-ui-font-weight-medium);
+}
+
+.SpotlyUI-text--weight-semibold {
+    font-weight: var(--spotly-ui-font-weight-semibold);
+}
+
+.SpotlyUI-text--weight-bold {
+    font-weight: var(--spotly-ui-font-weight-bold);
+}
+
+.SpotlyUI-text--weight-black {
+    font-weight: var(--spotly-ui-font-weight-black);
+}

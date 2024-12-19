@@ -10,6 +10,8 @@ import React, { forwardRef } from "react";
 import { PolymorphicRef } from "@/utils/types";
 import { TextComponent, TextProps } from "@/utils/types/text";
 
+import "./Text.css";
+
 // @ts-expect-error - unexpected typing errors
 export const Text: TextComponent = forwardRef(
     // @ts-expect-error - unexpected typing errors
