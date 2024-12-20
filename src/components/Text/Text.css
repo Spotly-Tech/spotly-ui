@@ -58,7 +58,6 @@
 .SpotlyUI-text--color-default {
     color: var(--spotly-ui-color-default);
 }
-
 .SpotlyUI-text--color-default-gradient {
     background: linear-gradient(
         135deg,
@@ -72,23 +71,18 @@
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
-
 .SpotlyUI-text--color-primary {
     color: var(--spotly-ui-color-primary);
 }
-
 .SpotlyUI-text--color-secondary {
     color: var(--spotly-ui-color-secondary);
 }
-
 .SpotlyUI-text--color-danger {
     color: var(--spotly-ui-color-danger);
 }
-
 .SpotlyUI-text--color-warning {
     color: var(--spotly-ui-color-warning);
 }
-
 .SpotlyUI-text--color-info {
     color: var(--spotly-ui-color-info);
 }
@@ -97,31 +91,24 @@
 .SpotlyUI-text--size-2xs {
     font-size: var(--spotly-ui-font-size-2xs);
 }
-
 .SpotlyUI-text--size-xs {
     font-size: var(--spotly-ui-font-size-xs);
 }
-
 .SpotlyUI-text--size-sm {
     font-size: var(--spotly-ui-font-size-sm);
 }
-
 .SpotlyUI-text--size-base {
     font-size: var(--spotly-ui-font-size-base);
 }
-
 .SpotlyUI-text--size-lg {
     font-size: var(--spotly-ui-font-size-lg);
 }
-
 .SpotlyUI-text--size-xl {
     font-size: var(--spotly-ui-font-size-xl);
 }
-
 .SpotlyUI-text--size-2xl {
     font-size: var(--spotly-ui-font-size-2xl);
 }
-
 .SpotlyUI-text--size-3xl {
     font-size: var(--spotly-ui-font-size-3xl);
 }
@@ -130,23 +117,50 @@
 .SpotlyUI-text--weight-thin {
     font-weight: var(--spotly-ui-font-weight-thin);
 }
-
 .SpotlyUI-text--weight-normal {
     font-weight: var(--spotly-ui-font-weight-normal);
 }
-
 .SpotlyUI-text--weight-medium {
     font-weight: var(--spotly-ui-font-weight-medium);
 }
-
 .SpotlyUI-text--weight-semibold {
     font-weight: var(--spotly-ui-font-weight-semibold);
 }
-
 .SpotlyUI-text--weight-bold {
     font-weight: var(--spotly-ui-font-weight-bold);
 }
-
 .SpotlyUI-text--weight-black {
     font-weight: var(--spotly-ui-font-weight-black);
+}
+
+/* ITALIC */
+.SpotlyUI-text--italic {
+    font-style: italic;
+}
+
+/* UNDERLINE */
+.SpotlyUI-text--underline {
+    text-decoration: wavy underline;
+}
+
+/* EMPHASIS */
+.SpotlyUI-text--emphasis-high {
+    font-style: italic;
+    font-weight: var(--spotly-ui-font-weight-bold);
+    opacity: 0.9;
+}
+.SpotlyUI-text--emphasis-medium {
+    font-style: italic;
+    font-weight: var(--spotly-ui-font-weight-semibold);
+    opacity: 0.8;
+}
+.SpotlyUI-text--emphasis-low {
+    font-style: italic;
+    font-weight: var(--spotly-ui-font-weight-regular);
+    opacity: 0.7;
+}
+.SpotlyUI-text--emphasis-low-bold {
+    font-style: italic;
+    font-weight: var(--spotly-ui-font-weight-bold);
+    opacity: 0.7;
 }
