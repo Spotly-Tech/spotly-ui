@@ -23,7 +23,7 @@ describe("Text", () => {
         const textElement = getByText(children);
 
         expect(textElement).toHaveClass(
-            "SpotlyUI-text SpotlyUI-text--color-default SpotlyUI-text--size-base SpotlyUI-text--weight-normal SpotlyUI-text--align-left SpotlyUI-text--emphasis-default"
+            "SpotlyUI-text SpotlyUI-text--color-default SpotlyUI-text--size-base SpotlyUI-text--weight-normal SpotlyUI-text--align-left"
         );
     });
     it("renders <a> element with children and link to github repo", () => {
