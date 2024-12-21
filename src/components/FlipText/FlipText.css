@@ -1,0 +1,23 @@
+/*
+ * Copyright (c) Spotly Tech
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@import "../shared/typography.css";
+
+.SpotlyUI-flip-text {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: var(--spotly-ui-font-family);
+}
+.SpotlyUI-flip-text__appearing-letters {
+    position: absolute;
+    inset: 0;
+}
+.SpotlyUI-flip-text__letter {
+    display: inline-block;
+}

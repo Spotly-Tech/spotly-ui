@@ -5,6 +5,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-export { Text } from "./Text";
-
 export { Button } from "./Button";
+export { FlipText } from "./FlipText";
+export { Text } from "./Text";
