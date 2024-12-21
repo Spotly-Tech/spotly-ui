@@ -4,37 +4,11 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+
+@import "../shared/colors.css";
+@import "../shared/typography.css";
+
 :root {
-    /* Primary Colors */
-    --spotly-ui-primary: #edff00;
-    --spotly-ui-primary-light: #f1ff33;
-    --spotly-ui-primary-dark: #a3b200;
-    --spotly-ui-primary-low-opacity: #eeff0024;
-
-    /* Secondary Colors */
-    --spotly-ui-secondary: #21499f;
-    --spotly-ui-secondary-light: #3f68c2;
-    --spotly-ui-secondary-dark: #0c2353;
-    --spotly-ui-secondary-low-opacity: #143a8b26;
-
-    /* Danger Colors */
-    --spotly-ui-danger: #a3142a;
-    --spotly-ui-danger-light: #ac2c3f;
-    --spotly-ui-danger-lighter: #c8727f;
-    --spotly-ui-danger-dark: #721c24;
-    --spotly-ui-danger-low-opacity: #dc354627;
-
-    /* Disabled Colors */
-    --spotly-ui-disabled-bg: #e9ecef;
-    --spotly-ui-disabled-text: #adb5bd;
-    --spotly-ui-disabled-border: #ced4da;
-
-    /* Default Colors */
-    --spotly-ui-default-dark: #161316;
-    --spotly-ui-default-light: #fffcf5;
-    --spotly-ui-default-light-dark: #fbfbfb;
-    --spotly-ui-default-light-low-opacity: #fffcf52d;
-
     /* Small Buttons */
     --spotly-ui-btn-sm-fs: 0.875rem;
     --spotly-ui-btn-sm-radius: 0.25rem;
@@ -57,8 +31,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    font-family: var(--spotly-ui-font-family);
 
-    padding: 0.5rem 1rem;
+    padding: var(--spotly-ui-btn-md-padding);
     font-weight: 500;
     cursor: pointer;
     transition:
@@ -103,7 +78,7 @@
 /* DEFAULT */
 /* Ghost */
 .SpotlyUI-btn--default.SpotlyUI-btn--ghost {
-    color: var(--spotly-ui-default-light);
+    color: var(--spotly-ui-light-50);
     background-color: transparent;
 }
 .SpotlyUI-btn--default.SpotlyUI-btn--ghost:hover {
@@ -118,11 +93,11 @@
 
 /* Solid */
 .SpotlyUI-btn--default.SpotlyUI-btn--solid {
-    background-color: var(--spotly-ui-default-light);
+    background-color: var(--spotly-ui-light-50);
     color: var(--spotly-ui-default-dark);
 }
 .SpotlyUI-btn--default.SpotlyUI-btn--solid:hover {
-    background-color: var(--spotly-ui-default-light-dark);
+    background-color: var(--spotly-ui-light-100);
 }
 .SpotlyUI-btn--default.SpotlyUI-btn--solid.SpotlyUI-btn--disabled,
 .SpotlyUI-btn--default.SpotlyUI-btn--solid.SpotlyUI-btn--loading {
@@ -134,11 +109,11 @@
 /* Outlined */
 .SpotlyUI-btn--default.SpotlyUI-btn--outlined {
     background-color: transparent;
-    color: var(--spotly-ui-default-light);
-    border: 1px solid var(--spotly-ui-default-light);
+    color: var(--spotly-ui-light-50);
+    border: 1px solid var(--spotly-ui-light-50);
 }
 .SpotlyUI-btn--default.SpotlyUI-btn--outlined:hover {
-    color: var(--spotly-ui-default-light);
+    color: var(--spotly-ui-light-50);
     background-color: var(--spotly-ui-default-light-low-opacity);
 }
 .SpotlyUI-btn--default.SpotlyUI-btn--outlined.SpotlyUI-btn--disabled,
@@ -151,101 +126,101 @@
 /* PRIMARY */
 /* Ghost */
 .SpotlyUI-btn--primary.SpotlyUI-btn--ghost {
-    color: var(--spotly-ui-primary);
+    color: var(--spotly-ui-primary-500);
     background-color: transparent;
 }
 .SpotlyUI-btn--primary.SpotlyUI-btn--ghost:hover {
-    color: var(--spotly-ui-primary);
+    color: var(--spotly-ui-primary-500);
     background-color: var(--spotly-ui-primary-low-opacity);
 }
 .SpotlyUI-btn--primary.SpotlyUI-btn--ghost.SpotlyUI-btn--disabled,
 .SpotlyUI-btn--primary.SpotlyUI-btn--ghost.SpotlyUI-btn--loading {
-    color: var(--spotly-ui-primary-dark);
+    color: var(--spotly-ui-default-dark);
     background-color: transparent;
 }
 
 /* Solid */
 .SpotlyUI-btn--primary.SpotlyUI-btn--solid {
-    background-color: var(--spotly-ui-primary);
+    background-color: var(--spotly-ui-primary-500);
     color: var(--spotly-ui-default-dark);
 }
 .SpotlyUI-btn--primary.SpotlyUI-btn--solid:hover {
-    background-color: var(--spotly-ui-primary-light);
+    background-color: var(--spotly-ui-primary-600);
 }
 .SpotlyUI-btn--primary.SpotlyUI-btn--solid.SpotlyUI-btn--disabled,
 .SpotlyUI-btn--primary.SpotlyUI-btn--solid.SpotlyUI-btn--loading {
-    color: var(--spotly-ui-primary-dark);
+    color: var(--spotly-ui-default-dark);
     background-color: var(--spotly-ui-primary-low-opacity);
 }
 
 /* Outlined */
 .SpotlyUI-btn--primary.SpotlyUI-btn--outlined {
     background-color: transparent;
-    color: var(--spotly-ui-primary);
-    border: 1px solid var(--spotly-ui-primary);
+    color: var(--spotly-ui-primary-500);
+    border: 1px solid var(--spotly-ui-primary-500);
 }
 .SpotlyUI-btn--primary.SpotlyUI-btn--outlined:hover {
-    color: var(--spotly-ui-primary);
+    color: var(--spotly-ui-primary-500);
     background-color: var(--spotly-ui-primary-low-opacity);
 }
 .SpotlyUI-btn--primary.SpotlyUI-btn--outlined.SpotlyUI-btn--disabled,
 .SpotlyUI-btn--primary.SpotlyUI-btn--outlined.SpotlyUI-btn--loading {
-    color: var(--spotly-ui-primary-dark);
-    border-color: var(--spotly-ui-primary-dark);
+    color: var(--spotly-ui-primary-800);
+    border-color: var(--spotly-ui-primary-800);
     background-color: transparent;
 }
 
 /* SECONDARY */
 /* Ghost */
 .SpotlyUI-btn--secondary.SpotlyUI-btn--ghost {
-    color: var(--spotly-ui-secondary);
+    color: var(--spotly-ui-secondary-500);
     background-color: transparent;
 }
 .SpotlyUI-btn--secondary.SpotlyUI-btn--ghost:hover {
-    color: var(--spotly-ui-secondary);
+    color: var(--spotly-ui-secondary-300);
     background-color: var(--spotly-ui-secondary-low-opacity);
 }
 .SpotlyUI-btn--secondary.SpotlyUI-btn--ghost.SpotlyUI-btn--disabled,
 .SpotlyUI-btn--secondary.SpotlyUI-btn--ghost.SpotlyUI-btn--loading {
-    color: var(--spotly-ui-secondary-dark);
+    color: var(--spotly-ui-secondary-800);
     background-color: transparent;
 }
 
 /* Solid */
 .SpotlyUI-btn--secondary.SpotlyUI-btn--solid {
-    background-color: var(--spotly-ui-secondary);
-    color: var(--spotly-ui-default-light);
+    background-color: var(--spotly-ui-secondary-500);
+    color: var(--spotly-ui-light-50);
 }
 .SpotlyUI-btn--secondary.SpotlyUI-btn--solid:hover {
-    background-color: var(--spotly-ui-secondary-light);
+    background-color: var(--spotly-ui-secondary-600);
 }
 .SpotlyUI-btn--secondary.SpotlyUI-btn--solid.SpotlyUI-btn--disabled,
 .SpotlyUI-btn--secondary.SpotlyUI-btn--solid.SpotlyUI-btn--loading {
-    color: var(--spotly-ui-secondary-light);
-    background-color: var(--spotly-ui-secondary-dark);
+    color: var(--spotly-ui-secondary-500);
+    background-color: var(--spotly-ui-secondary-800);
 }
 
 /* Outlined */
 .SpotlyUI-btn--secondary.SpotlyUI-btn--outlined {
     background-color: transparent;
-    color: var(--spotly-ui-secondary);
-    border: 1px solid var(--spotly-ui-secondary);
+    color: var(--spotly-ui-secondary-500);
+    border: 1px solid var(--spotly-ui-secondary-500);
 }
 .SpotlyUI-btn--secondary.SpotlyUI-btn--outlined:hover {
-    color: var(--spotly-ui-secondary);
+    color: var(--spotly-ui-secondary-500);
     background-color: var(--spotly-ui-secondary-low-opacity);
 }
 .SpotlyUI-btn--secondary.SpotlyUI-btn--outlined.SpotlyUI-btn--disabled,
 .SpotlyUI-btn--secondary.SpotlyUI-btn--outlined.SpotlyUI-btn--loading {
-    color: var(--spotly-ui-secondary-dark);
-    border-color: var(--spotly-ui-secondary-dark);
+    color: var(--spotly-ui-secondary-700);
+    border-color: var(--spotly-ui-secondary-700);
     background-color: transparent;
 }
 
 /* DANGER */
 /* Ghost */
 .SpotlyUI-btn--danger.SpotlyUI-btn--ghost {
-    color: var(--spotly-ui-danger);
+    color: var(--spotly-ui-danger-500);
     background-color: transparent;
 }
 .SpotlyUI-btn--danger.SpotlyUI-btn--ghost:hover {
@@ -253,38 +228,38 @@
 }
 .SpotlyUI-btn--danger.SpotlyUI-btn--ghost.SpotlyUI-btn--disabled,
 .SpotlyUI-btn--danger.SpotlyUI-btn--ghost.SpotlyUI-btn--loading {
-    color: var(--spotly-ui-danger-dark);
+    color: var(--spotly-ui-danger-700);
     background-color: transparent;
 }
 
 /* Solid */
 .SpotlyUI-btn--danger.SpotlyUI-btn--solid {
-    background-color: var(--spotly-ui-danger);
-    color: var(--spotly-ui-danger-lighter);
+    background-color: var(--spotly-ui-danger-500);
+    color: var(--spotly-ui-light-50);
 }
 .SpotlyUI-btn--danger.SpotlyUI-btn--solid:hover {
-    background-color: var(--spotly-ui-danger-light);
+    background-color: var(--spotly-ui-danger-600);
 }
 .SpotlyUI-btn--danger.SpotlyUI-btn--solid.SpotlyUI-btn--disabled,
 .SpotlyUI-btn--danger.SpotlyUI-btn--solid.SpotlyUI-btn--loading {
-    color: var(--spotly-ui-danger-light);
-    background-color: var(--spotly-ui-danger-dark);
+    color: var(--spotly-ui-danger-500);
+    background-color: var(--spotly-ui-danger-800);
 }
 
 /* Outlined */
 .SpotlyUI-btn--danger.SpotlyUI-btn--outlined {
     background-color: transparent;
-    color: var(--spotly-ui-danger);
-    border: 1px solid var(--spotly-ui-danger);
+    color: var(--spotly-ui-danger-500);
+    border: 1px solid var(--spotly-ui-danger-500);
 }
 .SpotlyUI-btn--danger.SpotlyUI-btn--outlined:hover {
-    color: var(--spotly-ui-danger);
+    color: var(--spotly-ui-danger-500);
     background-color: var(--spotly-ui-danger-low-opacity);
 }
 .SpotlyUI-btn--danger.SpotlyUI-btn--outlined.SpotlyUI-btn--disabled,
 .SpotlyUI-btn--danger.SpotlyUI-btn--outlined.SpotlyUI-btn--loading {
-    color: var(--spotly-ui-danger-dark);
-    border-color: var(--spotly-ui-danger-dark);
+    color: var(--spotly-ui-danger-700);
+    border-color: var(--spotly-ui-danger-700);
     background-color: transparent;
 }
 
