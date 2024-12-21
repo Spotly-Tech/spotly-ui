@@ -1,0 +1,109 @@
+/*
+ * Copyright (c) Spotly Tech
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@import "./colors.css";
+@import "./typography.css";
+
+/* COLORS */
+.SpotlyUI-text--color-default,
+.SpotlyUI-flip-text--color-default {
+    color: var(--spotly-ui-light-50);
+}
+.SpotlyUI-text--color-default-gradient,
+.SpotlyUI-flip-text--color-default-gradient {
+    background: linear-gradient(
+        135deg,
+        var(--spotly-ui-light-50),
+        var(--spotly-ui-light-200),
+        var(--spotly-ui-light-400),
+        var(--spotly-ui-light-800)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+.SpotlyUI-text--color-primary,
+.SpotlyUI-flip-text--color-primary {
+    color: var(--spotly-ui-primary-500);
+}
+.SpotlyUI-text--color-secondary,
+.SpotlyUI-flip-text--color-secondary {
+    color: var(--spotly-ui-secondary-500);
+}
+.SpotlyUI-text--color-danger,
+.SpotlyUI-flip-text--color-danger {
+    color: var(--spotly-ui-danger-500);
+}
+.SpotlyUI-text--color-warning,
+.SpotlyUI-flip-text--color-warning {
+    color: var(--spotly-ui-warning-500);
+}
+.SpotlyUI-text--color-info,
+.SpotlyUI-flip-text--color-info {
+    color: var(--spotly-ui-info-500);
+}
+
+/* SIZES */
+.SpotlyUI-text--size-2xs,
+.SpotlyUI-flip-text--size-2xs {
+    font-size: var(--spotly-ui-font-size-2xs);
+}
+.SpotlyUI-text--size-xs,
+.SpotlyUI-flip-text--size-xs {
+    font-size: var(--spotly-ui-font-size-xs);
+}
+.SpotlyUI-text--size-sm,
+.SpotlyUI-flip-text--size-sm {
+    font-size: var(--spotly-ui-font-size-sm);
+}
+.SpotlyUI-text--size-base,
+.SpotlyUI-flip-text--size-base {
+    font-size: var(--spotly-ui-font-size-base);
+}
+.SpotlyUI-text--size-lg,
+.SpotlyUI-flip-text--size-lg {
+    font-size: var(--spotly-ui-font-size-lg);
+}
+.SpotlyUI-text--size-xl,
+.SpotlyUI-flip-text--size-xl {
+    font-size: var(--spotly-ui-font-size-xl);
+}
+.SpotlyUI-text--size-2xl,
+.SpotlyUI-flip-text--size-2xl {
+    font-size: var(--spotly-ui-font-size-2xl);
+}
+.SpotlyUI-text--size-3xl,
+.SpotlyUI-flip-text--size-3xl {
+    font-size: var(--spotly-ui-font-size-3xl);
+}
+
+/* WEIGHTS */
+.SpotlyUI-text--weight-thin,
+.SpotlyUI-flip-text--weight-thin {
+    font-weight: var(--spotly-ui-font-weight-thin);
+}
+.SpotlyUI-text--weight-normal,
+.SpotlyUI-flip-text--weight-normal {
+    font-weight: var(--spotly-ui-font-weight-normal);
+}
+.SpotlyUI-text--weight-medium,
+.SpotlyUI-flip-text--weight-medium {
+    font-weight: var(--spotly-ui-font-weight-medium);
+}
+.SpotlyUI-text--weight-semibold,
+.SpotlyUI-flip-text--weight-semibold {
+    font-weight: var(--spotly-ui-font-weight-semibold);
+}
+.SpotlyUI-text--weight-bold,
+.SpotlyUI-flip-text--weight-bold {
+    font-weight: var(--spotly-ui-font-weight-bold);
+}
+.SpotlyUI-text--weight-black,
+.SpotlyUI-flip-text--weight-black {
+    font-weight: var(--spotly-ui-font-weight-black);
+}

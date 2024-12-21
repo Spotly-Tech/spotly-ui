@@ -1,0 +1,36 @@
+/*
+ * Copyright (c) Spotly Tech
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+    /* Fonts */
+    --spotly-ui-font-family: "Rubik", sans-serif;
+
+    /* Font Sizes */
+    --spotly-ui-font-size-2xs: 0.625rem; /* 10px */
+    --spotly-ui-font-size-xs: 0.75rem; /* 12px */
+    --spotly-ui-font-size-sm: 0.875rem; /* 14px */
+    --spotly-ui-font-size-base: 1rem; /* 16px */
+    --spotly-ui-font-size-lg: 1.125rem; /* 18px */
+    --spotly-ui-font-size-xl: 1.25rem; /* 20px */
+    --spotly-ui-font-size-2xl: 1.5rem; /* 24px */
+    --spotly-ui-font-size-3xl: 1.875rem; /* 30px */
+
+    /* Font Weights */
+    --spotly-ui-font-weight-thin: 100;
+    --spotly-ui-font-weight-normal: 400;
+    --spotly-ui-font-weight-medium: 500;
+    --spotly-ui-font-weight-semibold: 600;
+    --spotly-ui-font-weight-bold: 700;
+    --spotly-ui-font-weight-black: 900;
+
+    /* Line Heights */
+    --spotly-ui-line-height-tight: 1.2;
+    --spotly-ui-line-height-normal: 1.5;
+    --spotly-ui-line-height-loose: 1.8;
+}

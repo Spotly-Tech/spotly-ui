@@ -1,0 +1,99 @@
+/*
+ * Copyright (c) Spotly Tech
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+:root {
+    /* Dark Colors  */
+    --spotly-ui-default-dark: #161316;
+    --spotly-ui-default-dark-darker: #120f12;
+
+    /* Light Colors */
+    --spotly-ui-light-50: #fffcf5;
+    --spotly-ui-light-100: #e6e3dd;
+    --spotly-ui-light-200: #cccac4;
+    --spotly-ui-light-300: #b3b0ac;
+    --spotly-ui-light-400: #999793;
+    --spotly-ui-light-500: #807e7b;
+    --spotly-ui-light-600: #666562;
+    --spotly-ui-light-700: #4c4c49;
+    --spotly-ui-light-800: #333231;
+    --spotly-ui-light-900: #191918;
+    --spotly-ui-light-950: #000000;
+    --spotly-ui-default-light-low-opacity: #fffcf52d;
+
+    /* Primary Colors */
+    --spotly-ui-primary-50: #fefff0;
+    --spotly-ui-primary-100: #fdffe5;
+    --spotly-ui-primary-200: #fbffc2;
+    --spotly-ui-primary-300: #f9ff9e;
+    --spotly-ui-primary-400: #f9ff9e;
+    --spotly-ui-primary-500: #edff00;
+    --spotly-ui-primary-600: #d6e600;
+    --spotly-ui-primary-700: #becc00;
+    --spotly-ui-primary-800: #9da800;
+    --spotly-ui-primary-900: #727a00;
+    --spotly-ui-primary-950: #515700;
+    --spotly-ui-primary-low-opacity: #eeff0024;
+
+    /* Secondary Colors */
+    --spotly-ui-secondary-50: #f2f6fc;
+    --spotly-ui-secondary-100: #e1e9f9;
+    --spotly-ui-secondary-200: #c0d0f2;
+    --spotly-ui-secondary-300: #9ab3ea;
+    --spotly-ui-secondary-400: #638adf;
+    --spotly-ui-secondary-500: #21499f;
+    --spotly-ui-secondary-600: #1e4290;
+    --spotly-ui-secondary-700: #1b3c83;
+    --spotly-ui-secondary-800: #152e65;
+    --spotly-ui-secondary-900: #112550;
+    --spotly-ui-secondary-950: #0b1937;
+    --spotly-ui-secondary-low-opacity: #143a8b26;
+
+    /* Warning Colors */
+    --spotly-ui-warning-50: #fffbf0;
+    --spotly-ui-warning-100: #fff8e5;
+    --spotly-ui-warning-200: #ffefc2;
+    --spotly-ui-warning-300: #ffe7a3;
+    --spotly-ui-warning-400: #ffdc7a;
+    --spotly-ui-warning-500: #ffd255;
+    --spotly-ui-warning-600: #fab700;
+    --spotly-ui-warning-700: #dba100;
+    --spotly-ui-warning-800: #b88700;
+    --spotly-ui-warning-900: #856100;
+    --spotly-ui-warning-950: #614700;
+
+    /* Danger Colors */
+    --spotly-ui-danger-50: #fdf1f3;
+    --spotly-ui-danger-100: #fce4e7;
+    --spotly-ui-danger-200: #f8c4cc;
+    --spotly-ui-danger-300: #f39ba8;
+    --spotly-ui-danger-400: #eb6075;
+    --spotly-ui-danger-500: #a3142a;
+    --spotly-ui-danger-600: #961226;
+    --spotly-ui-danger-700: #7f1020;
+    --spotly-ui-danger-800: #640c19;
+    --spotly-ui-danger-900: #520a15;
+    --spotly-ui-danger-950: #36070e;
+    --spotly-ui-danger-low-opacity: #dc354627;
+
+    /* Info Colors */
+    --spotly-ui-info-50: #f3f6fb;
+    --spotly-ui-info-100: #e4eaf6;
+    --spotly-ui-info-200: #c9d5ee;
+    --spotly-ui-info-300: #a6b9e3;
+    --spotly-ui-info-400: #7b98d5;
+    --spotly-ui-info-500: #3f68c2;
+    --spotly-ui-info-600: #395fb2;
+    --spotly-ui-info-700: #31539b;
+    --spotly-ui-info-800: #294480;
+    --spotly-ui-info-900: #1c3059;
+    --spotly-ui-info-950: #0f192e;
+
+    /* Disabled Colors */
+    --spotly-ui-disabled-bg: #e9ecef;
+    --spotly-ui-disabled-text: #adb5bd;
+    --spotly-ui-disabled-border: #ced4da;
+}
