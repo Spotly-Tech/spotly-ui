@@ -1,0 +1,137 @@
+/*
+ * Copyright (c) Spotly Tech
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@import "../shared/colors.css";
+@import "../shared/typography.css";
+
+/* INPUT */
+.SpotlyUI-input {
+    padding-left: 2.5rem; 
+    padding-right: 2.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-background);
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+}
+
+/* INPUT WRAPPER */
+.SpotlyUI-input-wrapper--with-icon .SpotlyUI-input__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* INPUT ICONS */
+.SpotlyUI-input-wrapper--icon-start .SpotlyUI-input__icon {
+    left: 0.75rem;
+}
+.SpotlyUI-input-wrapper--icon-end .SpotlyUI-input__icon {
+    right: 0.75rem;
+}
+
+/* FULL WIDTH */
+.SpotlyUI-input--full-width {
+    width: 100%;
+}
+
+/* SIZES */
+.SpotlyUI-input--size-sm {
+    height: 1rem;
+}
+.SpotlyUI-input--size-md {
+    height: 1.5rem;
+}
+.SpotlyUI-input--size-lg {
+    height: 2rem;
+}
+
+/* COLORS */
+/* Default Input */
+.SpotlyUI-input--color-default {
+    color: var(--spotly-ui-light-50);
+    border: 1px solid var(--spotly-ui-light-200);
+}
+.SpotlyUI-input--color-default::placeholder {
+    color: var(--spotly-ui-light-500);
+}
+.SpotlyUI-input--color-default:focus {
+    border: 1px solid var(--spotly-ui-light-50);
+}
+
+/* Primary Input */
+.SpotlyUI-input--color-primary {
+    color: var(--spotly-ui-primary-500);
+    border: 1px solid var(--spotly-ui-primary-500);
+}
+.SpotlyUI-input--color-primary::placeholder {
+    color: var(--spotly-ui-primary-900);
+}
+.SpotlyUI-input--color-primary:focus {
+    border: 1px solid var(--spotly-ui-primary-500);
+}
+
+/* Secondary Input */
+.SpotlyUI-input--color-secondary {
+    color: var(--spotly-ui-secondary-400);
+    border: 1px solid var(--spotly-ui-secondary-500);
+}
+.SpotlyUI-input--color-secondary::placeholder {
+    color: var(--spotly-ui-secondary-600);
+}
+.SpotlyUI-input--color-secondary:focus {
+    border: 1px solid var(--spotly-ui-secondary-500);
+}
+
+/* Danger Input */
+.SpotlyUI-input--color-danger {
+    color: var(--spotly-ui-danger-500);
+    border: 1px solid var(--spotly-ui-danger-500);
+}
+.SpotlyUI-input--color-danger::placeholder {
+    color: var(--spotly-ui-danger-600);
+}
+.SpotlyUI-input--color-danger:focus {
+    border: 1px solid var(--spotly-ui-danger-500);
+}
+
+/* DISABLED */
+.SpotlyUI-input--disabled {
+    pointer-events: none;
+    user-select: none;
+}
+/* Disabled Default */
+.SpotlyUI-input.SpotlyUI-input--color-default.SpotlyUI-input--disabled {
+    border-color: var(--spotly-ui-light-400);
+    background-color: var(--spotly-ui-default-light-low-opacity);
+}
+.SpotlyUI-input.SpotlyUI-input--color-default.SpotlyUI-input--disabled::placeholder {
+    color: var(--spotly-ui-light-500);
+}
+/* Disabled Primary */
+.SpotlyUI-input.SpotlyUI-input--color-primary.SpotlyUI-input--disabled {
+    border-color: var(--spotly-ui-primary-600);
+    background-color: var(--spotly-ui-primary-low-opacity);
+}
+.SpotlyUI-input.SpotlyUI-input--color-primary.SpotlyUI-input--disabled::placeholder {
+    color: var(--spotly-ui-primary-800);
+}
+/* Disabled Secondary */
+.SpotlyUI-input.SpotlyUI-input--color-secondary.SpotlyUI-input--disabled {
+    border-color: var(--spotly-ui-secondary-500);
+    background-color: var(--spotly-ui-secondary-low-opacity);
+}
+.SpotlyUI-input.SpotlyUI-input--color-secondary.SpotlyUI-input--disabled::placeholder {
+    color: var(--spotly-ui-secondary-500);
+}
+/* Disabled Danger */
+.SpotlyUI-input.SpotlyUI-input--color-danger.SpotlyUI-input--disabled {
+    border-color: var(--spotly-ui-danger-600);
+    background-color: var(--spotly-ui-danger-low-opacity);
+}
+.SpotlyUI-input.SpotlyUI-input--color-danger.SpotlyUI-input--disabled::placeholder {
+    color: var(--spotly-ui-danger-600);
+}
