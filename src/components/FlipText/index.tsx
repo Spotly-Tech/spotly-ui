@@ -27,17 +27,18 @@ export const FlipText = forwardRef<HTMLParagraphElement, FlipTextProps>(
         },
         ref
     ) => {
-        const baseClass = `SpotlyUI-flip-text SpotlyUI-flip-text--color-${color} SpotlyUI-flip-text--size-${size} SpotlyUI-flip-text--weight-${weight}`;
+        const baseClass = `SpotlyUI-flip-text__letter SpotlyUI-flip-text--color-${color} SpotlyUI-flip-text--size-${size} SpotlyUI-flip-text--weight-${weight}`;
+        const letters = children.split("");
         return (
             <motion.p
                 initial="initial"
                 whileHover="hovered"
                 ref={ref}
                 {...restProps}
-                className={baseClass}
+                className="SpotlyUI-flip-text"
             >
                 <div>
-                    {children.split("").map((letter, index) => {
+                    {letters.map((letter, index) => {
                         return (
                             <motion.span
                                 variants={{
@@ -52,15 +53,15 @@ export const FlipText = forwardRef<HTMLParagraphElement, FlipTextProps>(
                                     repeatDelay: isLooped ? delay * children.length : 0,
                                 }}
                                 key={index}
-                                className="SpotlyUI-flip-text__letter"
+                                className={baseClass}
                             >
-                                {letter}
+                                {letter === " " ? "\u00A0" : letter}
                             </motion.span>
                         );
                     })}
                 </div>
                 <div className="SpotlyUI-flip-text__appearing-letters">
-                    {children.split("").map((letter, index) => {
+                    {letters.map((letter, index) => {
                         return (
                             <motion.span
                                 key={index}
@@ -75,9 +76,9 @@ export const FlipText = forwardRef<HTMLParagraphElement, FlipTextProps>(
                                     repeat: isLooped ? Infinity : 0,
                                     repeatDelay: isLooped ? delay * children.length : 0,
                                 }}
-                                className="SpotlyUI-flip-text__letter"
+                                className={baseClass}
                             >
-                                {letter}
+                                {letter === " " ? "\u00A0" : letter}
                             </motion.span>
                         );
                     })}
