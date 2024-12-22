@@ -40,5 +40,4 @@ export interface FlipTextProps extends SharedTextProps {
     children: string;
     duration?: number;
     delay?: number;
-    isLooped?: boolean;
 }

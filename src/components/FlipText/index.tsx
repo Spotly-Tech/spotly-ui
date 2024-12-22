@@ -22,7 +22,6 @@ export const FlipText = forwardRef<HTMLParagraphElement, FlipTextProps>(
             weight = "normal",
             duration = 0.25,
             delay = 0.25,
-            isLooped = false,
             ...restProps
         },
         ref
@@ -49,8 +48,6 @@ export const FlipText = forwardRef<HTMLParagraphElement, FlipTextProps>(
                                     duration: duration,
                                     ease: "easeInOut",
                                     delay: delay * index,
-                                    repeat: isLooped ? Infinity : 0,
-                                    repeatDelay: isLooped ? delay * children.length : 0,
                                 }}
                                 key={index}
                                 className={baseClass}
@@ -73,8 +70,6 @@ export const FlipText = forwardRef<HTMLParagraphElement, FlipTextProps>(
                                     duration: duration,
                                     ease: "easeInOut",
                                     delay: delay * index,
-                                    repeat: isLooped ? Infinity : 0,
-                                    repeatDelay: isLooped ? delay * children.length : 0,
                                 }}
                                 className={baseClass}
                             >
