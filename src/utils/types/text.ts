@@ -16,7 +16,8 @@ export interface SharedTextProps {
         | "secondary"
         | "danger"
         | "warning"
-        | "info";
+        | "info"
+        | "success";
     size?: "2xs" | "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl";
     weight?: "thin" | "normal" | "medium" | "semibold" | "bold" | "black";
 }
