@@ -118,6 +118,18 @@
 	color: var(--spotly-ui-danger-500);
 }
 
+/* Success Input */
+.SpotlyUI-input--color-success {
+    color: var(--spotly-ui-success-500);
+    border: 1px solid var(--spotly-ui-success-700);
+}
+.SpotlyUI-input--color-success::placeholder {
+    color: var(--spotly-ui-success-800);
+}
+.SpotlyUI-input--color-success:focus {
+    border: 1px solid var(--spotly-ui-success-500);
+}
+
 /* DISABLED */
 .SpotlyUI-input--disabled {
     pointer-events: none;
