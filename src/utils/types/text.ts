@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { PolymorphicComponentPropsWithRef } from "./index";
+import { PolymorphicComponentPropsWithRef } from "./polymorphic";
 
 /* SHARED TEXT PROPS */
 export interface SharedTextProps {
