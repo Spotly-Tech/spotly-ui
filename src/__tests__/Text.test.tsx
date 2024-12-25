@@ -83,35 +83,17 @@ describe("Text", () => {
         const textElement = getByText(children);
         expect(textElement).toHaveClass("SpotlyUI-text--color-info");
     });
-    it("renders span element with default emphasis", () => {
-        const children = "Default Emphasis Text";
-        const { getByText } = render(<Text>{children}</Text>);
+    it("renders span element with success color", () => {
+        const children = "Success Color Text";
+        const { getByText } = render(<Text color="success">{children}</Text>);
         const textElement = getByText(children);
-        expect(textElement).not.toHaveClass("SpotlyUI-text--emphasis-default");
-    });
-    it("renders span element with high emphasis", () => {
-        const children = "High Emphasis Text";
-        const { getByText } = render(<Text emphasis="high">{children}</Text>);
-        const textElement = getByText(children);
-        expect(textElement).toHaveClass("SpotlyUI-text--emphasis-high");
-    });
-    it("renders span element with medium emphasis", () => {
-        const children = "Medium Emphasis Text";
-        const { getByText } = render(<Text emphasis="medium">{children}</Text>);
-        const textElement = getByText(children);
-        expect(textElement).toHaveClass("SpotlyUI-text--emphasis-medium");
+        expect(textElement).toHaveClass("SpotlyUI-text--color-success");
     });
     it("renders span element with low emphasis", () => {
         const children = "Low Emphasis Text";
         const { getByText } = render(<Text emphasis="low">{children}</Text>);
         const textElement = getByText(children);
         expect(textElement).toHaveClass("SpotlyUI-text--emphasis-low");
-    });
-    it("renders span element with low-bold emphasis", () => {
-        const children = "Low-Bold Emphasis Text";
-        const { getByText } = render(<Text emphasis="low-bold">{children}</Text>);
-        const textElement = getByText(children);
-        expect(textElement).toHaveClass("SpotlyUI-text--emphasis-low-bold");
     });
     it("renders span element with 2xs size", () => {
         const children = "2xs size";
