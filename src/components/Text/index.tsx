@@ -7,10 +7,10 @@
 
 import React, { forwardRef } from "react";
 
-import { PolymorphicRef } from "@/utils/types";
+import { PolymorphicRef } from "@/utils/types/polymorphic";
 import { TextComponent, TextProps } from "@/utils/types/text";
 
-import "@/shared/SharedText.css";
+import "@/components/shared/SharedText.css";
 import "./Text.css";
 
 // @ts-expect-error - unexpected typing errors
@@ -33,8 +33,7 @@ export const Text: TextComponent = forwardRef(
     ) => {
         const Component = as || "span";
 
-        const emphasisClass =
-            emphasis === "low" ? `SpotlyUI-text--emphasis-low`: "";
+        const emphasisClass = emphasis === "low" ? `SpotlyUI-text--emphasis-low` : "";
         const baseClass = `SpotlyUI-text SpotlyUI-text--color-${color} SpotlyUI-text--size-${size} SpotlyUI-text--weight-${weight} SpotlyUI-text--align-${align} ${emphasisClass}`;
         const italicClass = italic ? "SpotlyUI-text--italic" : "";
         const underlineClass = underline ? "SpotlyUI-text--underline" : "";

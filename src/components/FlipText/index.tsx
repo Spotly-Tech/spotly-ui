@@ -10,7 +10,7 @@ import { forwardRef } from "react";
 import { FlipTextProps } from "@/utils/types/text";
 import { motion } from "motion/react";
 
-import "@/shared/SharedText.css";
+import "@/components/shared/SharedText.css";
 import "./FlipText.css";
 
 export const FlipText = forwardRef<HTMLParagraphElement, FlipTextProps>(
