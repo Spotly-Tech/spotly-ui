@@ -92,7 +92,7 @@ const meta: Meta<typeof Text> = {
             control: { type: "inline-radio" },
             description: "Defines the emphasis level for the text.",
             table: {
-                type: { summary: "ReactNode" },
+                type: { summary: "string" },
                 defaultValue: { summary: "default" },
             },
         },
@@ -105,28 +105,39 @@ type Story = StoryObj<typeof Text>;
 
 // Stories for each argument
 export const Default: Story = {
-    render: () => <Text>Hello</Text>,
-    args: {
-        placeholder: "Enter text",
-    },
+    render: () => (
+        <div>
+            <Text>Hello</Text>
+        </div>
+    ),
     parameters: {
         docs: {
             description: {
-                story: "Default Input.",
+                story: "Showcases the Text component with the default settings.",
+            },
+            source: {
+                code: `
+<Text>Hello</Text>
+            `,
             },
         },
     },
 };
 export const As: Story = {
     render: () => (
-        <Text as="label">
-            This is rendered as an {"<"}label{">"} tag
+        <Text as="a" href="https://www.google.com">
+            This is rendered as an {"<"}a{">"} tag
         </Text>
     ),
     parameters: {
         docs: {
             description: {
                 story: "Specifies the HTML tag or React component to use for rendering. Default is `span`.",
+            },
+            source: {
+                code: `
+<Text as="a" href="https://www.google.com">
+            `,
             },
         },
     },
@@ -148,12 +159,25 @@ export const Colors: Story = {
             <Text color="danger">Danger Color</Text>
             <Text color="warning">Warning Color</Text>
             <Text color="info">Info Color</Text>
+            <Text color="success">Success Color</Text>
         </div>
     ),
     parameters: {
         docs: {
             description: {
-                story: "Demonstrates different text colors: default, default-gradient, primary, secondary, danger, warning, and info.",
+                story: "Demonstrates different Text colors: default, default-gradient, primary, secondary, danger, warning, info and success.",
+            },
+            source: {
+                code: `
+<Text color="default">Default Color</Text>
+<Text color="default-gradient">Default Gradient</Text>
+<Text color="primary">Primary Color</Text>
+<Text color="secondary">Secondary Color</Text>
+<Text color="danger">Danger Color</Text>
+<Text color="warning">Warning Color</Text>
+<Text color="info">Info Color</Text>
+<Text color="success">Success Color</Text>
+            `,
             },
         },
     },
@@ -162,20 +186,32 @@ export const Colors: Story = {
 export const Sizes: Story = {
     render: () => (
         <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-            <Text size="2xs">2XS Text</Text>
-            <Text size="xs">XS Text</Text>
-            <Text size="sm">Small Text</Text>
-            <Text size="base">Base Text</Text>
-            <Text size="lg">Large Text</Text>
-            <Text size="xl">Extra Large Text</Text>
-            <Text size="2xl">2XL Text</Text>
-            <Text size="3xl">3XL Text</Text>
+            <Text size="2xs">2xs</Text>
+            <Text size="xs">xs</Text>
+            <Text size="sm">sm</Text>
+            <Text size="base">base</Text>
+            <Text size="lg">lg</Text>
+            <Text size="xl">xl</Text>
+            <Text size="2xl">2xl</Text>
+            <Text size="3xl">3xl</Text>
         </div>
     ),
     parameters: {
         docs: {
             description: {
                 story: "Demonstrates different text sizes: 2xs, xs, sm, base, lg, xl, 2xl, and 3xl.",
+            },
+            source: {
+                code: `
+<Text size="2xs">2xs</Text>
+<Text size="xs">xs</Text>
+<Text size="sm">sm</Text>
+<Text size="base">base</Text>
+<Text size="lg">lg</Text>
+<Text size="xl">xl</Text>
+<Text size="2xl">2xl</Text>
+<Text size="3xl">3xl</Text>
+            `,
             },
         },
     },
@@ -196,6 +232,16 @@ export const Weights: Story = {
         docs: {
             description: {
                 story: "Demonstrates different font weights: thin, normal, medium, semibold, bold, and black.",
+            },
+            source: {
+                code: `
+<Text weight="thin">Thin Weight</Text>
+<Text weight="normal">Normal Weight</Text>
+<Text weight="medium">Medium Weight</Text>
+<Text weight="semibold">Semibold Weight</Text>
+<Text weight="bold">Bold Weight</Text>
+<Text weight="black">Black Weight</Text>
+            `,
             },
         },
     },
@@ -240,6 +286,13 @@ export const Alignments: Story = {
             description: {
                 story: "Demonstrates different text alignments: left, center, and right. Each alignment is showcased in a box for clarity.",
             },
+            source: {
+                code: `
+<Text align="left">Left-aligned Text</Text>
+<Text align="center">Center-aligned Text</Text>
+<Text align="right">Right-aligned Text</Text>
+            `,
+            },
         },
     },
 };
@@ -251,6 +304,11 @@ export const Italic: Story = {
             description: {
                 story: "Applies italic styling to the text.",
             },
+            source: {
+                code: `
+<Text italic>This text is italicized.</Text>
+            `,
+            },
         },
     },
 };
@@ -261,6 +319,11 @@ export const Underline: Story = {
         docs: {
             description: {
                 story: "Adds an underline to the text.",
+            },
+            source: {
+                code: `
+<Text underline>This text has an underline.</Text>
+            `,
             },
         },
     },
@@ -280,6 +343,15 @@ export const Emphasis: Story = {
         docs: {
             description: {
                 story: "Demonstrates emphasis levels: default, low, low-bold, medium, and high.",
+            },
+            source: {
+                code: `
+<Text emphasis="default">Default Emphasis</Text>
+<Text emphasis="low">Low Emphasis</Text>
+<Text emphasis="low-bold">Low Bold Emphasis</Text>
+<Text emphasis="medium">Medium Emphasis</Text>
+<Text emphasis="high">High Emphasis</Text>
+            `,
             },
         },
     },
