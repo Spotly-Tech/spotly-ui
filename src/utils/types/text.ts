@@ -26,7 +26,7 @@ export interface SharedTextProps {
 export type TextProps<C extends React.ElementType> = PolymorphicComponentPropsWithRef<
     C,
     SharedTextProps & {
-        emphasis?: "default" | "high" | "medium" | "low" | "low-bold";
+        emphasis?: "low";
         align?: "left" | "center" | "right";
         italic?: boolean;
         underline?: boolean;

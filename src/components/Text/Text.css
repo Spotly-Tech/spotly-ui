@@ -24,23 +24,7 @@
 }
 
 /* EMPHASIS */
-.SpotlyUI-text--emphasis-high {
-    font-style: italic;
-    font-weight: var(--spotly-ui-font-weight-bold);
-    opacity: 0.9;
-}
-.SpotlyUI-text--emphasis-medium {
-    font-style: italic;
-    font-weight: var(--spotly-ui-font-weight-semibold);
-    opacity: 0.8;
-}
 .SpotlyUI-text--emphasis-low {
-    font-style: italic;
-    font-weight: var(--spotly-ui-font-weight-regular);
-    opacity: 0.7;
-}
-.SpotlyUI-text--emphasis-low-bold {
-    font-style: italic;
-    font-weight: var(--spotly-ui-font-weight-bold);
-    opacity: 0.7;
+    color: var(--spotly-ui-light-500);
+    font-weight: var(--spotly-ui-font-weight-normal);
 }

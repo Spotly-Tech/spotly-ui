@@ -20,7 +20,7 @@ export const Text: TextComponent = forwardRef(
         {
             as,
             color = "default",
-            emphasis = "default",
+            emphasis,
             size = "base",
             weight = "normal",
             align = "left",
@@ -34,7 +34,7 @@ export const Text: TextComponent = forwardRef(
         const Component = as || "span";
 
         const emphasisClass =
-            emphasis === "default" ? "" : `SpotlyUI-text--emphasis-${emphasis}`;
+            emphasis === "low" ? `SpotlyUI-text--emphasis-low`: "";
         const baseClass = `SpotlyUI-text SpotlyUI-text--color-${color} SpotlyUI-text--size-${size} SpotlyUI-text--weight-${weight} SpotlyUI-text--align-${align} ${emphasisClass}`;
         const italicClass = italic ? "SpotlyUI-text--italic" : "";
         const underlineClass = underline ? "SpotlyUI-text--underline" : "";
