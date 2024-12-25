@@ -1,106 +1,228 @@
-import { FlipTextProps } from "@/utils/types/text";
-import { Meta, StoryFn } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
 import { FlipText } from "./index";
 
-export default {
+const meta: Meta<typeof FlipText> = {
     title: "Components/FlipText",
     component: FlipText,
+    parameters: {
+        layout: "centered",
+    },
+    tags: ["autodocs"],
     argTypes: {
-        color: {
-            control: { type: "select" },
-            options: ["default",  "primary", "secondary", "danger"],
-        },
-        size: {
-            control: { type: "select" },
-            options: ["2xs", "xs", "sm", "base", "lg", "xl", "2xl", "3xl"],
-        },
-        weight: {
-            control: { type: "select" },
-            options: ["thin", "normal", "medium", "semibold", "bold", "black"],
+        children: {
+            control: { type: "text" },
+            description:
+                "Specifies the text that will be displayed in the FlipText component.",
+            table: {
+                type: { summary: "string" },
+            },
         },
         duration: {
             control: { type: "number" },
+            description: "Specifies the duration of the flip animation in seconds.",
+            table: {
+                type: { summary: "number" },
+                defaultValue: { summary: "0.25" },
+            },
         },
         delay: {
             control: { type: "number" },
+            description:
+                "Specifies the delay before the flip animation starts in seconds. Also being used to stagger animations.",
+            table: {
+                type: { summary: "number" },
+                defaultValue: { summary: "0.25" },
+            },
         },
-        isLooped: {
-            control: { type: "boolean" },
+        color: {
+            options: [
+                "default",
+                "default-gradient",
+                "primary",
+                "secondary",
+                "danger",
+                "warning",
+                "info",
+                "success",
+            ],
+            control: { type: "inline-radio" },
+            description: "Specifies the color scheme for the FlipText component.",
+            table: {
+                type: { summary: "string" },
+                defaultValue: { summary: "default" },
+            },
+        },
+        size: {
+            options: ["2xs", "xs", "sm", "base", "lg", "xl", "2xl", "3xl"],
+            control: { type: "inline-radio" },
+            description: "Specifies the size of the text.",
+            table: {
+                type: { summary: "string" },
+                defaultValue: { summary: "base" },
+            },
+        },
+        weight: {
+            options: ["thin", "normal", "medium", "semibold", "bold", "black"],
+            control: { type: "inline-radio" },
+            description: "Defines the font weight.",
+            table: {
+                type: { summary: "string" },
+                defaultValue: { summary: "normal" },
+            },
         },
     },
-} as Meta<FlipTextProps>;
-
-const Template: StoryFn<FlipTextProps> = (args) => <FlipText {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-    children: "Hover me!",
-    color: "default",
-    size: "base",
-    weight: "normal",
-    duration: 0.25,
-    delay: 0.25,
-    isLooped: false,
 };
 
-export const PrimaryColor = Template.bind({});
-PrimaryColor.args = {
-    children: "Spotly UI",
-    color: "primary",
-    size: "lg",
-    weight: "bold",
-    duration: 0.4,
-    delay: 0.1,
+export default meta;
+
+type Story = StoryObj<typeof FlipText>;
+
+// Default story
+export const Default: Story = {
+    render: () => (
+        <div style={{ display: "flex", gap: "1rem" }}>
+            <FlipText>Spotly UI</FlipText>
+        </div>
+    ),
+    parameters: {
+        docs: {
+            description: {
+                story: "Showcases the FlipText component with the default settings.",
+            },
+            source: {
+                code: `
+    <FlipText>Spotly UI</FlipText>
+                `,
+            },
+        },
+    },
 };
 
-export const DangerColorLooped = Template.bind({});
-DangerColorLooped.args = {
-    children: "Error!",
-    color: "danger",
-    size: "xl",
-    weight: "black",
-    duration: 0.3,
-    delay: 0.15,
-    isLooped: true,
+// Custom duration and delay
+export const CustomDurationAndDelay: Story = {
+    render: () => (
+        <div style={{ display: "flex", gap: "1rem" }}>
+            <FlipText duration={0.5}>Custom duration</FlipText>
+            <FlipText delay={0.5}>Custom delay</FlipText>
+        </div>
+    ),
+    parameters: {
+        docs: {
+            description: {
+                story: "Showcases the FlipText component with custom duration and delay settings.",
+            },
+            source: {
+                code: `
+<FlipText duration={0.5}>Custom duration</FlipText>
+<FlipText delay={0.5}>Custom delay</FlipText>
+                `,
+            },
+        },
+    },
 };
 
-export const SmallSize = Template.bind({});
-SmallSize.args = {
-    children: "Small Text",
-    color: "secondary",
-    size: "sm",
-    weight: "medium",
-    duration: 0.2,
-    delay: 0.05,
+// Colors
+export const Colors: Story = {
+    render: () => (
+        <div
+            style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.5rem",
+            }}
+        >
+            <FlipText color="default">Default</FlipText>
+            <FlipText color="primary">Primary</FlipText>
+            <FlipText color="secondary">Secondary</FlipText>
+            <FlipText color="danger">Danger</FlipText>
+            <FlipText color="warning">Warning</FlipText>
+            <FlipText color="info">Info</FlipText>
+            <FlipText color="success">Success</FlipText>
+        </div>
+    ),
+    parameters: {
+        docs: {
+            description: {
+                story: "Showcases all available FlipText colors: default, primary, secondary, danger, warning, info, and success.",
+            },
+            source: {
+                code: `
+<FlipText color="default">Default</FlipText>
+<FlipText color="primary">Primary</FlipText>
+<FlipText color="secondary">Secondary</FlipText>
+<FlipText color="danger">Danger</FlipText>
+<FlipText color="warning">Warning</FlipText>
+<FlipText color="info">Info</FlipText>
+<FlipText color="success">Success</FlipText>
+            `,
+            },
+        },
+    },
 };
 
-export const LargeSize = Template.bind({});
-LargeSize.args = {
-    children: "BIG TEXT",
-    color: "primary",
-    size: "3xl",
-    weight: "bold",
-    duration: 0.5,
-    delay: 0.2,
+// Sizes
+export const Sizes: Story = {
+    render: () => (
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+            <FlipText size="2xs">2xs</FlipText>
+            <FlipText size="xs">xs</FlipText>
+            <FlipText size="sm">sm</FlipText>
+            <FlipText size="base">base</FlipText>
+            <FlipText size="lg">lg</FlipText>
+            <FlipText size="xl">xl</FlipText>
+            <FlipText size="2xl">2xl</FlipText>
+            <FlipText size="3xl">3xl</FlipText>
+        </div>
+    ),
+    parameters: {
+        docs: {
+            description: {
+                story: "Showcases all available text sizes: 2xs, xs, sm, base, lg, xl, 2xl, and 3xl.",
+            },
+            source: {
+                code: `
+<FlipText size="2xs">2xs</FlipText>
+<FlipText size="xs">xs</FlipText>
+<FlipText size="sm">sm</FlipText>
+<FlipText size="base">base</FlipText>
+<FlipText size="lg">lg</FlipText>
+<FlipText size="xl">xl</FlipText>
+<FlipText size="2xl">2xl</FlipText>
+<FlipText size="3xl">3xl</FlipText>
+            `,
+            },
+        },
+    },
 };
 
-export const FastAnimation = Template.bind({});
-FastAnimation.args = {
-    children: "Speedy!",
-    color: "default",
-    size: "base",
-    weight: "normal",
-    duration: 0.1,
-    delay: 0.05,
-};
-
-export const CustomText = Template.bind({});
-CustomText.args = {
-    children: "Customize me",
-    color: "default",
-    size: "lg",
-    weight: "semibold",
-    duration: 0.3,
-    delay: 0.2,
+// Weights
+export const Weights: Story = {
+    render: () => (
+        <div style={{ display: "flex", gap: "1rem" }}>
+            <FlipText weight="thin">Thin</FlipText>
+            <FlipText weight="normal">Normal</FlipText>
+            <FlipText weight="medium">Medium</FlipText>
+            <FlipText weight="semibold">Semibold</FlipText>
+            <FlipText weight="bold">Bold</FlipText>
+            <FlipText weight="black">Black</FlipText>
+        </div>
+    ),
+    parameters: {
+        docs: {
+            description: {
+                story: "Showcases all available font weights: thin, normal, medium, semibold, bold, and black.",
+            },
+            source: {
+                code: `
+<FlipText weight="thin">Thin</FlipText>
+<FlipText weight="normal">Normal</FlipText>
+<FlipText weight="medium">Medium</FlipText>
+<FlipText weight="semibold">Semibold</FlipText>
+<FlipText weight="bold">Bold</FlipText>
+<FlipText weight="black">Black</FlipText>
+            `,
+            },
+        },
+    },
 };
