@@ -30,7 +30,6 @@
         /* Enable type declarations */
         "declaration": true,
         "emitDeclarationOnly": true,
-        "declarationDir": "./dist/types",
         "outDir": "./dist",
         "removeComments": true
     },
