@@ -88,7 +88,7 @@ const meta: Meta<typeof Text> = {
             },
         },
         emphasis: {
-            options: ["default", "high", "medium", "low", "low-bold"],
+            options: ["low"],
             control: { type: "inline-radio" },
             description: "Defines the emphasis level for the text.",
             table: {
@@ -332,11 +332,7 @@ export const Underline: Story = {
 export const Emphasis: Story = {
     render: () => (
         <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-            <Text emphasis="default">Default Emphasis</Text>
             <Text emphasis="low">Low Emphasis</Text>
-            <Text emphasis="low-bold">Low Bold Emphasis</Text>
-            <Text emphasis="medium">Medium Emphasis</Text>
-            <Text emphasis="high">High Emphasis</Text>
         </div>
     ),
     parameters: {
@@ -346,11 +342,7 @@ export const Emphasis: Story = {
             },
             source: {
                 code: `
-<Text emphasis="default">Default Emphasis</Text>
 <Text emphasis="low">Low Emphasis</Text>
-<Text emphasis="low-bold">Low Bold Emphasis</Text>
-<Text emphasis="medium">Medium Emphasis</Text>
-<Text emphasis="high">High Emphasis</Text>
             `,
             },
         },
