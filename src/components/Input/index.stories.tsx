@@ -30,29 +30,56 @@ const meta: Meta<typeof Input> = {
             options: ["sm", "md", "lg"],
             control: { type: "inline-radio" },
             description: "Sets the size of the input field.",
+            table: {
+                type: { summary: "string" },
+                defaultValue: { summary: "md" },
+            },
         },
         color: {
             options: ["default", "primary", "secondary", "danger", "success"],
             control: { type: "inline-radio" },
             description: "Sets the color of the input field.",
+            table: {
+                type: { summary: "string" },
+                defaultValue: { summary: "default" },
+            },
         },
         fullWidth: {
             control: { type: "boolean" },
             description: "Makes the input field span the full width of its container.",
+            table: {
+                type: { summary: "boolean" },
+                defaultValue: { summary: "false" },
+            },
         },
-		isWithIcon: {
-			control: { type: "boolean" },
-			description: "Adds an icon to the input field.",
-		},
-		icon: {
-			control: { type: "text" },
-			description: "Icon to be displayed in the input field.",
-		},
-		iconPosition: {
-			options: ["start", "end"],
-			control: { type: "inline-radio" },
-			description: "Position of the icon in the input field.",
-		},
+        isWithIcon: {
+            control: { type: "boolean" },
+            description:
+                "Adds an icon to the input field. If `true`, `icon` and `iconPosition` props are required.",
+            table: {
+                type: { summary: "boolean" },
+                defaultValue: { summary: "false" },
+            },
+        },
+        icon: {
+            control: { type: "text" },
+            description:
+                "Icon to be displayed in the input field. Applicable only if `isWithIcon` is `true`.",
+            table: {
+                type: { summary: "ReactNode" },
+                defaultValue: { summary: "" },
+            },
+        },
+        iconPosition: {
+            options: ["start", "end"],
+            control: { type: "inline-radio" },
+            description:
+                "Position of the icon in the input field. Applicable only if `isWithIcon` is `true`.",
+            table: {
+                type: { summary: "string" },
+                defaultValue: { summary: "start" },
+            },
+        },
     },
 };
 
