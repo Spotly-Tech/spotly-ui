@@ -8,6 +8,14 @@
 import { Box } from "@/components";
 import { StackProps } from "@/utils/types/layout";
 
-export const Stack = ({ children, ...props }: StackProps) => {
-    return <Box {...props}>{children}</Box>;
+import "./Stack.css";
+
+export const Stack = ({
+    align = "start",
+    direction = "column",
+    justify = "start",
+    ...props
+}: StackProps) => {
+    const baseClass = `SpotlyUI-stack SpotlyUI-stack--align-${align} SpotlyUI-stack--direction-${direction} SpotlyUI-stack--justify-${justify}`;
+    return <Box className={baseClass} {...props} />;
 };
