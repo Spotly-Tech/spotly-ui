@@ -1,0 +1,54 @@
+.SpotlyUI-stack {
+    display: flex;
+}
+
+/* Alignments */
+.SpotlyUI-stack--align-start {
+    align-items: flex-start;
+}
+.SpotlyUI-stack--align-center {
+    align-items: center;
+}
+.SpotlyUI-stack--align-end {
+    align-items: flex-end;
+}
+.SpotlyUI-stack--align-stretch {
+    align-items: stretch;
+}
+.SpotlyUI-stack--align-baseline {
+    align-items: baseline;
+}
+
+/* Directions */
+.SpotlyUI-stack--direction-row {
+    flex-direction: row;
+}
+.SpotlyUI-stack--direction-row-reverse {
+    flex-direction: row-reverse;
+}
+.SpotlyUI-stack--direction-column {
+    flex-direction: column;
+}
+.SpotlyUI-stack--direction-column-reverse {
+    flex-direction: column-reverse;
+}
+
+/* Justify */
+.SpotlyUI-stack--justify-start {
+    justify-content: flex-start;
+}
+.SpotlyUI-stack--justify-center {
+    justify-content: center;
+}
+.SpotlyUI-stack--justify-end {
+    justify-content: flex-end;
+}
+.SpotlyUI-stack--justify-between {
+    justify-content: space-between;
+}
+.SpotlyUI-stack--justify-around {
+    justify-content: space-around;
+}
+.SpotlyUI-stack--justify-evenly {
+    justify-content: space-evenly;
+}
