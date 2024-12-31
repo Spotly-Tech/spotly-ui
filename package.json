@@ -43,7 +43,7 @@
     "scripts": {
         "dev": "vite",
         "prebuild": "rimraf dist",
-        "build": "npm run prebuild && tsc -b && vite build",
+        "build": "tsc -b && vite build",
         "test": "vitest",
         "lint": "eslint ./src/ -c eslint.config.js",
         "lint:fix": "eslint ./src/ -c eslint.config.js --fix",
