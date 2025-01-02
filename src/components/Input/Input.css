@@ -39,16 +39,33 @@
 
 /* SIZES */
 .SpotlyUI-input--size-sm {
-    height: 1rem;
-	padding: 0.5rem 2rem 0.5rem 2rem; 
+	padding: 0.25rem 0.5rem; 
 }
+.SpotlyUI-input-wrapper--icon-start .SpotlyUI-input--size-sm {
+    padding: 0.25rem 0.5rem 0.25rem 2.25rem;
+}
+.SpotlyUI-input-wrapper--icon-end .SpotlyUI-input--size-sm {
+    padding: 0.25rem 2.25rem 0.25rem 0.25rem;
+}
+
 .SpotlyUI-input--size-md {
-    height: 1.25rem;
-	padding: 0.5rem 2.25rem 0.5rem 2.25rem;
+	padding: 0.5rem 0.75rem;
 }
+.SpotlyUI-input-wrapper--icon-start .SpotlyUI-input--size-md {
+    padding: 0.5rem 0.75rem 0.5rem 2.5rem;
+}
+.SpotlyUI-input-wrapper--icon-end .SpotlyUI-input--size-md {
+    padding: 0.5rem 2.5rem 0.5rem 0.5rem;
+}
+
 .SpotlyUI-input--size-lg {
-    height: 1.5rem;
-	padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+	padding: 0.75rem 1rem;
+}
+.SpotlyUI-input-wrapper--icon-start .SpotlyUI-input--size-lg {
+    padding: 0.75rem 1rem 0.75rem 2.75rem;
+}
+.SpotlyUI-input-wrapper--icon-end .SpotlyUI-input--size-lg {
+    padding: 0.75rem 2.75rem 0.75rem 0.75rem;
 }
 
 /* COLORS */
