@@ -91,7 +91,7 @@
     border: 1px solid var(--spotly-ui-primary-500);
 }
 .SpotlyUI-input--color-primary::placeholder {
-    color: var(--spotly-ui-primary-900);
+    color: var(--spotly-ui-primary-700);
 }
 .SpotlyUI-input--color-primary:focus {
     border: 1px solid var(--spotly-ui-primary-500);
@@ -140,6 +140,9 @@
 }
 .SpotlyUI-input--color-success:focus {
     border: 1px solid var(--spotly-ui-success-500);
+}
+.SpotlyUI-input__icon--color-success {
+	color: var(--spotly-ui-success-500);
 }
 
 /* DISABLED */
