@@ -44,14 +44,6 @@ const meta: Meta<typeof Input> = {
                 defaultValue: { summary: "default" },
             },
         },
-        fullWidth: {
-            control: { type: "boolean" },
-            description: "Makes the input field span the full width of its container.",
-            table: {
-                type: { summary: "boolean" },
-                defaultValue: { summary: "false" },
-            },
-        },
         isWithIcon: {
             control: { type: "boolean" },
             description:
@@ -125,7 +117,6 @@ export const WithIcon: Story = {
             placeholder="Search..."
             inputSize="md"
             color="primary"
-            fullWidth
             {...args}
         />
     ),

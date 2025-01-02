@@ -37,11 +37,6 @@
     right: 0.75rem;
 }
 
-/* FULL WIDTH */
-.SpotlyUI-input--full-width {
-    width: 100%;
-}
-
 /* SIZES */
 .SpotlyUI-input--size-sm {
     height: 1rem;

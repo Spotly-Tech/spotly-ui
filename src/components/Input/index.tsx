@@ -19,7 +19,6 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             iconPosition = "start",
             inputSize = "md",
             color = "default",
-            fullWidth = false,
             type = "text",
             disabled = false,
             ...restProps
@@ -27,7 +26,6 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         ref
     ) => {
         const disabledClass = disabled ? "SpotlyUI-input--disabled" : "";
-        const fullWidthClass = fullWidth ? "SpotlyUI-input--full-width" : "";
         const baseClass = `SpotlyUI-input SpotlyUI-input--size-${inputSize} SpotlyUI-input--color-${color} SpotlyUI-input--type-${type}`;
 
         return (
@@ -41,7 +39,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
                 )}
                 <input
                     ref={ref}
-                    className={`${baseClass} ${fullWidthClass} ${disabledClass}`}
+                    className={`${baseClass} ${disabledClass}`}
                     type={type}
                     {...restProps}
                 />
