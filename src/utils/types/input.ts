@@ -6,5 +6,4 @@ export interface InputProps extends ComponentProps<"input"> {
     icon?: React.ReactNode;
     inputSize?: "sm" | "md" | "lg";
     color?: "default" | "primary" | "secondary" | "danger" | "success";
-    fullWidth?: boolean;
 }
