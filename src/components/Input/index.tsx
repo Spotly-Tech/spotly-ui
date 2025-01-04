@@ -41,6 +41,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
                     ref={ref}
                     className={`${baseClass} ${disabledClass}`}
                     type={type}
+                    disabled={disabled}
                     {...restProps}
                 />
                 {isWithIcon && icon && iconPosition === "end" && (
