@@ -20,9 +20,16 @@
     --spotly-ui-font-size-xl: 1.25rem; /* 20px */
     --spotly-ui-font-size-2xl: 1.5rem; /* 24px */
     --spotly-ui-font-size-3xl: 1.875rem; /* 30px */
+    --spotly-ui-font-size-4xl: 2.25rem; /* 36px */
+    --spotly-ui-font-size-5xl: 3rem; /* 48px */
+    --spotly-ui-font-size-6xl: 3.75rem; /* 60px */
+    --spotly-ui-font-size-7xl: 4.5rem; /* 72px */
+    --spotly-ui-font-size-8xl: 6rem; /* 96px */
 
     /* Font Weights */
     --spotly-ui-font-weight-thin: 100;
+    --spotly-ui-font-weight-extra-light: 200;
+    --spotly-ui-font-weight-light: 300;
     --spotly-ui-font-weight-normal: 400;
     --spotly-ui-font-weight-medium: 500;
     --spotly-ui-font-weight-semibold: 600;
