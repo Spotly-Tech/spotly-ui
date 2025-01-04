@@ -39,16 +39,16 @@
     --spotly-ui-primary-low-opacity: #eeff0024;
 
     /* Secondary Colors */
-    --spotly-ui-secondary-50: #F1F7FD;
-    --spotly-ui-secondary-100: #E4F0FB;
-    --spotly-ui-secondary-200: #C4DEF7;
-    --spotly-ui-secondary-300: #A9CFF4;
-    --spotly-ui-secondary-400: #8ABDF0;
-    --spotly-ui-secondary-500: #6FADEC;
-    --spotly-ui-secondary-600: #308AE4;
-    --spotly-ui-secondary-700: #1869B9;
-    --spotly-ui-secondary-800: #10457A;
-    --spotly-ui-secondary-900: #08243F;
+    --spotly-ui-secondary-50: #f1f7fd;
+    --spotly-ui-secondary-100: #e4f0fb;
+    --spotly-ui-secondary-200: #c4def7;
+    --spotly-ui-secondary-300: #a9cff4;
+    --spotly-ui-secondary-400: #8abdf0;
+    --spotly-ui-secondary-500: #6fadec;
+    --spotly-ui-secondary-600: #308ae4;
+    --spotly-ui-secondary-700: #1869b9;
+    --spotly-ui-secondary-800: #10457a;
+    --spotly-ui-secondary-900: #08243f;
     --spotly-ui-secondary-950: #041220;
     --spotly-ui-secondary-low-opacity: #6fadec26;
 
@@ -66,18 +66,18 @@
     --spotly-ui-warning-950: #614700;
 
     /* Danger Colors */
-    --spotly-ui-danger-50: #fdf1f3;
-    --spotly-ui-danger-100: #fce4e7;
-    --spotly-ui-danger-200: #f8c4cc;
-    --spotly-ui-danger-300: #f39ba8;
-    --spotly-ui-danger-400: #eb6075;
-    --spotly-ui-danger-500: #a3142a;
-    --spotly-ui-danger-600: #961226;
-    --spotly-ui-danger-700: #7f1020;
-    --spotly-ui-danger-800: #640c19;
-    --spotly-ui-danger-900: #520a15;
-    --spotly-ui-danger-950: #36070e;
-    --spotly-ui-danger-low-opacity: #dc354627;
+    --spotly-ui-danger-50: #fff5f5;
+    --spotly-ui-danger-100: #ffe6e5;
+    --spotly-ui-danger-200: #ffcdcc;
+    --spotly-ui-danger-300: #ffafad;
+    --spotly-ui-danger-400: #ff8280;
+    --spotly-ui-danger-500: #ff302c;
+    --spotly-ui-danger-600: #f00400;
+    --spotly-ui-danger-700: #d10300;
+    --spotly-ui-danger-800: #ad0300;
+    --spotly-ui-danger-900: #850200;
+    --spotly-ui-danger-950: #570100;
+    --spotly-ui-danger-low-opacity: #ff302c26;
 
     /* Info Colors */
     --spotly-ui-info-50: #f3f6fb;
