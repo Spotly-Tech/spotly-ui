@@ -80,17 +80,17 @@
     --spotly-ui-danger-low-opacity: #ff302c26;
 
     /* Info Colors */
-    --spotly-ui-info-50: #f3f6fb;
-    --spotly-ui-info-100: #e4eaf6;
-    --spotly-ui-info-200: #c9d5ee;
-    --spotly-ui-info-300: #a6b9e3;
-    --spotly-ui-info-400: #7b98d5;
-    --spotly-ui-info-500: #3f68c2;
-    --spotly-ui-info-600: #395fb2;
-    --spotly-ui-info-700: #31539b;
-    --spotly-ui-info-800: #294480;
-    --spotly-ui-info-900: #1c3059;
-    --spotly-ui-info-950: #0f192e;
+    --spotly-ui-info-50: #f6f9fe;
+    --spotly-ui-info-100: #e9effb;
+    --spotly-ui-info-200: #d3dff8;
+    --spotly-ui-info-300: #b9ccf3;
+    --spotly-ui-info-400: #9fb8ef;
+    --spotly-ui-info-500: #7c9fe9;
+    --spotly-ui-info-600: #668ee5;
+    --spotly-ui-info-700: #4c7be1;
+    --spotly-ui-info-800: #2961db;
+    --spotly-ui-info-900: #1a449d;
+    --spotly-ui-info-950: #122d69;
 
     /* Success Colors */
     --spotly-ui-success-50: #f8fded;
