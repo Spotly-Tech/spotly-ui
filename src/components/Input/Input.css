@@ -11,7 +11,7 @@
 /* INPUT */
 .SpotlyUI-input {
     border-radius: 0.5rem;
-    background-color: var(--color-background);
+    background-color: transparent;
     outline: none;
     transition: border-color 0.2s ease-in-out;
 }
@@ -39,7 +39,8 @@
 
 /* SIZES */
 .SpotlyUI-input--size-sm {
-	padding: 0.25rem 0.5rem; 
+	padding: 0.25rem 0.5rem;
+    font-size: var(--spotly-ui-font-size-sm);
 }
 .SpotlyUI-input-wrapper--icon-start .SpotlyUI-input--size-sm {
     padding: 0.25rem 0.5rem 0.25rem 2.25rem;
@@ -50,6 +51,7 @@
 
 .SpotlyUI-input--size-md {
 	padding: 0.5rem 0.75rem;
+    font-size: var(--spotly-ui-font-size-base);
 }
 .SpotlyUI-input-wrapper--icon-start .SpotlyUI-input--size-md {
     padding: 0.5rem 0.75rem 0.5rem 2.5rem;
@@ -60,6 +62,7 @@
 
 .SpotlyUI-input--size-lg {
 	padding: 0.75rem 1rem;
+    font-size: var(--spotly-ui-font-size-lg);
 }
 .SpotlyUI-input-wrapper--icon-start .SpotlyUI-input--size-lg {
     padding: 0.75rem 1rem 0.75rem 2.75rem;
