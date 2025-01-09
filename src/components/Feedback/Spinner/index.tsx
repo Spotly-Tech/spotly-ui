@@ -41,6 +41,7 @@ export const Spinner = ({
                         strokeWidth={strokeWidth}
                         strokeDasharray={diameter * Math.PI}
                         strokeDashoffset={((100 - value) / 100) * diameter * Math.PI}
+                        transform={`rotate(-90 ${diameter / 2} ${diameter / 2})`}
                     />
                 </motion.svg>
             ) : (
