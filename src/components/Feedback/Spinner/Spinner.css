@@ -1,0 +1,32 @@
+@import "../../shared/colors.css";
+
+.SpotlyUI-spinner__wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* COLORS */
+.SpotlyUI-spinner--color-default {
+    stroke: var(--spotly-ui-light-50);
+}
+.SpotlyUI-spinner--color-primary {
+    stroke: var(--spotly-ui-primary-500);
+}
+.SpotlyUI-spinner--color-secondary {
+    stroke: var(--spotly-ui-secondary-500);
+}
+.SpotlyUI-spinner--color-success {
+    stroke: var(--spotly-ui-success-500);
+}
+.SpotlyUI-spinner--color-warning {
+    stroke: var(--spotly-ui-warning-500);
+}
+.SpotlyUI-spinner--color-danger {
+    stroke: var(--spotly-ui-danger-500);
+}
+.SpotlyUI-spinner--color-info {
+    stroke: var(--spotly-ui-info-500);
+}
+
