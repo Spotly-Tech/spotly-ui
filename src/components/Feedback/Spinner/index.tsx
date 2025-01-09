@@ -3,9 +3,8 @@ import { motion } from "motion/react";
 
 import "./Spinner.css";
 
+import { spinner } from "@/utils/animations/feedback/spinner";
 import { sizes, speeds, thicknesses } from "@/utils/constants/spinner";
-
-import { spinner } from "./anim";
 
 export const Spinner = ({
     // children,
