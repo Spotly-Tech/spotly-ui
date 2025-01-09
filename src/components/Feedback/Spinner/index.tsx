@@ -26,7 +26,7 @@ export const Spinner = ({
         <div className="SpotlyUI-spinner__wrapper" {...props}>
             {variant === "specified" ? (
                 <motion.svg
-                    variants={spinner(spinSpeed, value)}
+                    variants={spinner(spinSpeed)}
                     animate="specified"
                     width={diameter}
                     height={diameter}
@@ -46,7 +46,7 @@ export const Spinner = ({
                 </motion.svg>
             ) : (
                 <motion.svg
-                    variants={spinner(spinSpeed, value)}
+                    variants={spinner(spinSpeed)}
                     animate="unspecified"
                     width={diameter}
                     height={diameter}
