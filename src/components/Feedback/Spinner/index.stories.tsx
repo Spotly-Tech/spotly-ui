@@ -1,7 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import React from "react";
 
 import { Spinner } from "@/components";
-import React from 'react'
+import type { Meta, StoryObj } from "@storybook/react";
+
 // import React from 'react'
 
 const meta: Meta<typeof Spinner> = {
@@ -104,7 +105,9 @@ export const SpecifiedExample: Story = {
 
         React.useEffect(() => {
             const timer = setInterval(() => {
-                setProgress((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 10));
+                setProgress((prevProgress) =>
+                    prevProgress >= 100 ? 0 : prevProgress + 10
+                );
             }, 800);
 
             return () => {

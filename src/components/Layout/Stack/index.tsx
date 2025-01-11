@@ -6,6 +6,7 @@
  */
 
 import { Box } from "@/components";
+
 import { StackProps } from "@/utils/types/layout";
 
 import "./Stack.css";

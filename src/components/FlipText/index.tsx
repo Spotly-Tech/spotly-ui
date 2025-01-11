@@ -7,8 +7,9 @@
 
 import { forwardRef } from "react";
 
-import { FlipTextProps } from "@/utils/types/text";
 import { motion } from "motion/react";
+
+import { FlipTextProps } from "@/utils/types/text";
 
 import "@/components/shared/SharedText.css";
 import "./FlipText.css";

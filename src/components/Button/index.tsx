@@ -7,8 +7,9 @@
 
 import { forwardRef } from "react";
 
-import { ButtonProps } from "@/utils/types/button";
 import { motion, MotionProps } from "motion/react";
+
+import { ButtonProps } from "@/utils/types/button";
 
 import "./Button.css";
 

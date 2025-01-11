@@ -1,6 +1,4 @@
-export declare const spinner: (
-    spinSpeed: number,
-) => {
+export declare const spinner: (spinSpeed: number) => {
     unspecified: {
         rotate: number[];
         transition: {

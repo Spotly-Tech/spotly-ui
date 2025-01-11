@@ -1,5 +1,6 @@
-import { SpinnerProps } from "@/utils/types/feedback";
 import { motion } from "motion/react";
+
+import { SpinnerProps } from "@/utils/types/feedback";
 
 import "./Spinner.css";
 

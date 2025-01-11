@@ -3,10 +3,9 @@ import "@testing-library/jest-dom";
 import { FlipText } from "@/components";
 import { render, screen } from "@testing-library/react";
 
-
 /**
- * Keep in mind that `letters.length` is not returning 4 as length but 8 
- * because we have two sets of letters, one for the disappearing letters 
+ * Keep in mind that `letters.length` is not returning 4 as length but 8
+ * because we have two sets of letters, one for the disappearing letters
  * and one for the appearing letters.
  */
 

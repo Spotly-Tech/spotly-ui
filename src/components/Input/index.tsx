@@ -33,7 +33,9 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
                 className={`SpotlyUI-input-wrapper ${isWithIcon ? `SpotlyUI-input-wrapper--with-icon SpotlyUI-input-wrapper--icon-${iconPosition}` : ""}`}
             >
                 {isWithIcon && icon && iconPosition === "start" && (
-                    <span className={`SpotlyUI-input__icon SpotlyUI-input__icon--color-${color}`}>
+                    <span
+                        className={`SpotlyUI-input__icon SpotlyUI-input__icon--color-${color}`}
+                    >
                         {icon}
                     </span>
                 )}
@@ -45,7 +47,9 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
                     {...restProps}
                 />
                 {isWithIcon && icon && iconPosition === "end" && (
-                    <span  className={`SpotlyUI-input__icon SpotlyUI-input__icon--color-${color}`}>
+                    <span
+                        className={`SpotlyUI-input__icon SpotlyUI-input__icon--color-${color}`}
+                    >
                         {icon}
                     </span>
                 )}

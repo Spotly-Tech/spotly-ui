@@ -17,4 +17,4 @@ export type StackProps = BoxProps<"div"> & {
     align?: "start" | "center" | "end" | "stretch" | "baseline";
     direction?: "row" | "row-reverse" | "column" | "column-reverse";
     justify?: "start" | "center" | "end" | "between" | "around" | "evenly";
-}
+};

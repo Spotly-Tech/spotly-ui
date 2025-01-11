@@ -1,5 +1,4 @@
 import path from "path";
-
 import type { StorybookConfig } from "@storybook/react-vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
