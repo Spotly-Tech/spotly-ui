@@ -8,10 +8,9 @@ import { spinner } from "@/utils/animations/feedback/spinner";
 import { sizes, speeds, thicknesses } from "@/utils/constants/spinner";
 
 export const Spinner = ({
-    // children,
     size = "md",
     color = "default",
-    // label,
+    withLabel = false,
     variant = "unspecified",
     value = 0,
     thickness = "medium",
@@ -44,6 +43,17 @@ export const Spinner = ({
                         strokeDashoffset={((100 - value) / 100) * diameter * Math.PI}
                         transform={`rotate(-90 ${diameter / 2} ${diameter / 2})`}
                     />
+                    {withLabel && (
+                        <text
+                            x={diameter / 2}
+                            y={diameter / 2}
+                            textAnchor="middle"
+                            dy="0.35em"
+                            className="SpotlyUI-spinner__label"
+                        >
+                            {value}%
+                        </text>
+                    )}
                 </motion.svg>
             ) : (
                 <motion.svg
