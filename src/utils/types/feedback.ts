@@ -1,7 +1,6 @@
-import React, { ComponentProps } from "react";
+import { ComponentProps } from "react";
 
-export type SpinnerProps = ComponentProps<"div"> & {
-    children?: React.ReactNode;
+type SpinnerBaseProps = ComponentProps<"div"> & {
     size?: "sm" | "md" | "lg";
     color?:
         | "default"
@@ -11,9 +10,20 @@ export type SpinnerProps = ComponentProps<"div"> & {
         | "danger"
         | "warning"
         | "info";
-    label?: string | string[] | number;
-    variant: "specified" | "unspecified";
-    value?: number;
+
     thickness?: "thin" | "medium" | "thick";
     speed?: "slow" | "medium" | "fast";
 };
+
+type SpinnerUnspecifiedProps = SpinnerBaseProps & {
+    variant: "unspecified";
+    withLabel?: never;
+    value?: never;
+};
+type SpinnerSpecifiedProps = SpinnerBaseProps & {
+    variant: "specified";
+    withLabel?: boolean;
+    value: number;
+};
+
+export type SpinnerProps = SpinnerUnspecifiedProps | SpinnerSpecifiedProps;
