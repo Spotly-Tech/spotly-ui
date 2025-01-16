@@ -42,7 +42,8 @@
     },
     "scripts": {
         "dev": "vite",
-        "prebuild": "rimraf dist && npx prettier --write .",
+        "prebuild": "rimraf dist",
+        "prettier": "npx prettier --write .",
         "build": "tsc -b && vite build",
         "test": "vitest",
         "lint": "eslint ./src/ -c eslint.config.js",
