@@ -11,3 +11,4 @@ export * from "./input";
 export * from "./layout";
 export * from "./polymorphic";
 export * from "./text";
+export * from "./divider";
