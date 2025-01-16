@@ -6,5 +6,8 @@ npm test -- --run
 # Run lint before commit
 npm run lint
 
+# Run format before commit
+npm run prettier
+
 # Run build before commit
 npm run build
