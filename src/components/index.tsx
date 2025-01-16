@@ -6,8 +6,9 @@
  */
 
 export { Button } from "./Button";
-export { Input } from "./Input";
-export { FlipText } from "./FlipText";
-export { Text } from "./Text";
-export * from "./Layout";
+export { Divider } from "./Divider";
 export * from "./Feedback";
+export { FlipText } from "./FlipText";
+export { Input } from "./Input";
+export * from "./Layout";
+export { Text } from "./Text";
