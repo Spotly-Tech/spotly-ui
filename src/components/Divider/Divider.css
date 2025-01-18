@@ -1,61 +1,105 @@
 @import "../shared/colors.css";
 
+/* BASE */
 .SpotlyUI-divider {
     position: relative;
     background-color: var(--spotly-ui-light-500);
     margin: 0;
     border: none;
 }
+/* CHILDREN */
+.SpotlyUI-divider-content {
+    position: absolute;
+    display: inline-block;
+    padding: 0 0.5rem;
+    top: 50%;
+    background-color: var(--spotly-ui-default-dark);
+}
 
-/* Variant */
-.SpotlyUI-divider--variant-fullWidth {
+/* VARIANTS */
+/* Horizontal */
+.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--variant-fullWidth {
     width: 100%;
 }
-.SpotlyUI-divider--variant-middle {
+.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--variant-middle {
     width: 50%;
     margin: 0 auto;
 }
-/* Thickness */
-.SpotlyUI-divider--thickness-thin {
-    height: 0.0625rem;
+/* Vertical */
+.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--variant-fullWidth {
+    height: 100%;
 }
-.SpotlyUI-divider--thickness-thick {
-    height: 0.125rem;
+.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--variant-middle {
+    height: 50%;
+    margin: auto 0;
 }
 
-/* Orientation */
-.SpotlyUI-divider--orientation-horizontal {
+/* THICKNESS */
+/* Horizontal */
+.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--thickness-thin {
+    height: 0.0625rem;
+}
+.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--thickness-thick {
+    height: 0.125rem;
+}
+/* Vertical */
+.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--thickness-thin {
+    width: 0.0625rem;
+}
+.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--thickness-thick {
+    width: 0.125rem;
+}
+
+/* ORIENTATION */
+/* Horizontal */
+.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--variant-fullWidth,
+.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--variant-middle {
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
 }
-.SpotlyUI-divider--orientation-vertical {
-    height: inherit;
-    width: 0.0625rem;
-    display: inline-block;
+/* Vertical */
+.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--variant-fullWidth,
+.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--variant-middle {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
 }
 
-/* Text align */
-.SpotlyUI-divider--textAlign-left .SpotlyUI-divider-content {
+/* TEXT ALIGN */
+/* Horizontal */
+.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--textAlign-left
+    .SpotlyUI-divider-content {
     position: absolute;
     transform: translateY(-50%);
     left: 5%;
 }
-.SpotlyUI-divider--textAlign-center .SpotlyUI-divider-content {
+.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--textAlign-center
+    .SpotlyUI-divider-content {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.SpotlyUI-divider--textAlign-right .SpotlyUI-divider-content {
+.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--textAlign-right
+    .SpotlyUI-divider-content {
     position: absolute;
     transform: translateY(-50%);
     right: 5%;
 }
-
-/* Content */
-.SpotlyUI-divider-content {
-    display: inline-block;
+/* Vertical */
+.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--textAlign-top
+    .SpotlyUI-divider-content {
     position: absolute;
-    padding: 0 0.5rem;
+    transform: translateX(-50%);
+    top: 5%;
+}
+.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--textAlign-middle
+    .SpotlyUI-divider-content {
+    position: absolute;
     top: 50%;
-    background-color: var(--spotly-ui-default-dark);
+    transform: translate(-50%, -50%);
+}
+.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--textAlign-bottom
+    .SpotlyUI-divider-content {
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: 5%;
 }
