@@ -24,10 +24,15 @@ export const Divider: DividerComponent = <C extends React.ElementType = "div">({
     ...restProps
 }: DividerProps<C>) => {
     const Component = as || "div";
-    const alignStepsStyle = {
+    const horizontalAlignStepsStyle = {
         top: "50%",
         left: `${alignSteps}%`,
         transform: `translate(-${alignSteps}%, -50%)`,
+    };
+    const verticalAlignStepsStyle = {
+        top: `${alignSteps}%`,
+        left: "50%",
+        transform: `translate(-50%, -${alignSteps}%)`,
     };
     return (
         <Component
@@ -39,7 +44,13 @@ export const Divider: DividerComponent = <C extends React.ElementType = "div">({
             {children && (
                 <span
                     className="SpotlyUI-divider-content"
-                    style={withSteps ? alignStepsStyle : undefined}
+                    style={
+                        withSteps
+                            ? orientation === "horizontal"
+                                ? horizontalAlignStepsStyle
+                                : verticalAlignStepsStyle
+                            : undefined
+                    }
                 >
                     {children}
                 </span>
