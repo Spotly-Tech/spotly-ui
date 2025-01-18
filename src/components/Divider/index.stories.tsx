@@ -13,7 +13,7 @@ const meta: Meta<typeof Divider> = {
             description: "The text to render inside the divider.",
             control: { type: "text" },
             table: {
-                type: { summary: "ReactNode" },
+                type: { summary: "ReactNode | string" },
             },
         },
         flex: {
@@ -35,7 +35,7 @@ const meta: Meta<typeof Divider> = {
             },
         },
         textAlign: {
-            options: ["left", "center", "right"],
+            options: ["left", "center", "right", "top", "middle", "bottom"],
             control: { type: "inline-radio" },
             description: "The alignment of the content inside the divider.",
             table: {
@@ -53,7 +53,8 @@ const meta: Meta<typeof Divider> = {
         },
         alignSteps: {
             control: { type: "number" },
-            description: "The number of steps to align the content inside the divider.",
+            description:
+                "The number of steps to align the content inside the divider. Steps are in percentage, so alignSteps=25 will align the content 25% from the left and so on.",
             table: {
                 type: { summary: "number" },
                 defaultValue: { summary: "1" },
@@ -110,7 +111,12 @@ export const Default: Story = {
 };
 export const Vertical: Story = {
     render: (args) => (
-        <Stack direction="row">
+        <Stack
+            align="center"
+            justify="center"
+            direction="row"
+            style={{ width: "350px", height: "50px", textAlign: "center" }}
+        >
             <Text size="base" color="default" weight="semibold">
                 This is text before the divider
             </Text>
@@ -179,7 +185,7 @@ export const Left: Story = {
             <Text size="base" color="default" weight="semibold">
                 This is text above the divider
             </Text>
-            <Divider {...args} textAlign="left">
+            <Divider {...args} orientation="horizontal" textAlign="left">
                 <Text>Hello</Text>
             </Divider>
             <Text size="base" color="default" weight="semibold">
@@ -187,6 +193,28 @@ export const Left: Story = {
             </Text>
         </Stack>
     ),
+    parameters: {
+        docs: {
+            description: {
+                story: "Showcases the left alignment of the text in divider.",
+            },
+            source: {
+                code: `
+<Stack justify="center" style={{ backgroundColor: "#161316", width: "950px" }}>
+    <Text size="base" color="default" weight="semibold">
+        This is text above the divider
+    </Text>
+    <Divider {...args} textAlign="left">
+        <Text size="lg">Hello</Text>
+    </Divider>
+    <Text size="base" color="default" weight="semibold">
+        This is text below the divider
+    </Text>
+</Stack>
+                `,
+            },
+        },
+    },
 };
 export const Center: Story = {
     render: (args) => (
@@ -194,7 +222,7 @@ export const Center: Story = {
             <Text size="base" color="default" weight="semibold">
                 This is text above the divider
             </Text>
-            <Divider {...args} textAlign="center">
+            <Divider {...args} orientation="horizontal" textAlign="center">
                 <Text size="lg">Hello</Text>
             </Divider>
             <Text size="base" color="default" weight="semibold">
@@ -202,6 +230,28 @@ export const Center: Story = {
             </Text>
         </Stack>
     ),
+    parameters: {
+        docs: {
+            description: {
+                story: "Showcases the center alignment of the text in divider.",
+            },
+            source: {
+                code: `
+<Stack justify="center" style={{ backgroundColor: "#161316", width: "950px" }}>
+    <Text size="base" color="default" weight="semibold">
+        This is text above the divider
+    </Text>
+    <Divider {...args} textAlign="center">
+        <Text size="lg">Hello</Text>
+    </Divider>
+    <Text size="base" color="default" weight="semibold">
+        This is text below the divider
+    </Text>
+</Stack>
+                `,
+            },
+        },
+    },
 };
 export const Right: Story = {
     render: (args) => (
@@ -209,7 +259,7 @@ export const Right: Story = {
             <Text size="base" color="default" weight="semibold">
                 This is text above the divider
             </Text>
-            <Divider {...args} textAlign="right">
+            <Divider {...args} orientation="horizontal" textAlign="right">
                 <Text>Hello</Text>
             </Divider>
             <Text size="base" color="default" weight="semibold">
@@ -217,18 +267,161 @@ export const Right: Story = {
             </Text>
         </Stack>
     ),
+    parameters: {
+        docs: {
+            description: {
+                story: "Showcases the right alignment of the text in divider.",
+            },
+            source: {
+                code: `
+<Stack justify="center" style={{ backgroundColor: "#161316", width: "950px" }}>
+    <Text size="base" color="default" weight="semibold">
+        This is text above the divider
+    </Text>
+    <Divider {...args} textAlign="right">
+        <Text size="lg">Hello</Text>
+    </Divider>
+    <Text size="base" color="default" weight="semibold">
+        This is text below the divider
+    </Text>
+</Stack>
+                `,
+            },
+        },
+    },
 };
-export const AlignSteps: Story = {
+export const TopVertical: Story = {
+    render: (args) => (
+        <Stack
+            align="center"
+            justify="center"
+            direction="row"
+            style={{ width: "350px", height: "50px", textAlign: "center" }}
+        >
+            <Text size="base" color="default" weight="semibold">
+                This is text before the divider
+            </Text>
+            <Divider {...args} orientation="vertical" textAlign="top">
+                <Text size="xs" color="default" weight="semibold">
+                    Hello
+                </Text>
+            </Divider>
+            <Text size="base" color="default" weight="semibold">
+                This is text after the divider
+            </Text>
+        </Stack>
+    ),
+};
+export const MiddleVertical: Story = {
+    render: (args) => (
+        <Stack
+            align="center"
+            justify="center"
+            direction="row"
+            style={{ width: "350px", height: "50px", textAlign: "center" }}
+        >
+            <Text size="base" color="default" weight="semibold">
+                This is text before the divider
+            </Text>
+            <Divider {...args} orientation="vertical" textAlign="middle">
+                <Text size="xs" color="default" weight="semibold">
+                    Hello
+                </Text>
+            </Divider>
+            <Text size="base" color="default" weight="semibold">
+                This is text after the divider
+            </Text>
+        </Stack>
+    ),
+};
+
+export const BottomVertical: Story = {
+    render: (args) => (
+        <Stack
+            align="center"
+            justify="center"
+            direction="row"
+            style={{
+                backgroundColor: "#161316",
+                width: "350px",
+                height: "50px",
+                textAlign: "center",
+            }}
+        >
+            <Text size="base" color="default" weight="semibold">
+                This is text before the divider
+            </Text>
+            <Divider {...args} orientation="vertical" textAlign="bottom">
+                <Text size="xs" color="default" weight="semibold">
+                    Hello
+                </Text>
+            </Divider>
+            <Text size="base" color="default" weight="semibold">
+                This is text after the divider
+            </Text>
+        </Stack>
+    ),
+};
+export const HorizontalAlignSteps: Story = {
     render: (args) => (
         <Stack justify="center" style={{ backgroundColor: "#161316", width: "950px" }}>
             <Text size="base" color="default" weight="semibold">
                 This is text above the divider
             </Text>
-            <Divider {...args} alignSteps={21.5}>
+            <Divider {...args} alignSteps={25}>
                 <Text>Hello</Text>
             </Divider>
             <Text size="base" color="default" weight="semibold">
                 This is text below the divider
+            </Text>
+        </Stack>
+    ),
+    parameters: {
+        docs: {
+            description: {
+                story: "Showcases the center alignment of the divider.",
+            },
+            source: {
+                code: `
+<Stack justify="center" style={{ backgroundColor: "#161316", width: "950px" }}>
+    <Text size="base" color="default" weight="semibold">
+        This is text above the divider
+    </Text>
+    <Divider {...args} alignSteps={21.5}>
+        <Text>Hello</Text>
+    </Divider>
+    <Text size="base" color="default" weight="semibold">
+        This is text below the divider
+    </Text>
+</Stack>
+                `,
+            },
+        },
+    },
+};
+export const VerticalAlignSteps: Story = {
+    render: (args) => (
+        <Stack
+            align="center"
+            justify="center"
+            direction="row"
+            style={{
+                backgroundColor: "#161316",
+                width: "350px",
+                height: "50px",
+                textAlign: "center",
+            }}
+        >
+            <Text size="base" color="default" weight="semibold">
+                This is text before the divider
+            </Text>
+            <Divider {...args} withSteps orientation="vertical" alignSteps={50}>
+                <Text size="xs" color="default" weight="semibold">
+                    Hello
+                </Text>
+            </Divider>
+            <Text size="base" color="default" weight="semibold">
+                This is text after the divider
             </Text>
         </Stack>
     ),
