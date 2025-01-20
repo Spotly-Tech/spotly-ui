@@ -21,36 +21,38 @@ export const Divider: DividerComponent = <C extends React.ElementType = "div">({
     thickness = "thin",
     orientation = "horizontal",
     variant = "full",
+    m = "0.75rem",
     ...restProps
 }: DividerProps<C>) => {
     const Component = as || "div";
-    const horizontalAlignStepsStyle = {
-        top: "50%",
-        left: `${alignSteps}%`,
-        transform: `translate(-${alignSteps}%, -50%)`,
+
+    const marginStyle =
+        orientation === "horizontal" ? { margin: `${m} 0` } : { margin: `0 ${m}` };
+    const alignStepsStyle = {
+        horizontal: {
+            top: "50%",
+            left: `${alignSteps}%`,
+            transform: `translate(-${alignSteps}%, -50%)`,
+        },
+        vertical: {
+            top: `${alignSteps}%`,
+            left: "50%",
+            transform: `translate(-50%, -${alignSteps}%)`,
+        },
     };
-    const verticalAlignStepsStyle = {
-        top: `${alignSteps}%`,
-        left: "50%",
-        transform: `translate(-50%, -${alignSteps}%)`,
-    };
+
     return (
         <Component
             className={`SpotlyUI-divider SpotlyUI-divider--thickness-${thickness} SpotlyUI-divider--orientation-${orientation} SpotlyUI-divider--variant-${variant} SpotlyUI-divider--textAlign-${textAlign} ${flex ? "SpotlyUI-divider--flex" : ""}`}
             role="separator"
             aria-orientation={orientation}
+            style={marginStyle}
             {...restProps}
         >
             {children && (
                 <span
                     className="SpotlyUI-divider-content"
-                    style={
-                        withSteps
-                            ? orientation === "horizontal"
-                                ? horizontalAlignStepsStyle
-                                : verticalAlignStepsStyle
-                            : undefined
-                    }
+                    style={withSteps ? alignStepsStyle[orientation] : undefined}
                 >
                     {children}
                 </span>
