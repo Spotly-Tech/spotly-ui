@@ -20,6 +20,7 @@ type DividerBaseProps<C extends React.ElementType> = PolymorphicComponentProps<
         variant?: "full" | "inset" | "middle";
         orientation?: "horizontal" | "vertical";
         textAlign?: "start" | "center" | "end";
+        m?: string;
     }
 >;
 
