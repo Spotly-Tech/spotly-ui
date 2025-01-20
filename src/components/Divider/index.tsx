@@ -20,7 +20,7 @@ export const Divider: DividerComponent = <C extends React.ElementType = "div">({
     withSteps = false,
     thickness = "thin",
     orientation = "horizontal",
-    variant = "fullWidth",
+    variant = "full",
     ...restProps
 }: DividerProps<C>) => {
     const Component = as || "div";
