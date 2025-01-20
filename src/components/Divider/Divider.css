@@ -18,7 +18,7 @@
 
 /* VARIANTS */
 /* Horizontal */
-.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--variant-fullWidth {
+.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--variant-full {
     width: 100%;
 }
 .SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--variant-middle {
@@ -26,7 +26,7 @@
     margin: 0 auto;
 }
 /* Vertical */
-.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--variant-fullWidth {
+.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--variant-full {
     height: 100%;
 }
 .SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--variant-middle {
@@ -52,13 +52,13 @@
 
 /* ORIENTATION */
 /* Horizontal */
-.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--variant-fullWidth,
+.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--variant-full,
 .SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--variant-middle {
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
 }
 /* Vertical */
-.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--variant-fullWidth,
+.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--variant-full,
 .SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--variant-middle {
     margin-left: 0.75rem;
     margin-right: 0.75rem;
@@ -66,7 +66,7 @@
 
 /* TEXT ALIGN */
 /* Horizontal */
-.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--textAlign-left
+.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--textAlign-start
     .SpotlyUI-divider-content {
     position: absolute;
     transform: translateY(-50%);
@@ -78,26 +78,26 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--textAlign-right
+.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--textAlign-end
     .SpotlyUI-divider-content {
     position: absolute;
     transform: translateY(-50%);
     right: 5%;
 }
 /* Vertical */
-.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--textAlign-top
+.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--textAlign-start
     .SpotlyUI-divider-content {
     position: absolute;
     transform: translateX(-50%);
     top: 5%;
 }
-.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--textAlign-middle
+.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--textAlign-center
     .SpotlyUI-divider-content {
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--textAlign-bottom
+.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--textAlign-end
     .SpotlyUI-divider-content {
     position: absolute;
     transform: translateX(-50%);
