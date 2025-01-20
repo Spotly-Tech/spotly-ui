@@ -53,6 +53,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                     isIconButton ? "SpotlyUI-btn--icon" : ""
                 }`}
                 disabled={disabled || isLoading}
+                aria-disabled={disabled || isLoading}
+                aria-busy={isLoading ? "true" : undefined}            
                 {...animationProps}
                 {...props}
             >
