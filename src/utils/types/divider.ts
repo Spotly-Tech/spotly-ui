@@ -13,43 +13,35 @@ import { PolymorphicComponentProps } from "./polymorphic";
 type DividerBaseProps<C extends React.ElementType> = PolymorphicComponentProps<
     C,
     {
-        children?: React.ReactNode | string;
+        children?: React.ReactNode;
         flex?: boolean;
         thickness?: "thin" | "thick";
         withSteps?: boolean;
-        variant?: "fullWidth" | "inset" | "middle";
+        variant?: "full" | "inset" | "middle";
+        orientation?: "horizontal" | "vertical";
+        textAlign?: "start" | "center" | "end";
     }
 >;
 
-type DividerVerticalProps<C extends React.ElementType> = PolymorphicComponentProps<
-    C,
-    { orientation: "vertical"; textAlign: "top" | "middle" | "bottom" }
->;
-type DividerHorizontalProps<C extends React.ElementType> = PolymorphicComponentProps<
-    C,
-    { orientation: "horizontal"; textAlign: "left" | "center" | "right" }
->;
-
-// `Steps` related props
+// `steps` related props
 type DividerWithoutStepsProps<C extends React.ElementType> = PolymorphicComponentProps<
     C,
-    { withSteps: false; alignSteps?: never }
+    DividerBaseProps<C> & { withSteps: false; alignSteps?: never }
 >;
 type DividerWithStepsProps<C extends React.ElementType> = PolymorphicComponentProps<
     C,
-    { withSteps: true; alignSteps: number }
+    DividerBaseProps<C> & { withSteps: true; alignSteps: number }
 >;
 type DividerStepsProps<C extends React.ElementType> =
     | DividerWithStepsProps<C>
     | DividerWithoutStepsProps<C>;
 
-// Combine all `steps` props
+// Combine all props
 export type DividerProps<C extends React.ElementType> =
     | DividerBaseProps<C>
-    | DividerStepsProps<C>
-    | DividerVerticalProps<C>
-    | DividerHorizontalProps<C>;
+    | DividerStepsProps<C>;
 
+// Component
 export type DividerComponent = <C extends React.ElementType = "div">(
     props: DividerProps<C>
 ) => React.ReactElement | null;
