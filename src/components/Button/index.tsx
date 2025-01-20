@@ -54,7 +54,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                 }`}
                 disabled={disabled || isLoading}
                 aria-disabled={disabled || isLoading}
-                aria-busy={isLoading ? "true" : undefined}            
+                aria-busy={isLoading ? "true" : undefined}
+                aria-live="polite"
                 {...animationProps}
                 {...props}
             >
