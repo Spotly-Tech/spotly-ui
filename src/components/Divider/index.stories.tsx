@@ -80,6 +80,15 @@ const meta: Meta<typeof Divider> = {
                 defaultValue: { summary: "full" },
             },
         },
+        m: {
+            control: { type: "text" },
+            description:
+                "The margin around the divider. It is a string with a valid CSS unit. For horizontal divider, it will be applied as top and bottom margin and as left and right margin for vertical.",
+            table: {
+                type: { summary: "string" },
+                defaultValue: { summary: "0.75rem" },
+            },
+        },
     },
 };
 
@@ -499,7 +508,7 @@ export const HorizontalAlignSteps: Story = {
             <Text size="base" color="default" weight="semibold">
                 This is text above the divider
             </Text>
-            <Divider orientation="horizontal" withSteps alignSteps={33}>
+            <Divider orientation="horizontal" withSteps alignSteps={80}>
                 <Text>Hello</Text>
             </Divider>
             <Text size="base" color="default" weight="semibold">
@@ -548,6 +557,98 @@ export const VerticalAlignSteps: Story = {
             </Text>
             <Divider withSteps orientation="vertical" alignSteps={60}>
                 <Text size="xs" color="default" weight="semibold">
+                    Hello
+                </Text>
+            </Divider>
+            <Text size="base" color="default" weight="semibold">
+                This is text after the divider
+            </Text>
+        </Stack>
+    ),
+};
+export const InteractiveHorizontal: Story = {
+    render: (args) => (
+        <Stack
+            align="center"
+            style={{
+                backgroundColor: "#161316",
+                width: "350px",
+                height: "75px",
+            }}
+        >
+            <Text size="base" color="default" weight="semibold">
+                This is text above the divider
+            </Text>
+            <Divider {...args} />
+            <Text size="base" color="default" weight="semibold">
+                This is text below the divider
+            </Text>
+        </Stack>
+    ),
+};
+export const InteractiveVertical: Story = {
+    render: (args) => (
+        <Stack
+            align="center"
+            direction="row"
+            style={{
+                backgroundColor: "#161316",
+                width: "350px",
+                height: "75px",
+                textAlign: "center",
+            }}
+        >
+            <Text size="base" color="default" weight="semibold">
+                This is text before the divider
+            </Text>
+            <Divider {...args} />
+            <Text size="base" color="default" weight="semibold">
+                This is text after the divider
+            </Text>
+        </Stack>
+    ),
+};
+export const InteractiveHorizontalWithChildren: Story = {
+    render: (args) => (
+        <Stack
+            align="center"
+            style={{
+                backgroundColor: "#161316",
+                width: "350px",
+                height: "75px",
+            }}
+        >
+            <Text size="base" color="default" weight="semibold">
+                This is text above the divider
+            </Text>
+            <Divider {...args} orientation="horizontal">
+                <Text size="base" color="default" weight="semibold">
+                    Hello
+                </Text>
+            </Divider>
+            <Text size="base" color="default" weight="semibold">
+                This is text below the divider
+            </Text>
+        </Stack>
+    ),
+};
+export const InteractiveVerticalWithChildren: Story = {
+    render: (args) => (
+        <Stack
+            align="center"
+            direction="row"
+            style={{
+                backgroundColor: "#161316",
+                width: "350px",
+                height: "75px",
+                textAlign: "center",
+            }}
+        >
+            <Text size="base" color="default" weight="semibold">
+                This is text before the divider
+            </Text>
+            <Divider {...args} orientation="vertical">
+                <Text size="base" color="default" weight="semibold">
                     Hello
                 </Text>
             </Divider>
