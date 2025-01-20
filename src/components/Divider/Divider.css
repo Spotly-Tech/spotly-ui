@@ -50,20 +50,6 @@
     width: 0.125rem;
 }
 
-/* ORIENTATION */
-/* Horizontal */
-.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--variant-full,
-.SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--variant-middle {
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
-}
-/* Vertical */
-.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--variant-full,
-.SpotlyUI-divider--orientation-vertical.SpotlyUI-divider--variant-middle {
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
-}
-
 /* TEXT ALIGN */
 /* Horizontal */
 .SpotlyUI-divider--orientation-horizontal.SpotlyUI-divider--textAlign-start
