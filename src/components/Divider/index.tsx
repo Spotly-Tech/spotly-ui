@@ -37,7 +37,7 @@ export const Divider: DividerComponent = <C extends React.ElementType = "div">({
     return (
         <Component
             className={`SpotlyUI-divider SpotlyUI-divider--thickness-${thickness} SpotlyUI-divider--orientation-${orientation} SpotlyUI-divider--variant-${variant} SpotlyUI-divider--textAlign-${textAlign} ${flex ? "SpotlyUI-divider--flex" : ""}`}
-            role={orientation === "vertical" ? "separator" : undefined}
+            role="separator"
             aria-orientation={orientation}
             {...restProps}
         >
