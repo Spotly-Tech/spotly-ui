@@ -51,7 +51,7 @@ const meta: Meta<typeof Input> = {
                 defaultValue: { summary: "default" },
             },
         },
-        isWithIcon: {
+        withIcon: {
             control: { type: "boolean" },
             description:
                 "Adds an icon to the input field. If `true`, `icon` and `iconPosition` props are required.",
@@ -63,7 +63,7 @@ const meta: Meta<typeof Input> = {
         icon: {
             control: { type: "text" },
             description:
-                "Icon to be displayed in the input field. Applicable only if `isWithIcon` is `true`.",
+                "Icon to be displayed in the input field. Applicable only if `withIcon` is `true`.",
             table: {
                 type: { summary: "ReactNode" },
                 defaultValue: { summary: "" },
@@ -73,7 +73,7 @@ const meta: Meta<typeof Input> = {
             options: ["start", "end"],
             control: { type: "inline-radio" },
             description:
-                "Position of the icon in the input field. Applicable only if `isWithIcon` is `true`.",
+                "Position of the icon in the input field. Applicable only if `withIcon` is `true`.",
             table: {
                 type: { summary: "string" },
                 defaultValue: { summary: "start" },
@@ -118,7 +118,7 @@ export const Disabled: Story = {
 export const WithIcon: Story = {
     render: (args) => (
         <Input
-            isWithIcon
+            withIcon
             icon={<FaSearch />}
             iconPosition="start"
             placeholder="Search..."
