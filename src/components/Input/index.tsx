@@ -14,7 +14,7 @@ import "./Input.css";
 export const Input = forwardRef<HTMLInputElement, InputProps>(
     (
         {
-            isWithIcon = false,
+            withIcon = false,
             icon,
             iconPosition = "start",
             inputSize = "md",
@@ -30,9 +30,9 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 
         return (
             <div
-                className={`SpotlyUI-input-wrapper ${isWithIcon ? `SpotlyUI-input-wrapper--with-icon SpotlyUI-input-wrapper--icon-${iconPosition}` : ""}`}
+                className={`SpotlyUI-input-wrapper ${withIcon ? `SpotlyUI-input-wrapper--with-icon SpotlyUI-input-wrapper--icon-${iconPosition}` : ""}`}
             >
-                {isWithIcon && icon && iconPosition === "start" && (
+                {withIcon && icon && iconPosition === "start" && (
                     <span
                         className={`SpotlyUI-input__icon SpotlyUI-input__icon--color-${color}`}
                     >
@@ -49,7 +49,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
                     aria-required={restProps.required}
                     {...restProps}
                 />
-                {isWithIcon && icon && iconPosition === "end" && (
+                {withIcon && icon && iconPosition === "end" && (
                     <span
                         className={`SpotlyUI-input__icon SpotlyUI-input__icon--color-${color}`}
                     >
