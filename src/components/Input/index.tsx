@@ -44,6 +44,9 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
                     className={`${baseClass} ${disabledClass}`}
                     type={type}
                     disabled={disabled}
+                    aria-disabled={disabled}
+                    aria-label={restProps.placeholder}
+                    aria-required={restProps.required}
                     {...restProps}
                 />
                 {isWithIcon && icon && iconPosition === "end" && (
