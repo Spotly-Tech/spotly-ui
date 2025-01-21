@@ -76,7 +76,7 @@ describe("Input", () => {
         render(
             <Input
                 placeholder="Input with Icon"
-                isWithIcon
+                withIcon
                 icon={<FaSearch title="icon" />}
             />
         );
@@ -95,7 +95,7 @@ describe("Input", () => {
         render(
             <Input
                 placeholder="Input with Icon"
-                isWithIcon
+                withIcon
                 icon={<FaSearch title="icon" />}
                 iconPosition="end"
                 color="primary"
