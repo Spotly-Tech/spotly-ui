@@ -24,7 +24,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             icon,
             iconPosition = "start",
             isLoading = false,
-            loadingText = "Loading...",
+            indicator = "Loading...",
             children,
             disabled = false,
             animated = false,
@@ -60,7 +60,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                 {...props}
             >
                 {isLoading ? (
-                    loadingText
+                    indicator
                 ) : (
                     <>
                         {isWithIconButton && icon && iconPosition === "start" && (
