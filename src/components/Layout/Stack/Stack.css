@@ -59,3 +59,29 @@
 .SpotlyUI-stack--justify-evenly {
     justify-content: space-evenly;
 }
+
+/* Spacing */
+.SpotlyUI-stack--spacing-none {
+    gap: 0;
+}
+.SpotlyUI-stack--spacing-xs {
+    gap: 0.25rem;
+}
+.SpotlyUI-stack--spacing-sm {
+    gap: 0.5rem;
+}
+.SpotlyUI-stack--spacing-md {
+    gap: 1rem;
+}
+.SpotlyUI-stack--spacing-lg {
+    gap: 1.5rem;
+}
+.SpotlyUI-stack--spacing-xl {
+    gap: 2rem;
+}
+.SpotlyUI-stack--spacing-2xl {
+    gap: 3rem;
+}
+.SpotlyUI-stack--spacing-3xl {
+    gap: 4rem;
+}
