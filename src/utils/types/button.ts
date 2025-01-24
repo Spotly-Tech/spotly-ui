@@ -17,7 +17,7 @@ export interface IButtonBaseProps extends MotionButtonProps {
     color?: "default" | "primary" | "secondary" | "danger";
     shape?: "square" | "circle";
     isLoading?: boolean;
-    loadingText?: string;
+    indicator?: string | React.ReactNode;
     children?: React.ReactNode;
     disabled?: boolean;
     animated?: boolean;
