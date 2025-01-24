@@ -15,8 +15,9 @@ export const Stack = ({
     align = "start",
     direction = "column",
     justify = "start",
+    spacing = "none",
     ...props
 }: StackProps) => {
-    const baseClass = `SpotlyUI-stack SpotlyUI-stack--align-${align} SpotlyUI-stack--direction-${direction} SpotlyUI-stack--justify-${justify}`;
+    const baseClass = `SpotlyUI-stack SpotlyUI-stack--align-${align} SpotlyUI-stack--direction-${direction} SpotlyUI-stack--justify-${justify} SpotlyUI-stack--spacing-${spacing}`;
     return <Box className={baseClass} {...props} />;
 };
