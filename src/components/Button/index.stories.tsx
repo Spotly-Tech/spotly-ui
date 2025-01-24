@@ -7,6 +7,7 @@
 
 import type { Meta, StoryObj } from "@storybook/react";
 
+import { Spinner } from "../Feedback";
 import { Button } from "./index";
 
 const meta: Meta<typeof Button> = {
@@ -80,13 +81,13 @@ const meta: Meta<typeof Button> = {
         isLoading: {
             control: { type: "boolean" },
             description:
-                "Indicates if the button is in a loading state. Displays `loadingText` instead of `children` when `true`",
+                "Indicates if the button is in a loading state. Displays `indicator` instead of `children` when `true`",
             table: {
                 type: { summary: "boolean" },
                 defaultValue: { summary: "false" },
             },
         },
-        loadingText: {
+        indicator: {
             control: { type: "text" },
             description: "Text to display when the button is in a loading state.",
             table: {
@@ -274,7 +275,11 @@ export const States: Story = {
     render: () => (
         <div style={{ display: "flex", gap: "1rem" }}>
             <Button>Normal</Button>
-            <Button isLoading>Loading</Button>
+            <Button
+                isLoading
+                indicator={<Spinner variant="unspecified" size="sm" color="dark" />}
+            />
+            <Button isLoading indicator="Loading" />
             <Button disabled>Disabled</Button>
         </div>
     ),
