@@ -33,6 +33,12 @@
 .SpotlyUI-spinner--color-default .SpotlyUI-spinner__label {
     fill: var(--spotly-ui-light-50);
 }
+.SpotlyUI-spinner--color-dark {
+    stroke: var(--spotly-ui-default-dark);
+}
+.SpotlyUI-spinner--color-dark .SpotlyUI-spinner__label {
+    fill: var(--spotly-ui-default-dark);
+}
 .SpotlyUI-spinner--color-primary {
     stroke: var(--spotly-ui-primary-500);
 }
