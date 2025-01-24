@@ -27,6 +27,10 @@
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
+.SpotlyUI-text--color-dark,
+.SpotlyUI-flip-text--color-dark {
+    color: var(--spotly-ui-default-dark);
+}
 .SpotlyUI-text--color-primary,
 .SpotlyUI-flip-text--color-primary {
     color: var(--spotly-ui-primary-500);
