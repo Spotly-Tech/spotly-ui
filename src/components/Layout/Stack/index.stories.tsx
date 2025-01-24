@@ -44,6 +44,15 @@ const meta: Meta<typeof Stack> = {
                 defaultValue: { summary: "start" },
             },
         },
+        spacing: {
+            options: ["none", "xs", "sm", "md", "lg", "xl", "2xl", "3xl"],
+            control: { type: "inline-radio" },
+            description: "Defines the spacing between the children inside the stack.",
+            table: {
+                type: { summary: "string" },
+                defaultValue: { summary: "none" },
+            },
+        },
     },
 };
 
