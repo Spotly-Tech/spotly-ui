@@ -12,6 +12,7 @@ export interface SharedTextProps {
     color?:
         | "default"
         | "default-gradient"
+        | "dark"
         | "primary"
         | "secondary"
         | "danger"
