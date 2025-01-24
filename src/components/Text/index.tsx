@@ -27,6 +27,7 @@ export const Text: TextComponent = forwardRef(
             italic = false,
             underline = false,
             children,
+            className,
             ...restProps
         }: TextProps<C>,
         ref?: PolymorphicRef<C>
@@ -37,11 +38,10 @@ export const Text: TextComponent = forwardRef(
         const baseClass = `SpotlyUI-text SpotlyUI-text--color-${color} SpotlyUI-text--size-${size} SpotlyUI-text--weight-${weight} SpotlyUI-text--align-${align} ${emphasisClass}`;
         const italicClass = italic ? "SpotlyUI-text--italic" : "";
         const underlineClass = underline ? "SpotlyUI-text--underline" : "";
-
         return (
             <Component
                 ref={ref}
-                className={`${baseClass} ${italicClass} ${underlineClass}`}
+                className={`${baseClass} ${italicClass} ${underlineClass} ${className}`}
                 {...restProps}
             >
                 {children}
