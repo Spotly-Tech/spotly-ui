@@ -107,7 +107,7 @@ describe("Button", () => {
     });
     it("renders loading button", () => {
         const loadingText = "Loading";
-        const { getByText } = render(<Button isLoading loadingText={loadingText} />);
+        const { getByText } = render(<Button isLoading indicator={loadingText} />);
         const buttonElement = getByText(loadingText);
         expect(buttonElement).toBeInTheDocument();
         expect(buttonElement).toHaveClass("SpotlyUI-btn--loading");
