@@ -29,6 +29,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             disabled = false,
             animated = false,
             animation,
+            className,
             ...props
         },
         ref
@@ -51,7 +52,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                 ref={ref}
                 className={`${baseClass} ${disabledClass} ${loadingClass} ${
                     isIconButton ? "SpotlyUI-btn--icon" : ""
-                }`}
+                } ${className}`}
                 disabled={disabled || isLoading}
                 aria-disabled={disabled || isLoading}
                 aria-busy={isLoading ? "true" : undefined}
