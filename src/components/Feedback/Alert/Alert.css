@@ -1,0 +1,78 @@
+/*
+ * Copyright (c) Spotly Tech
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@import "../../shared/colors.css";
+
+/* Base */
+.SpotlyUI-alert {
+    padding: 0.5rem 0.75rem;
+}
+.SpotlyUI-alert .SpotlyUI-alert__icon {
+    line-height: 0;
+}
+
+/* Full Width */
+.SpotlyUI-alert--full-width {
+    width: 100%;
+}
+
+/* Rounded */
+.SpotlyUI-alert--rounded {
+    border-radius: 0.25rem;
+}
+
+/* Solid */
+.SpotlyUI-alert--color-success.SpotlyUI-alert--variant-solid {
+    background-color: var(--spotly-ui-success-500);
+}
+.SpotlyUI-alert--color-success.SpotlyUI-alert--variant-solid .SpotlyUI-alert__text {
+    color: var(--spotly-ui-success-900);
+}
+.SpotlyUI-alert--color-danger.SpotlyUI-alert--variant-solid {
+    background-color: var(--spotly-ui-danger-500);
+}
+.SpotlyUI-alert--color-danger.SpotlyUI-alert--variant-solid .SpotlyUI-alert__text {
+    color: var(--spotly-ui-danger-900);
+}
+.SpotlyUI-alert--color-warning.SpotlyUI-alert--variant-solid {
+    background-color: var(--spotly-ui-warning-500);
+}
+.SpotlyUI-alert--color-warning.SpotlyUI-alert--variant-solid .SpotlyUI-alert__text {
+    color: var(--spotly-ui-warning-950);
+}
+.SpotlyUI-alert--color-info.SpotlyUI-alert--variant-solid {
+    background-color: var(--spotly-ui-info-500);
+}
+.SpotlyUI-alert--color-info.SpotlyUI-alert--variant-solid .SpotlyUI-alert__text {
+    color: var(--spotly-ui-info-900);
+}
+
+/* Outlined */
+.SpotlyUI-alert--color-success.SpotlyUI-alert--variant-outlined {
+    border: 1px solid var(--spotly-ui-success-500);
+}
+.SpotlyUI-alert--color-success.SpotlyUI-alert--variant-outlined .SpotlyUI-alert__text {
+    color: var(--spotly-ui-success-500);
+}
+.SpotlyUI-alert--color-danger.SpotlyUI-alert--variant-outlined {
+    border: 1px solid var(--spotly-ui-danger-500);
+}
+.SpotlyUI-alert--color-danger.SpotlyUI-alert--variant-outlined .SpotlyUI-alert__text {
+    color: var(--spotly-ui-danger-500);
+}
+.SpotlyUI-alert--color-warning.SpotlyUI-alert--variant-outlined {
+    border: 1px solid var(--spotly-ui-warning-500);
+}
+.SpotlyUI-alert--color-warning.SpotlyUI-alert--variant-outlined .SpotlyUI-alert__text {
+    color: var(--spotly-ui-warning-500);
+}
+.SpotlyUI-alert--color-info.SpotlyUI-alert--variant-outlined {
+    border: 1px solid var(--spotly-ui-info-500);
+}
+.SpotlyUI-alert--color-info.SpotlyUI-alert--variant-outlined .SpotlyUI-alert__text {
+    color: var(--spotly-ui-info-500);
+}
