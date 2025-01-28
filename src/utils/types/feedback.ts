@@ -7,10 +7,12 @@
 
 import { ComponentProps } from "react";
 
+/* Spinner */
 type SpinnerBaseProps = ComponentProps<"div"> & {
     size?: "sm" | "md" | "lg";
     color?:
         | "default"
+        | "dark"
         | "primary"
         | "secondary"
         | "success"
@@ -34,3 +36,15 @@ type SpinnerSpecifiedProps = SpinnerBaseProps & {
 };
 
 export type SpinnerProps = SpinnerUnspecifiedProps | SpinnerSpecifiedProps;
+
+/* Alert */
+export type AlertProps = ComponentProps<"div"> & {
+    children: React.ReactNode;
+    color?: "success" | "danger" | "warning" | "info";
+    variant?: "solid" | "outlined";
+    action?: React.ReactNode;
+    icon?: React.ReactNode;
+    fullWidth?: boolean;
+    rounded?: boolean;
+    onClose?: () => void;
+};
