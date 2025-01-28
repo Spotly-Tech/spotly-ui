@@ -27,48 +27,56 @@
 }
 
 /* COLORS */
+/* default */
 .SpotlyUI-spinner--color-default {
     stroke: var(--spotly-ui-light-50);
 }
 .SpotlyUI-spinner--color-default .SpotlyUI-spinner__label {
     fill: var(--spotly-ui-light-50);
 }
+/* dark */
 .SpotlyUI-spinner--color-dark {
     stroke: var(--spotly-ui-default-dark);
 }
 .SpotlyUI-spinner--color-dark .SpotlyUI-spinner__label {
     fill: var(--spotly-ui-default-dark);
 }
+/* primary */
 .SpotlyUI-spinner--color-primary {
     stroke: var(--spotly-ui-primary-500);
 }
 .SpotlyUI-spinner--color-primary .SpotlyUI-spinner__label {
     fill: var(--spotly-ui-primary-500);
 }
+/* secondary */
 .SpotlyUI-spinner--color-secondary {
     stroke: var(--spotly-ui-secondary-500);
 }
 .SpotlyUI-spinner--color-secondary .SpotlyUI-spinner__label {
     fill: var(--spotly-ui-secondary-500);
 }
+/* success */
 .SpotlyUI-spinner--color-success {
     stroke: var(--spotly-ui-success-500);
 }
 .SpotlyUI-spinner--color-success .SpotlyUI-spinner__label {
     fill: var(--spotly-ui-success-500);
 }
+/* warning */
 .SpotlyUI-spinner--color-warning {
     stroke: var(--spotly-ui-warning-500);
 }
 .SpotlyUI-spinner--color-warning .SpotlyUI-spinner__label {
     fill: var(--spotly-ui-warning-500);
 }
+/* danger */
 .SpotlyUI-spinner--color-danger {
     stroke: var(--spotly-ui-danger-500);
 }
 .SpotlyUI-spinner--color-danger .SpotlyUI-spinner__label {
     fill: var(--spotly-ui-danger-500);
 }
+/* info */
 .SpotlyUI-spinner--color-info {
     stroke: var(--spotly-ui-info-500);
 }
