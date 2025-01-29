@@ -13,9 +13,18 @@ export type BoxComponent = <C extends React.ElementType = "div">(
     props: BoxProps<C>
 ) => React.ReactElement | null;
 
-export type StackProps = BoxProps<"div"> & {
+type LayoutSharedProps = {
     align?: "start" | "center" | "end" | "stretch" | "baseline";
-    direction?: "row" | "row-reverse" | "column" | "column-reverse";
     justify?: "start" | "center" | "end" | "between" | "around" | "evenly";
     spacing?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
 };
+
+export type StackProps = BoxProps<"div"> &
+    LayoutSharedProps & {
+        direction?: "row" | "row-reverse" | "column" | "column-reverse";
+    };
+
+export type RowProps<C extends React.ElementType = "div"> = BoxProps<C> &
+    LayoutSharedProps & {
+        wrap?: boolean;
+    };
