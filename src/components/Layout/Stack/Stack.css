@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) Spotly Tech
  *
  * This source code is licensed under the MIT license found in the
@@ -7,23 +7,6 @@
 
 .SpotlyUI-stack {
     display: flex;
-}
-
-/* Alignments */
-.SpotlyUI-stack--align-start {
-    align-items: flex-start;
-}
-.SpotlyUI-stack--align-center {
-    align-items: center;
-}
-.SpotlyUI-stack--align-end {
-    align-items: flex-end;
-}
-.SpotlyUI-stack--align-stretch {
-    align-items: stretch;
-}
-.SpotlyUI-stack--align-baseline {
-    align-items: baseline;
 }
 
 /* Directions */
@@ -38,50 +21,4 @@
 }
 .SpotlyUI-stack--direction-column-reverse {
     flex-direction: column-reverse;
-}
-
-/* Justify */
-.SpotlyUI-stack--justify-start {
-    justify-content: flex-start;
-}
-.SpotlyUI-stack--justify-center {
-    justify-content: center;
-}
-.SpotlyUI-stack--justify-end {
-    justify-content: flex-end;
-}
-.SpotlyUI-stack--justify-between {
-    justify-content: space-between;
-}
-.SpotlyUI-stack--justify-around {
-    justify-content: space-around;
-}
-.SpotlyUI-stack--justify-evenly {
-    justify-content: space-evenly;
-}
-
-/* Spacing */
-.SpotlyUI-stack--spacing-none {
-    gap: 0;
-}
-.SpotlyUI-stack--spacing-xs {
-    gap: 0.25rem;
-}
-.SpotlyUI-stack--spacing-sm {
-    gap: 0.5rem;
-}
-.SpotlyUI-stack--spacing-md {
-    gap: 1rem;
-}
-.SpotlyUI-stack--spacing-lg {
-    gap: 1.5rem;
-}
-.SpotlyUI-stack--spacing-xl {
-    gap: 2rem;
-}
-.SpotlyUI-stack--spacing-2xl {
-    gap: 3rem;
-}
-.SpotlyUI-stack--spacing-3xl {
-    gap: 4rem;
 }
