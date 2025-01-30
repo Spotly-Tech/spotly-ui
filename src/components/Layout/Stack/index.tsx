@@ -9,6 +9,7 @@ import { Box } from "@/components";
 
 import { StackProps } from "@/utils/types/layout";
 
+import "@/components/shared/SharedLayout.css";
 import "./Stack.css";
 
 export const Stack = ({
