@@ -10,7 +10,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { FlipText } from "./index";
 
 const meta: Meta<typeof FlipText> = {
-    title: "Components/FlipText",
+    title: "Typography/FlipText",
     component: FlipText,
     parameters: {
         layout: "centered",
