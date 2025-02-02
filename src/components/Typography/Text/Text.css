@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-@import "../shared/typography.css";
+@import "../../shared/typography.css";
 
 /* BASE TEXT */
 .SpotlyUI-text {
