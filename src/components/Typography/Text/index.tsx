@@ -41,7 +41,7 @@ export const Text: TextComponent = forwardRef(
         return (
             <Component
                 ref={ref}
-                className={`${baseClass} ${italicClass} ${underlineClass} ${className}`}
+                className={`${baseClass} ${italicClass} ${underlineClass} ${className || ""}`}
                 {...restProps}
             >
                 {children}
