@@ -6,7 +6,7 @@
  */
 
 export { Button } from "./Button";
+export * from "./DataEntry";
 export * from "./Feedback";
-export { Input } from "./Input";
 export * from "./Layout";
 export * from "./Typography";
