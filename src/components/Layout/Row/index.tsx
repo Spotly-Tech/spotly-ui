@@ -20,7 +20,7 @@ export const Row = forwardRef<HTMLDivElement, RowProps>(
             align = "start",
             justify = "start",
             spacing = "none",
-            wrap = true,
+            wrap,
             className,
             ...restProps
         },
