@@ -6,6 +6,7 @@
  */
 
 export { Box } from "./Box";
+export { Col } from "./Col";
 export { Divider } from "./Divider";
 export { Row } from "./Row";
 export { Stack } from "./Stack";
