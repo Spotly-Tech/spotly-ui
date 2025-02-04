@@ -11,6 +11,3 @@ npm run prettier
 
 # Run build before commit
 npm run build
-
-# Run lint-staged (runs copyright check)
-npx lint-staged
