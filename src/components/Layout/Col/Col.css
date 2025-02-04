@@ -1,0 +1,263 @@
+/*
+ * Copyright (c) Spotly Tech
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/* Base */
+.SpotlyUI-col {
+    display: flex;
+    padding: 0;
+}
+
+/* Span */
+.SpotlyUI-col--span-auto {
+    flex: 1 1 auto;
+}
+.SpotlyUI-col--span-1 {
+    flex: 1 1 4.1666666667%;
+    max-width: 4.1666666667%;
+}
+.SpotlyUI-col--span-2 {
+    flex: 1 1 8.3333333333%;
+    max-width: 8.3333333333%;
+}
+.SpotlyUI-col--span-3 {
+    flex: 1 1 12.5%;
+    max-width: 12.5%;
+}
+.SpotlyUI-col--span-4 {
+    flex: 1 1 16.6666666667%;
+    max-width: 16.6666666667%;
+}
+.SpotlyUI-col--span-5 {
+    flex: 1 1 20.8333333333%;
+    max-width: 20.8333333333%;
+}
+.SpotlyUI-col--span-6 {
+    flex: 1 1 25%;
+    max-width: 25%;
+}
+.SpotlyUI-col--span-7 {
+    flex: 1 1 29.1666666667%;
+    max-width: 29.1666666667%;
+}
+.SpotlyUI-col--span-8 {
+    flex: 1 1 33.3333333333%;
+    max-width: 33.3333333333%;
+}
+.SpotlyUI-col--span-9 {
+    flex: 1 1 37.5%;
+    max-width: 37.5%;
+}
+.SpotlyUI-col--span-10 {
+    flex: 1 1 41.6666666667%;
+    max-width: 41.6666666667%;
+}
+.SpotlyUI-col--span-11 {
+    flex: 1 1 45.8333333333%;
+    max-width: 45.8333333333%;
+}
+.SpotlyUI-col--span-12 {
+    flex: 1 1 50%;
+    max-width: 50%;
+}
+.SpotlyUI-col--span-13 {
+    flex: 1 1 54.1666666667%;
+    max-width: 54.1666666667%;
+}
+.SpotlyUI-col--span-14 {
+    flex: 1 1 58.3333333333%;
+    max-width: 58.3333333333%;
+}
+.SpotlyUI-col--span-15 {
+    flex: 1 1 62.5%;
+    max-width: 62.5%;
+}
+.SpotlyUI-col--span-16 {
+    flex: 1 1 66.6666666667%;
+    max-width: 66.6666666667%;
+}
+.SpotlyUI-col--span-17 {
+    flex: 1 1 70.8333333333%;
+    max-width: 70.8333333333%;
+}
+.SpotlyUI-col--span-18 {
+    flex: 1 1 75%;
+    max-width: 75%;
+}
+.SpotlyUI-col--span-19 {
+    flex: 1 1 79.1666666667%;
+    max-width: 79.1666666667%;
+}
+.SpotlyUI-col--span-20 {
+    flex: 1 1 83.3333333333%;
+    max-width: 83.3333333333%;
+}
+.SpotlyUI-col--span-21 {
+    flex: 1 1 87.5%;
+    max-width: 87.5%;
+}
+.SpotlyUI-col--span-22 {
+    flex: 1 1 91.6666666667%;
+    max-width: 91.6666666667%;
+}
+.SpotlyUI-col--span-23 {
+    flex: 1 1 95.8333333333%;
+    max-width: 95.8333333333%;
+}
+.SpotlyUI-col--span-24 {
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+
+/* Order */
+.SpotlyUI-col--order-1 {
+    order: 1;
+}
+.SpotlyUI-col--order-2 {
+    order: 2;
+}
+.SpotlyUI-col--order-3 {
+    order: 3;
+}
+.SpotlyUI-col--order-4 {
+    order: 4;
+}
+.SpotlyUI-col--order-5 {
+    order: 5;
+}
+.SpotlyUI-col--order-6 {
+    order: 6;
+}
+.SpotlyUI-col--order-7 {
+    order: 7;
+}
+.SpotlyUI-col--order-8 {
+    order: 8;
+}
+.SpotlyUI-col--order-9 {
+    order: 9;
+}
+.SpotlyUI-col--order-10 {
+    order: 10;
+}
+.SpotlyUI-col--order-11 {
+    order: 11;
+}
+.SpotlyUI-col--order-12 {
+    order: 12;
+}
+.SpotlyUI-col--order-13 {
+    order: 13;
+}
+.SpotlyUI-col--order-14 {
+    order: 14;
+}
+.SpotlyUI-col--order-15 {
+    order: 15;
+}
+.SpotlyUI-col--order-16 {
+    order: 16;
+}
+.SpotlyUI-col--order-17 {
+    order: 17;
+}
+.SpotlyUI-col--order-18 {
+    order: 18;
+}
+.SpotlyUI-col--order-19 {
+    order: 19;
+}
+.SpotlyUI-col--order-20 {
+    order: 20;
+}
+.SpotlyUI-col--order-21 {
+    order: 21;
+}
+.SpotlyUI-col--order-22 {
+    order: 22;
+}
+.SpotlyUI-col--order-23 {
+    order: 23;
+}
+.SpotlyUI-col--order-24 {
+    order: 24;
+}
+
+/* Offset */
+.SpotlyUI-col--offset-1 {
+    margin-left: 4.1666666667%;
+}
+.SpotlyUI-col--offset-2 {
+    margin-left: 8.3333333333%;
+}
+.SpotlyUI-col--offset-3 {
+    margin-left: 12.5%;
+}
+.SpotlyUI-col--offset-4 {
+    margin-left: 16.6666666667%;
+}
+.SpotlyUI-col--offset-5 {
+    margin-left: 20.8333333333%;
+}
+.SpotlyUI-col--offset-6 {
+    margin-left: 25%;
+}
+.SpotlyUI-col--offset-7 {
+    margin-left: 29.1666666667%;
+}
+.SpotlyUI-col--offset-8 {
+    margin-left: 33.3333333333%;
+}
+.SpotlyUI-col--offset-9 {
+    margin-left: 37.5%;
+}
+.SpotlyUI-col--offset-10 {
+    margin-left: 41.6666666667%;
+}
+.SpotlyUI-col--offset-11 {
+    margin-left: 45.8333333333%;
+}
+.SpotlyUI-col--offset-12 {
+    margin-left: 50%;
+}
+.SpotlyUI-col--offset-13 {
+    margin-left: 54.1666666667%;
+}
+.SpotlyUI-col--offset-14 {
+    margin-left: 58.3333333333%;
+}
+.SpotlyUI-col--offset-15 {
+    margin-left: 62.5%;
+}
+.SpotlyUI-col--offset-16 {
+    margin-left: 66.6666666667%;
+}
+.SpotlyUI-col--offset-17 {
+    margin-left: 70.8333333333%;
+}
+.SpotlyUI-col--offset-18 {
+    margin-left: 75%;
+}
+.SpotlyUI-col--offset-19 {
+    margin-left: 79.1666666667%;
+}
+.SpotlyUI-col--offset-20 {
+    margin-left: 83.3333333333%;
+}
+.SpotlyUI-col--offset-21 {
+    margin-left: 87.5%;
+}
+.SpotlyUI-col--offset-22 {
+    margin-left: 91.6666666667%;
+}
+.SpotlyUI-col--offset-23 {
+    margin-left: 95.8333333333%;
+}
+.SpotlyUI-col--offset-24 {
+    margin-left: 100%;
+}
+
+/* Responsive Breakpoints */
