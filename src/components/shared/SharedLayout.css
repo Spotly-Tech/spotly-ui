@@ -7,82 +7,101 @@
 
 /* Alignments */
 .SpotlyUI-stack--align-start,
-.SpotlyUI-row--align-start {
+.SpotlyUI-row--align-start,
+.SpotlyUI-col--align-start {
     align-items: flex-start;
 }
 .SpotlyUI-stack--align-center,
-.SpotlyUI-row--align-center {
+.SpotlyUI-row--align-center,
+.SpotlyUI-col--align-center {
     align-items: center;
 }
 .SpotlyUI-stack--align-end,
-.SpotlyUI-row--align-end {
+.SpotlyUI-row--align-end,
+.SpotlyUI-col--align-end {
     align-items: flex-end;
 }
 .SpotlyUI-stack--align-stretch,
-.SpotlyUI-row--align-stretch {
+.SpotlyUI-row--align-stretch,
+.SpotlyUI-col--align-stretch {
     align-items: stretch;
 }
 .SpotlyUI-stack--align-baseline,
-.SpotlyUI-row--align-baseline {
+.SpotlyUI-row--align-baseline,
+.SpotlyUI-col--align-baseline {
     align-items: baseline;
 }
 
 /* Justify */
 .SpotlyUI-stack--justify-start,
-.SpotlyUI-row--justify-start {
+.SpotlyUI-row--justify-start,
+.SpotlyUI-col--justify-start {
     justify-content: flex-start;
 }
 .SpotlyUI-stack--justify-center,
-.SpotlyUI-row--justify-center {
+.SpotlyUI-row--justify-center,
+.SpotlyUI-col--justify-center {
     justify-content: center;
 }
 .SpotlyUI-stack--justify-end,
-.SpotlyUI-row--justify-end {
+.SpotlyUI-row--justify-end,
+.SpotlyUI-col--justify-end {
     justify-content: flex-end;
 }
 .SpotlyUI-stack--justify-between,
-.SpotlyUI-row--justify-between {
+.SpotlyUI-row--justify-between,
+.SpotlyUI-col--justify-between {
     justify-content: space-between;
 }
 .SpotlyUI-stack--justify-around,
-.SpotlyUI-row--justify-around {
+.SpotlyUI-row--justify-around,
+.SpotlyUI-col--justify-around {
     justify-content: space-around;
 }
 .SpotlyUI-stack--justify-evenly,
-.SpotlyUI-row--justify-evenly {
+.SpotlyUI-row--justify-evenly,
+.SpotlyUI-col--justify-evenly {
     justify-content: space-evenly;
 }
 
 /* Spacing */
 .SpotlyUI-stack--spacing-none,
-.SpotlyUI-row--spacing-none {
+.SpotlyUI-row--spacing-none,
+.SpotlyUI-col--spacing-none {
     gap: 0;
 }
 .SpotlyUI-stack--spacing-xs,
-.SpotlyUI-row--spacing-xs {
+.SpotlyUI-row--spacing-xs,
+.SpotlyUI-col--spacing-xs {
     gap: 0.25rem;
 }
 .SpotlyUI-stack--spacing-sm,
-.SpotlyUI-row--spacing-sm {
+.SpotlyUI-row--spacing-sm,
+.SpotlyUI-col--spacing-sm {
     gap: 0.5rem;
 }
 .SpotlyUI-stack--spacing-md,
-.SpotlyUI-row--spacing-md {
+.SpotlyUI-row--spacing-md,
+.SpotlyUI-col--spacing-md {
     gap: 1rem;
 }
 .SpotlyUI-stack--spacing-lg,
-.SpotlyUI-row--spacing-lg {
+.SpotlyUI-row--spacing-lg,
+.SpotlyUI-col--spacing-lg {
     gap: 1.5rem;
 }
 .SpotlyUI-stack--spacing-xl,
-.SpotlyUI-row--spacing-xl {
+.SpotlyUI-row--spacing-xl,
+.SpotlyUI-col--spacing-xl {
     gap: 2rem;
 }
 .SpotlyUI-stack--spacing-2xl,
-.SpotlyUI-row--spacing-2xl {
+.SpotlyUI-row--spacing-2xl,
+.SpotlyUI-col--spacing-2xl {
     gap: 3rem;
 }
 .SpotlyUI-stack--spacing-3xl,
-.SpotlyUI-row--spacing-3xl {
+.SpotlyUI-row--spacing-3xl,
+.SpotlyUI-col--spacing-3xl {
     gap: 4rem;
 }
