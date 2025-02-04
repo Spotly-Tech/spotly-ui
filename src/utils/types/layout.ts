@@ -36,21 +36,45 @@ export type RowProps<C extends React.ElementType = "div"> = BoxProps<C> &
     };
 
 /* Column */
-type ColSpan = number | "auto";
+type ColDefaultValue =
+    | 1
+    | 2
+    | 3
+    | 4
+    | 5
+    | 6
+    | 7
+    | 8
+    | 9
+    | 10
+    | 11
+    | 12
+    | 13
+    | 14
+    | 15
+    | 16
+    | 17
+    | 18
+    | 19
+    | 20
+    | 21
+    | 22
+    | 23
+    | 24;
 type ColBreakpoint = {
-    span?: ColSpan;
-    offset?: number;
-    order?: number;
+    span?: ColDefaultValue | "auto";
+    offset?: 0 | ColDefaultValue;
+    order?: ColDefaultValue;
 };
 export type ColProps = ComponentProps<"div"> &
     LayoutSharedProps & {
-        span?: ColSpan;
-        offset?: number;
-        order?: number;
-        xs?: ColSpan | ColBreakpoint;
-        sm?: ColSpan | ColBreakpoint;
-        md?: ColSpan | ColBreakpoint;
-        lg?: ColSpan | ColBreakpoint;
-        xl?: ColSpan | ColBreakpoint;
-        xxl?: ColSpan | ColBreakpoint;
+        span?: ColDefaultValue | "auto";
+        offset?: 0 | ColDefaultValue;
+        order?: ColDefaultValue;
+        xs?: ColDefaultValue | "auto" | ColBreakpoint;
+        sm?: ColDefaultValue | "auto" | ColBreakpoint;
+        md?: ColDefaultValue | "auto" | ColBreakpoint;
+        lg?: ColDefaultValue | "auto" | ColBreakpoint;
+        xl?: ColDefaultValue | "auto" | ColBreakpoint;
+        xxl?: ColDefaultValue | "auto" | ColBreakpoint;
     };
