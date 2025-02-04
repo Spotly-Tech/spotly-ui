@@ -9,7 +9,7 @@
 
 /* BASE TEXT */
 .SpotlyUI-text {
-    display: inline;
+    display: block;
     font-family: var(--spotly-ui-font-family);
 }
 
