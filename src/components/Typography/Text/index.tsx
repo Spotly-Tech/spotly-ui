@@ -10,7 +10,7 @@ import React, { forwardRef } from "react";
 import { PolymorphicRef } from "@/utils/types/polymorphic";
 import { TextComponent, TextProps } from "@/utils/types/text";
 
-import "@/components/shared/SharedText.css";
+import "@/components/shared/SharedTypography.css";
 import "./Text.css";
 
 // @ts-expect-error - unexpected typing errors

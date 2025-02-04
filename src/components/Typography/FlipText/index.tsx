@@ -11,7 +11,7 @@ import { motion } from "motion/react";
 
 import { FlipTextProps } from "@/utils/types/text";
 
-import "@/components/shared/SharedText.css";
+import "@/components/shared/SharedTypography.css";
 import "./FlipText.css";
 
 export const FlipText = forwardRef<HTMLParagraphElement, FlipTextProps>(
