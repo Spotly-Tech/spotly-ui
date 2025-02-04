@@ -264,7 +264,6 @@ export const Alignments: Story = {
                     border: "1px dashed gray",
                     padding: "0.5rem",
                     width: "300px",
-                    textAlign: "center",
                 }}
             >
                 <Text align="center">Center-aligned Text</Text>
@@ -274,7 +273,6 @@ export const Alignments: Story = {
                     border: "1px dashed gray",
                     padding: "0.5rem",
                     width: "300px",
-                    textAlign: "right",
                 }}
             >
                 <Text align="right">Right-aligned Text</Text>
