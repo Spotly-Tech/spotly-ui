@@ -115,3 +115,17 @@
 .SpotlyUI-flip-text--weight-black {
     font-weight: var(--spotly-ui-font-weight-black);
 }
+
+/* ALIGNMENTS */
+.SpotlyUI-text--align-left,
+.SpotlyUI-flip-text--align-left {
+    text-align: left;
+}
+.SpotlyUI-text--align-center,
+.SpotlyUI-flip-text--align-center {
+    text-align: center;
+}
+.SpotlyUI-text--align-right,
+.SpotlyUI-flip-text--align-right {
+    text-align: right;
+}
