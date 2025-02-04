@@ -10,7 +10,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { FaSearch } from "react-icons/fa";
 
 const meta: Meta<typeof Input> = {
-    title: "Components/Input",
+    title: "Data Entry/Input",
     component: Input,
     parameters: {
         layout: "centered",
