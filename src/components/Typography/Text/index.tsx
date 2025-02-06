@@ -8,7 +8,7 @@
 import React, { forwardRef } from "react";
 
 import { PolymorphicRef } from "@/utils/types/polymorphic";
-import { TextComponent, TextProps } from "@/utils/types/text";
+import { TextComponent, TextProps } from "@/utils/types/typography";
 
 import "@/components/shared/SharedTypography.css";
 import "./Text.css";

@@ -9,7 +9,7 @@ import { forwardRef } from "react";
 
 import { motion } from "motion/react";
 
-import { FlipTextProps } from "@/utils/types/text";
+import { FlipTextProps } from "@/utils/types/typography";
 
 import "@/components/shared/SharedTypography.css";
 import "./FlipText.css";
