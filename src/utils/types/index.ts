@@ -6,9 +6,10 @@
  */
 
 export * from "./button";
+export * from "./divider";
 export * from "./feedback";
+export * from "./icon";
 export * from "./input";
 export * from "./layout";
 export * from "./polymorphic";
-export * from "./text";
-export * from "./divider";
+export * from "./typography";
