@@ -33,7 +33,7 @@ export const getClassNames = ({
         if (typeof value === "number" || value === "auto") {
             classes.push(`SpotlyUI-col--${bp}-${value}`);
         } else if (typeof value === "object" && value !== null) {
-            if (value.span) classes.push(`SpotlyUI-col--${bp}-${value.span}`);
+            if (value.span) classes.push(`SpotlyUI-col--${bp}-span-${value.span}`);
             if (value.offset) classes.push(`SpotlyUI-col--${bp}-offset-${value.offset}`);
             if (value.order) classes.push(`SpotlyUI-col--${bp}-order-${value.order}`);
         }
