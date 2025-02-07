@@ -7,6 +7,61 @@
 
 /* ======== XS SCREENS ======== */
 @media (max-width: 575px) {
+    .SpotlyUI-col--xs-auto {
+        flex: 1 1 auto;
+    }
+    .SpotlyUI-col--xs-1 {
+        flex: 1 1 4.1667%;
+        max-width: 4.1667%;
+    }
+    .SpotlyUI-col--xs-2 {
+        flex: 1 1 8.3333%;
+        max-width: 8.3333%;
+    }
+    .SpotlyUI-col--xs-3 {
+        flex: 1 1 12.5%;
+        max-width: 12.5%;
+    }
+    .SpotlyUI-col--xs-4 {
+        flex: 1 1 16.6667%;
+        max-width: 16.6667%;
+    }
+    .SpotlyUI-col--xs-5 {
+        flex: 1 1 20.8333%;
+        max-width: 20.8333%;
+    }
+    .SpotlyUI-col--xs-6 {
+        flex: 1 1 25%;
+        max-width: 25%;
+    }
+    .SpotlyUI-col--xs-7 {
+        flex: 1 1 29.1667%;
+        max-width: 29.1667%;
+    }
+    .SpotlyUI-col--xs-8 {
+        flex: 1 1 33.3333%;
+        max-width: 33.3333%;
+    }
+    .SpotlyUI-col--xs-9 {
+        flex: 1 1 37.5%;
+        max-width: 37.5%;
+    }
+    .SpotlyUI-col--xs-10 {
+        flex: 1 1 41.6667%;
+        max-width: 41.6667%;
+    }
+    .SpotlyUI-col--xs-11 {
+        flex: 1 1 45.8333%;
+        max-width: 45.8333%;
+    }
+    .SpotlyUI-col--xs-12 {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+    .SpotlyUI-col--xs-24 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
     /* ======== SPAN ======== */
     .SpotlyUI-col--xs-span-auto {
         flex: 1 1 auto;
@@ -261,6 +316,61 @@
 
 /* ======== XL SCREENS ======== */
 @media (min-width: 576px) {
+    .SpotlyUI-col--sm-auto {
+        flex: 1 1 auto;
+    }
+    .SpotlyUI-col--sm-1 {
+        flex: 1 1 4.1667%;
+        max-width: 4.1667%;
+    }
+    .SpotlyUI-col--sm-2 {
+        flex: 1 1 8.3333%;
+        max-width: 8.3333%;
+    }
+    .SpotlyUI-col--sm-3 {
+        flex: 1 1 12.5%;
+        max-width: 12.5%;
+    }
+    .SpotlyUI-col--sm-4 {
+        flex: 1 1 16.6667%;
+        max-width: 16.6667%;
+    }
+    .SpotlyUI-col--sm-5 {
+        flex: 1 1 20.8333%;
+        max-width: 20.8333%;
+    }
+    .SpotlyUI-col--sm-6 {
+        flex: 1 1 25%;
+        max-width: 25%;
+    }
+    .SpotlyUI-col--sm-7 {
+        flex: 1 1 29.1667%;
+        max-width: 29.1667%;
+    }
+    .SpotlyUI-col--sm-8 {
+        flex: 1 1 33.3333%;
+        max-width: 33.3333%;
+    }
+    .SpotlyUI-col--sm-9 {
+        flex: 1 1 37.5%;
+        max-width: 37.5%;
+    }
+    .SpotlyUI-col--sm-10 {
+        flex: 1 1 41.6667%;
+        max-width: 41.6667%;
+    }
+    .SpotlyUI-col--sm-11 {
+        flex: 1 1 45.8333%;
+        max-width: 45.8333%;
+    }
+    .SpotlyUI-col--sm-12 {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+    .SpotlyUI-col--sm-24 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
     /* ======== SPAN ======== */
     .SpotlyUI-col--sm-span-auto {
         flex: 1 1 auto;
@@ -515,6 +625,61 @@
 
 /* ======== MD SCREENS ======== */
 @media (min-width: 768px) {
+    .SpotlyUI-col--md-auto {
+        flex: 1 1 auto;
+    }
+    .SpotlyUI-col--md-1 {
+        flex: 1 1 4.1667%;
+        max-width: 4.1667%;
+    }
+    .SpotlyUI-col--md-2 {
+        flex: 1 1 8.3333%;
+        max-width: 8.3333%;
+    }
+    .SpotlyUI-col--md-3 {
+        flex: 1 1 12.5%;
+        max-width: 12.5%;
+    }
+    .SpotlyUI-col--md-4 {
+        flex: 1 1 16.6667%;
+        max-width: 16.6667%;
+    }
+    .SpotlyUI-col--md-5 {
+        flex: 1 1 20.8333%;
+        max-width: 20.8333%;
+    }
+    .SpotlyUI-col--md-6 {
+        flex: 1 1 25%;
+        max-width: 25%;
+    }
+    .SpotlyUI-col--md-7 {
+        flex: 1 1 29.1667%;
+        max-width: 29.1667%;
+    }
+    .SpotlyUI-col--md-8 {
+        flex: 1 1 33.3333%;
+        max-width: 33.3333%;
+    }
+    .SpotlyUI-col--md-9 {
+        flex: 1 1 37.5%;
+        max-width: 37.5%;
+    }
+    .SpotlyUI-col--md-10 {
+        flex: 1 1 41.6667%;
+        max-width: 41.6667%;
+    }
+    .SpotlyUI-col--md-11 {
+        flex: 1 1 45.8333%;
+        max-width: 45.8333%;
+    }
+    .SpotlyUI-col--md-12 {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+    .SpotlyUI-col--md-24 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
     /* ======== SPAN ======== */
     .SpotlyUI-col--md-span-auto {
         flex: 1 1 auto;
@@ -769,6 +934,61 @@
 
 /* ======== LG SCREENS ======== */
 @media (min-width: 992px) {
+    .SpotlyUI-col--lg-auto {
+        flex: 1 1 auto;
+    }
+    .SpotlyUI-col--lg-1 {
+        flex: 1 1 4.1667%;
+        max-width: 4.1667%;
+    }
+    .SpotlyUI-col--lg-2 {
+        flex: 1 1 8.3333%;
+        max-width: 8.3333%;
+    }
+    .SpotlyUI-col--lg-3 {
+        flex: 1 1 12.5%;
+        max-width: 12.5%;
+    }
+    .SpotlyUI-col--lg-4 {
+        flex: 1 1 16.6667%;
+        max-width: 16.6667%;
+    }
+    .SpotlyUI-col--lg-5 {
+        flex: 1 1 20.8333%;
+        max-width: 20.8333%;
+    }
+    .SpotlyUI-col--lg-6 {
+        flex: 1 1 25%;
+        max-width: 25%;
+    }
+    .SpotlyUI-col--lg-7 {
+        flex: 1 1 29.1667%;
+        max-width: 29.1667%;
+    }
+    .SpotlyUI-col--lg-8 {
+        flex: 1 1 33.3333%;
+        max-width: 33.3333%;
+    }
+    .SpotlyUI-col--lg-9 {
+        flex: 1 1 37.5%;
+        max-width: 37.5%;
+    }
+    .SpotlyUI-col--lg-10 {
+        flex: 1 1 41.6667%;
+        max-width: 41.6667%;
+    }
+    .SpotlyUI-col--lg-11 {
+        flex: 1 1 45.8333%;
+        max-width: 45.8333%;
+    }
+    .SpotlyUI-col--lg-12 {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+    .SpotlyUI-col--lg-24 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
     /* ======== SPAN ======== */
     .SpotlyUI-col--lg-span-auto {
         flex: 1 1 auto;
@@ -1023,6 +1243,61 @@
 
 /* ======== XL SCREENS ======== */
 @media (min-width: 1200px) {
+    .SpotlyUI-col--xl-auto {
+        flex: 1 1 auto;
+    }
+    .SpotlyUI-col--xl-1 {
+        flex: 1 1 4.1667%;
+        max-width: 4.1667%;
+    }
+    .SpotlyUI-col--xl-2 {
+        flex: 1 1 8.3333%;
+        max-width: 8.3333%;
+    }
+    .SpotlyUI-col--xl-3 {
+        flex: 1 1 12.5%;
+        max-width: 12.5%;
+    }
+    .SpotlyUI-col--xl-4 {
+        flex: 1 1 16.6667%;
+        max-width: 16.6667%;
+    }
+    .SpotlyUI-col--xl-5 {
+        flex: 1 1 20.8333%;
+        max-width: 20.8333%;
+    }
+    .SpotlyUI-col--xl-6 {
+        flex: 1 1 25%;
+        max-width: 25%;
+    }
+    .SpotlyUI-col--xl-7 {
+        flex: 1 1 29.1667%;
+        max-width: 29.1667%;
+    }
+    .SpotlyUI-col--xl-8 {
+        flex: 1 1 33.3333%;
+        max-width: 33.3333%;
+    }
+    .SpotlyUI-col--xl-9 {
+        flex: 1 1 37.5%;
+        max-width: 37.5%;
+    }
+    .SpotlyUI-col--xl-10 {
+        flex: 1 1 41.6667%;
+        max-width: 41.6667%;
+    }
+    .SpotlyUI-col--xl-11 {
+        flex: 1 1 45.8333%;
+        max-width: 45.8333%;
+    }
+    .SpotlyUI-col--xl-12 {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+    .SpotlyUI-col--xl-24 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
     /* ======== SPAN ======== */
     .SpotlyUI-col--xl-span-auto {
         flex: 1 1 auto;
@@ -1277,6 +1552,61 @@
 
 /* ======== XXL SCREENS ======== */
 @media (min-width: 1400px) {
+    .SpotlyUI-col--xxl-auto {
+        flex: 1 1 auto;
+    }
+    .SpotlyUI-col--xxl-1 {
+        flex: 1 1 4.1667%;
+        max-width: 4.1667%;
+    }
+    .SpotlyUI-col--xxl-2 {
+        flex: 1 1 8.3333%;
+        max-width: 8.3333%;
+    }
+    .SpotlyUI-col--xxl-3 {
+        flex: 1 1 12.5%;
+        max-width: 12.5%;
+    }
+    .SpotlyUI-col--xxl-4 {
+        flex: 1 1 16.6667%;
+        max-width: 16.6667%;
+    }
+    .SpotlyUI-col--xxl-5 {
+        flex: 1 1 20.8333%;
+        max-width: 20.8333%;
+    }
+    .SpotlyUI-col--xxl-6 {
+        flex: 1 1 25%;
+        max-width: 25%;
+    }
+    .SpotlyUI-col--xxl-7 {
+        flex: 1 1 29.1667%;
+        max-width: 29.1667%;
+    }
+    .SpotlyUI-col--xxl-8 {
+        flex: 1 1 33.3333%;
+        max-width: 33.3333%;
+    }
+    .SpotlyUI-col--xxl-9 {
+        flex: 1 1 37.5%;
+        max-width: 37.5%;
+    }
+    .SpotlyUI-col--xxl-10 {
+        flex: 1 1 41.6667%;
+        max-width: 41.6667%;
+    }
+    .SpotlyUI-col--xxl-11 {
+        flex: 1 1 45.8333%;
+        max-width: 45.8333%;
+    }
+    .SpotlyUI-col--xxl-12 {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+    .SpotlyUI-col--xxl-24 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
     /* ======== SPAN ======== */
     .SpotlyUI-col--xxl-span-auto {
         flex: 1 1 auto;
