@@ -8,9 +8,10 @@
 import { forwardRef } from "react";
 
 import { getClassNames } from "@/utils/helpers/Column/getClassNames";
-import { ColProps } from "@/utils/types";
+import { ColProps } from "@/utils/types/layout";
 
 import "./Col.css";
+import "./Col.responsive.css";
 
 export const Col = forwardRef<HTMLDivElement, ColProps>(
     (
