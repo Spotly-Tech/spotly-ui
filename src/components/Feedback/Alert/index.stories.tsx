@@ -63,7 +63,7 @@ type Story = StoryObj<typeof Alert>;
 
 export const Default: Story = {
     render: () => (
-        <Stack direction="column" spacing="sm" style={{ width: "350px" }}>
+        <Stack direction="column" spacing="sm">
             <Alert fullWidth rounded color="success">
                 This is a success alert.
             </Alert>
@@ -81,7 +81,7 @@ export const Default: Story = {
 };
 export const Outlined: Story = {
     render: () => (
-        <Stack direction="column" spacing="sm" style={{ width: "350px" }}>
+        <Stack direction="column" spacing="sm">
             <Alert fullWidth rounded color="success" variant="outlined">
                 This is a success alert.
             </Alert>
@@ -134,7 +134,7 @@ export const WithAction: Story = {
 
         return (
             <div>
-                <Stack direction="column" spacing="sm" style={{ width: "350px" }}>
+                <Stack direction="column" spacing="sm">
                     {alerts.success && (
                         <Alert
                             fullWidth
@@ -173,6 +173,97 @@ export const WithAction: Story = {
                             fullWidth
                             rounded
                             color="info"
+                            action="Undo"
+                            onClose={() => handleUndo("info")}
+                        >
+                            This is an info alert.
+                        </Alert>
+                    )}
+                    <Button onClick={showAllAlerts}>Show All Alerts</Button>
+                </Stack>
+            </div>
+        );
+    },
+};
+export const OutlinedWithAction: Story = {
+    render: () => {
+        const [alerts, setAlerts] = useState({
+            success: true,
+            danger: true,
+            warning: true,
+            info: true,
+        });
+
+        const handleUndo = (type: keyof typeof alerts) => {
+            setAlerts((prev) => ({ ...prev, [type]: false }));
+        };
+
+        const showAllAlerts = () => {
+            setAlerts({
+                success: true,
+                danger: true,
+                warning: true,
+                info: true,
+            });
+        };
+
+        useEffect(() => {
+            const timers = Object.keys(alerts).map((type) =>
+                setTimeout(() => {
+                    setAlerts((prev) => ({ ...prev, [type]: false }));
+                }, 5000)
+            );
+
+            return () => {
+                timers.forEach(clearTimeout);
+            };
+        }, []);
+
+        return (
+            <div>
+                <Stack direction="column" spacing="sm">
+                    {alerts.success && (
+                        <Alert
+                            fullWidth
+                            rounded
+                            color="success"
+                            variant="outlined"
+                            action="Undo"
+                            onClose={() => handleUndo("success")}
+                        >
+                            This is a success alert.
+                        </Alert>
+                    )}
+                    {alerts.danger && (
+                        <Alert
+                            fullWidth
+                            rounded
+                            color="danger"
+                            variant="outlined"
+                            action="Undo"
+                            onClose={() => handleUndo("danger")}
+                        >
+                            This is a danger alert.
+                        </Alert>
+                    )}
+                    {alerts.warning && (
+                        <Alert
+                            fullWidth
+                            rounded
+                            color="warning"
+                            variant="outlined"
+                            action="Undo"
+                            onClose={() => handleUndo("warning")}
+                        >
+                            This is a warning alert.
+                        </Alert>
+                    )}
+                    {alerts.info && (
+                        <Alert
+                            fullWidth
+                            rounded
+                            color="info"
+                            variant="outlined"
                             action="Undo"
                             onClose={() => handleUndo("info")}
                         >
