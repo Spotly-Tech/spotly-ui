@@ -7,12 +7,9 @@
 
 import { forwardRef } from "react";
 
-import { CheckCircle } from "@/assets/icons/CheckCircle";
-import { ErrorCircle } from "@/assets/icons/ErrorCircle";
-import { InfoCircle } from "@/assets/icons/InfoCircle";
-import { WarningCircle } from "@/assets/icons/WarningCircle";
-import { Button, Stack, Text } from "@/components";
+import { Button, Col, Row, Text } from "@/components";
 
+import { getActionColor, getDefaultIcon } from "@/utils/helpers/Alert";
 import { AlertProps } from "@/utils/types";
 
 import "./Alert.css";
@@ -21,7 +18,7 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
     (
         {
             children,
-            color = "success",
+            color = "warning",
             variant = "solid",
             action,
             icon,
@@ -34,68 +31,46 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
         ref
     ) => {
         const baseClass = `SpotlyUI-alert SpotlyUI-alert--color-${color} SpotlyUI-alert--variant-${variant} ${fullWidth ? "SpotlyUI-alert--full-width" : ""} ${rounded ? "SpotlyUI-alert--rounded" : ""} ${className}`;
-        const defaultIcon = (() => {
-            switch (color) {
-                case "success":
-                    return (
-                        <CheckCircle
-                            stroke={variant === "solid" ? "#2D3B08" : "#c3e956"}
-                        />
-                    );
-                case "danger":
-                    return (
-                        <ErrorCircle
-                            stroke={variant === "solid" ? "#850200" : "#ff302c"}
-                            fill={variant === "solid" ? "#850200" : "#ff302c"}
-                        />
-                    );
-                case "info":
-                    return (
-                        <InfoCircle
-                            stroke={variant === "solid" ? "#1a449d" : "#7c9fe9"}
-                            fill={variant === "solid" ? "#1a449d" : "#7c9fe9"}
-                        />
-                    );
-                case "warning":
-                default:
-                    return (
-                        <WarningCircle
-                            stroke={variant === "solid" ? "#614700" : "#ffd255"}
-                            fill={variant === "solid" ? "#614700" : "#ffd255"}
-                        />
-                    );
-            }
-        })();
+        const defaultIcon = getDefaultIcon({ color, variant });
         const alertIcon = icon || defaultIcon;
 
         return (
-            <Stack
+            <Row
                 ref={ref}
                 role="alert"
-                direction="row"
-                justify="between"
                 align="center"
-                spacing="xs"
                 className={`${baseClass}`}
+                spacing="sm"
                 {...restProps}
             >
-                {alertIcon && <span className="SpotlyUI-alert__icon">{alertIcon}</span>}
-                <Text as="span" weight="medium" className="SpotlyUI-alert__text">
-                    {children}
-                </Text>
+                <Col span={2}>
+                    {alertIcon && (
+                        <span className="SpotlyUI-alert__icon">{alertIcon}</span>
+                    )}
+                </Col>
+                <Col span={action ? 18 : 22}>
+                    <Text as="span" weight="medium" className="SpotlyUI-alert__text">
+                        {children}
+                    </Text>
+                </Col>
                 {action && (
-                    <Button
-                        variant="ghost"
-                        size="small"
-                        className="SpotlyUI-alert__action"
-                        onClick={onClose}
-                    >
-                        <Text color="dark" weight="medium">
-                            {action}
-                        </Text>
-                    </Button>
+                    <Col span={4}>
+                        <Button
+                            variant="ghost"
+                            size="small"
+                            className="SpotlyUI-alert__action"
+                            onClick={onClose}
+                        >
+                            <Text
+                                color={getActionColor({ color, variant })}
+                                weight="medium"
+                            >
+                                {action}
+                            </Text>
+                        </Button>
+                    </Col>
                 )}
-            </Stack>
+            </Row>
         );
     }
 );
