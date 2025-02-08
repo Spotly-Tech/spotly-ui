@@ -34,7 +34,10 @@ export const getDefaultIcon = ({
     }
 };
 
-export const getActionColor = ({color, variant}: Pick<AlertProps, "color" | "variant">) => {
+export const getActionColor = ({
+    color,
+    variant,
+}: Pick<AlertProps, "color" | "variant">) => {
     switch (color) {
         case "success":
             return variant === "solid" ? "dark" : "success";
