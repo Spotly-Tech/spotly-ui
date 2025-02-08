@@ -7,7 +7,7 @@
 
 import { forwardRef } from "react";
 
-import { RowProps } from "@/utils/types";
+import { RowProps } from "@/utils/types/layout";
 
 import "@/components/shared/SharedLayout.css";
 import "./Row.css";
