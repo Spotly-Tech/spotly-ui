@@ -253,3 +253,55 @@ export const Order: Story = {
         </Stack>
     ),
 };
+export const Responsive: Story = {
+    render: () => (
+        <Stack spacing="xs">
+            <Row spacing="xs">
+                <Col
+                    span={12}
+                    xs={{ span: 24 }}
+                    sm={{ span: 18 }}
+                    md={{ span: 12 }}
+                    lg={{ span: 8 }}
+                    xl={{ span: 6 }}
+                    xxl={{ span: 4 }}
+                    justify="center"
+                >
+                    <Text>Responsive Col</Text>
+                </Col>
+            </Row>
+        </Stack>
+    ),
+};
+export const ResponsivePropObject: StoryObj<typeof Col> = {
+    render: () => (
+        <Stack>
+            <Row>
+                <Col
+                    span={12}
+                    xs={{ span: 24, order: 1 }}
+                    sm={{ span: 18, order: 3 }}
+                    md={{ span: 23, order: 2 }}
+                    lg={{ span: 8, order: 9 }}
+                    xl={{ span: 6, order: 12 }}
+                    xxl={{ span: 4, order: 15 }}
+                    justify="center"
+                >
+                    <Text>Responsive Col 1</Text>
+                </Col>
+                <Col
+                    span={12}
+                    xs={{ span: 24, order: 2 }}
+                    sm={{ span: 18, order: 2 }}
+                    md={{ span: 1, order: 1 }}
+                    lg={{ span: 8, order: 8 }}
+                    xl={{ span: 6, order: 11 }}
+                    xxl={{ span: 4, order: 14 }}
+                    justify="center"
+                >
+                    <Text>Responsive Col 2</Text>
+                </Col>
+            </Row>
+        </Stack>
+    ),
+};
