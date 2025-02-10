@@ -8,7 +8,7 @@
 @import "./colors.css";
 @import "./typography.css";
 
-/* COLORS */
+/* ======== COLORS ======== */
 .SpotlyUI-text--color-default,
 .SpotlyUI-flip-text--color-default {
     color: var(--spotly-ui-light-50);
@@ -56,76 +56,105 @@
     color: var(--spotly-ui-success-500);
 }
 
-/* SIZES */
+/* ======== SIZES ======== */
 .SpotlyUI-text--size-2xs,
-.SpotlyUI-flip-text--size-2xs {
+.SpotlyUI-flip-text--size-2xs,
+.SpotlyUI-shiny-text--size-2xs {
     font-size: var(--spotly-ui-font-size-2xs);
 }
 .SpotlyUI-text--size-xs,
-.SpotlyUI-flip-text--size-xs {
+.SpotlyUI-flip-text--size-xs,
+.SpotlyUI-shiny-text--size-xs {
     font-size: var(--spotly-ui-font-size-xs);
 }
 .SpotlyUI-text--size-sm,
-.SpotlyUI-flip-text--size-sm {
+.SpotlyUI-flip-text--size-sm,
+.SpotlyUI-shiny-text--size-sm {
     font-size: var(--spotly-ui-font-size-sm);
 }
 .SpotlyUI-text--size-base,
-.SpotlyUI-flip-text--size-base {
+.SpotlyUI-flip-text--size-base,
+.SpotlyUI-shiny-text--size-base {
     font-size: var(--spotly-ui-font-size-base);
 }
 .SpotlyUI-text--size-lg,
-.SpotlyUI-flip-text--size-lg {
+.SpotlyUI-flip-text--size-lg,
+.SpotlyUI-shiny-text--size-lg {
     font-size: var(--spotly-ui-font-size-lg);
 }
 .SpotlyUI-text--size-xl,
-.SpotlyUI-flip-text--size-xl {
+.SpotlyUI-flip-text--size-xl,
+.SpotlyUI-shiny-text--size-xl {
     font-size: var(--spotly-ui-font-size-xl);
 }
 .SpotlyUI-text--size-2xl,
-.SpotlyUI-flip-text--size-2xl {
+.SpotlyUI-flip-text--size-2xl,
+.SpotlyUI-shiny-text--size-2xl {
     font-size: var(--spotly-ui-font-size-2xl);
 }
 .SpotlyUI-text--size-3xl,
-.SpotlyUI-flip-text--size-3xl {
+.SpotlyUI-flip-text--size-3xl,
+.SpotlyUI-shiny-text--size-3xl {
     font-size: var(--spotly-ui-font-size-3xl);
 }
 
-/* WEIGHTS */
+/* ======== WEIGHTS ======== */
 .SpotlyUI-text--weight-thin,
-.SpotlyUI-flip-text--weight-thin {
+.SpotlyUI-flip-text--weight-thin,
+.SpotlyUI-shiny-text--weight-thin {
     font-weight: var(--spotly-ui-font-weight-thin);
 }
 .SpotlyUI-text--weight-normal,
-.SpotlyUI-flip-text--weight-normal {
+.SpotlyUI-flip-text--weight-normal,
+.SpotlyUI-shiny-text--weight-normal {
     font-weight: var(--spotly-ui-font-weight-normal);
 }
 .SpotlyUI-text--weight-medium,
-.SpotlyUI-flip-text--weight-medium {
+.SpotlyUI-flip-text--weight-medium,
+.SpotlyUI-shiny-text--weight-medium {
     font-weight: var(--spotly-ui-font-weight-medium);
 }
 .SpotlyUI-text--weight-semibold,
-.SpotlyUI-flip-text--weight-semibold {
+.SpotlyUI-flip-text--weight-semibold,
+.SpotlyUI-shiny-text--weight-semibold {
     font-weight: var(--spotly-ui-font-weight-semibold);
 }
 .SpotlyUI-text--weight-bold,
-.SpotlyUI-flip-text--weight-bold {
+.SpotlyUI-flip-text--weight-bold,
+.SpotlyUI-shiny-text--weight-bold {
     font-weight: var(--spotly-ui-font-weight-bold);
 }
 .SpotlyUI-text--weight-black,
-.SpotlyUI-flip-text--weight-black {
+.SpotlyUI-flip-text--weight-black,
+.SpotlyUI-shiny-text--weight-black {
     font-weight: var(--spotly-ui-font-weight-black);
 }
 
-/* ALIGNMENTS */
+/* ======== ALIGNMENT ======== */
 .SpotlyUI-text--align-left,
-.SpotlyUI-flip-text--align-left {
+.SpotlyUI-flip-text--align-left,
+.SpotlyUI-shiny-text--align-left {
     text-align: left;
 }
 .SpotlyUI-text--align-center,
-.SpotlyUI-flip-text--align-center {
+.SpotlyUI-flip-text--align-center,
+.SpotlyUI-shiny-text--align-center {
     text-align: center;
 }
 .SpotlyUI-text--align-right,
-.SpotlyUI-flip-text--align-right {
+.SpotlyUI-flip-text--align-right,
+.SpotlyUI-shiny-text--align-right {
     text-align: right;
+}
+
+/* ======== ITALIC ======== */
+.SpotlyUI-text--italic,
+.SpotlyUI-shiny-text--italic {
+    font-style: italic;
+}
+
+/* ======== UNDERLINE ======== */
+.SpotlyUI-text--underline,
+.SpotlyUI-shiny-text--underline {
+    text-decoration: underline;
 }

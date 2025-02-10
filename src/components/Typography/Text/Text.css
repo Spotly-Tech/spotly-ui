@@ -7,23 +7,13 @@
 
 @import "../../shared/typography.css";
 
-/* BASE TEXT */
+/* ======== BASE ======== */
 .SpotlyUI-text {
     display: block;
     font-family: var(--spotly-ui-font-family);
 }
 
-/* ITALIC */
-.SpotlyUI-text--italic {
-    font-style: italic;
-}
-
-/* UNDERLINE */
-.SpotlyUI-text--underline {
-    text-decoration: wavy underline;
-}
-
-/* EMPHASIS */
+/* ======== EMPHASIS ======== */
 .SpotlyUI-text--emphasis-low {
     color: var(--spotly-ui-light-500);
     font-weight: var(--spotly-ui-font-weight-normal);
