@@ -7,8 +7,8 @@
 
 import { PolymorphicComponentPropsWithRef } from "./polymorphic";
 
-/* SHARED TEXT PROPS */
-export interface SharedTextProps {
+/* ======== SHARED TEXT PROPS ======== */
+export type SharedTextProps = {
     color?:
         | "default"
         | "default-gradient"
@@ -21,9 +21,9 @@ export interface SharedTextProps {
         | "success";
     size?: "2xs" | "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl";
     weight?: "thin" | "normal" | "medium" | "semibold" | "bold" | "black";
-}
+};
 
-/* TEXT PROPS */
+/* ======== TEXT PROPS ======== */
 export type TextProps<C extends React.ElementType> = PolymorphicComponentPropsWithRef<
     C,
     SharedTextProps & {
@@ -37,9 +37,27 @@ export type TextComponent = <C extends React.ElementType = "span">(
     props: TextProps<C>
 ) => React.ReactElement | null;
 
-/* FLIP TEXT PROPS */
-export interface FlipTextProps extends SharedTextProps {
+/* ======== FLIP TEXT PROPS ======== */
+export type FlipTextProps = SharedTextProps & {
+    color?: Exclude<SharedTextProps["color"], "default-gradient">;
     children: string;
     duration?: number;
     delay?: number;
-}
+};
+
+/* ======== SHINY TEXT PROPS ======== */
+export type ShinyTextProps<C extends React.ElementType> =
+    PolymorphicComponentPropsWithRef<
+        C,
+        Omit<SharedTextProps, "color"> & {
+            align?: "left" | "center" | "right";
+            italic?: boolean;
+            underline?: boolean;
+            speed?: number;
+            disabled?: boolean;
+        }
+    >;
+
+export type ShinyTextComponent = <C extends React.ElementType = "span">(
+    props: ShinyTextProps<C>
+) => React.ReactElement | null;
