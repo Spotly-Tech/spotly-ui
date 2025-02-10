@@ -1,0 +1,34 @@
+/*
+ * Copyright (c) Spotly Tech
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+.SpotlyUI-shiny-text {
+    color: #b5b5b5a4;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0) 60%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: block;
+    animation: shiny-animation 5s linear infinite;
+}
+
+@keyframes shiny-animation {
+    0% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: -100%;
+    }
+}
+
+.SpotlyUI-shiny-text--disabled {
+    animation: none;
+}
