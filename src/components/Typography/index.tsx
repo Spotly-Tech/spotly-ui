@@ -6,4 +6,5 @@
  */
 
 export { FlipText } from "./FlipText";
+export { ShinyText } from "./ShinyText";
 export { Text } from "./Text";
