@@ -19,6 +19,7 @@ export const ShinyText: ShinyTextComponent = forwardRef(
     <C extends React.ElementType = "span">(
         {
             as,
+            color = "#b5b5b5a4",
             size = "base",
             weight = "normal",
             align = "left",
@@ -43,7 +44,7 @@ export const ShinyText: ShinyTextComponent = forwardRef(
         return (
             <Component
                 className={`${baseClass} ${italicClass} ${underlineClass} ${disabledClass} ${className || ""}`}
-                style={{ animationDuration }}
+                style={{ color, animationDuration }}
                 ref={ref}
                 {...restProps}
             >
