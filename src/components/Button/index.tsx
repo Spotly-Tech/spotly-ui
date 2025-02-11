@@ -25,6 +25,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             iconPosition = "start",
             isLoading = false,
             indicator = "Loading...",
+            rounded,
             children,
             disabled = false,
             animated = false,
@@ -37,6 +38,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         const baseClass = `SpotlyUI-btn SpotlyUI-btn--${variant} SpotlyUI-btn--${size} SpotlyUI-btn--${color} SpotlyUI-btn--${shape}`;
         const disabledClass = disabled ? "SpotlyUI-btn--disabled" : "";
         const loadingClass = isLoading ? "SpotlyUI-btn--loading" : "";
+        const roundedClass = rounded ? "SpotlyUI-btn--rounded" : "";
 
         const isIconButton = btnType === "icon";
         const isWithIconButton = btnType === "with-icon";
@@ -52,7 +54,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                 ref={ref}
                 className={`${baseClass} ${disabledClass} ${loadingClass} ${
                     isIconButton ? "SpotlyUI-btn--icon" : ""
-                } ${className}`}
+                } ${className || ""} ${roundedClass}`}
                 disabled={disabled || isLoading}
                 aria-disabled={disabled || isLoading}
                 aria-busy={isLoading ? "true" : undefined}
