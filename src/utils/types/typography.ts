@@ -50,6 +50,7 @@ export type ShinyTextProps<C extends React.ElementType> =
     PolymorphicComponentPropsWithRef<
         C,
         Omit<SharedTextProps, "color"> & {
+            color?: string;
             align?: "left" | "center" | "right";
             italic?: boolean;
             underline?: boolean;
