@@ -13,16 +13,19 @@
     --spotly-ui-btn-sm-fs: 0.875rem;
     --spotly-ui-btn-sm-radius: 0.25rem;
     --spotly-ui-btn-sm-padding: 0.25rem 0.5rem;
+    --spotly-ui-btn-sm-rounded-radius: 1rem;
 
     /* Medium Buttons */
     --spotly-ui-btn-md-fs: 1rem;
     --spotly-ui-btn-md-radius: 0.375rem;
     --spotly-ui-btn-md-padding: 0.5rem 1rem;
+    --spotly-ui-btn-md-rounded-radius: 1.5rem;
 
     /* Large Buttons */
     --spotly-ui-btn-lg-fs: 1.125rem;
     --spotly-ui-btn-lg-radius: 0.5rem;
     --spotly-ui-btn-lg-padding: 0.75rem 1.5rem;
+    --spotly-ui-btn-lg-rounded-radius: 2rem;
 }
 
 /* BASE BUTTON */
@@ -61,15 +64,24 @@
     font-size: var(--spotly-ui-btn-sm-fs);
     border-radius: var(--spotly-ui-btn-sm-radius);
 }
+.SpotlyUI-btn--small.SpotlyUI-btn--rounded {
+    border-radius: var(--spotly-ui-btn-sm-rounded-radius);
+}
 .SpotlyUI-btn--medium {
     padding: var(--spotly-ui-btn-md-padding);
     font-size: var(--spotly-ui-btn-md-fs);
     border-radius: var(--spotly-ui-btn-md-radius);
 }
+.SpotlyUI-btn--medium.SpotlyUI-btn--rounded {
+    border-radius: var(--spotly-ui-btn-md-rounded-radius);
+}
 .SpotlyUI-btn--large {
     padding: var(--spotly-ui-btn-lg-padding);
     font-size: var(--spotly-ui-btn-lg-fs);
     border-radius: var(--spotly-ui-btn-lg-radius);
+}
+.SpotlyUI-btn--large.SpotlyUI-btn--rounded {
+    border-radius: var(--spotly-ui-btn-lg-rounded-radius);
 }
 .SpotlyUI-btn--fullwidth {
     width: 100%;
