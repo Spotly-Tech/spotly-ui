@@ -7,6 +7,7 @@
 
 import type { Meta, StoryObj } from "@storybook/react";
 
+import { Button } from "@/components/Button";
 import { Box, Stack } from "@/components/Layout";
 import { ShinyText } from "@/components/Typography/ShinyText";
 
@@ -28,6 +29,14 @@ const meta: Meta = {
             table: {
                 type: { summary: "ReactNode" },
                 defaultValue: { summary: "span" },
+            },
+        },
+        color: {
+            control: { type: "color" },
+            description: "Sets the text base color.",
+            table: {
+                type: { summary: "string" },
+                defaultValue: { summary: "#b5b5b5a4" },
             },
         },
         size: {
@@ -103,20 +112,61 @@ export const Default: Story = {
             description: {
                 story: "Displays the ShinyText component with default settings.",
             },
+            source: {
+                code: `
+<ShinyText>Hello, Shiny World!</ShinyText>
+                `,
+            },
         },
     },
 };
 
 export const Italic: Story = {
     render: () => <ShinyText italic>Hello, Italic Shiny World!</ShinyText>,
+    parameters: {
+        docs: {
+            description: {
+                story: "Displays the ShinyText component with italic styling.",
+            },
+            source: {
+                code: `
+<ShinyText italic>Hello, Italic Shiny World!</ShinyText>
+                `,
+            },
+        },
+    },
 };
 
 export const Underline: Story = {
     render: () => <ShinyText underline>Hello, Underlined Shiny World!</ShinyText>,
+    parameters: {
+        docs: {
+            description: {
+                story: "Displays the ShinyText component with an underline.",
+            },
+            source: {
+                code: `
+<ShinyText underline>Hello, Underlined Shiny World!</ShinyText>
+                `,
+            },
+        },
+    },
 };
 
 export const Disabled: Story = {
     render: () => <ShinyText disabled>Hello, No Shine Here!</ShinyText>,
+    parameters: {
+        docs: {
+            description: {
+                story: "Displays the ShinyText component with the shiny animation disabled.",
+            },
+            source: {
+                code: `
+<ShinyText disabled>Hello, No Shine Here!</ShinyText>
+                `,
+            },
+        },
+    },
 };
 
 export const DifferentSpeeds: Story = {
@@ -127,6 +177,20 @@ export const DifferentSpeeds: Story = {
             <ShinyText speed={10}>Slow Shine</ShinyText>
         </Stack>
     ),
+    parameters: {
+        docs: {
+            description: {
+                story: "Displays the ShinyText component with different animation speeds.",
+            },
+            source: {
+                code: `
+<ShinyText speed={2}>Fast Shine</ShinyText>
+<ShinyText speed={5}>Normal Shine</ShinyText>
+<ShinyText speed={10}>Slow Shine</ShinyText>
+                `,
+            },
+        },
+    },
 };
 
 export const Alignments: Story = {
@@ -143,11 +207,33 @@ export const Alignments: Story = {
             </Box>
         </Stack>
     ),
+    parameters: {
+        docs: {
+            description: {
+                story: "Displays the ShinyText component with different text alignments.",
+            },
+            source: {
+                code: `
+<Stack spacing="md" style={{ width: "100%" }}>
+    <Box style={{ border: "1px dashed gray", padding: "0.5rem", width: "300px" }}>
+        <ShinyText align="left">Left Aligned</ShinyText>
+    </Box>
+    <Box style={{ border: "1px dashed gray", padding: "0.5rem", width: "300px" }}>
+        <ShinyText align="center">Center Aligned</ShinyText>
+    </Box>
+    <Box style={{ border: "1px dashed gray", padding: "0.5rem", width: "300px" }}>
+        <ShinyText align="right">Right Aligned</ShinyText>
+    </Box>
+</Stack>
+                `,
+            },
+        },
+    },
 };
 
 export const Sizes: Story = {
     render: () => (
-        <div>
+        <Stack spacing="md">
             <ShinyText size="2xs">2xs</ShinyText>
             <ShinyText size="xs">xs</ShinyText>
             <ShinyText size="sm">sm</ShinyText>
@@ -156,8 +242,27 @@ export const Sizes: Story = {
             <ShinyText size="xl">xl</ShinyText>
             <ShinyText size="2xl">2xl</ShinyText>
             <ShinyText size="3xl">3xl</ShinyText>
-        </div>
+        </Stack>
     ),
+    parameters: {
+        docs: {
+            description: {
+                story: "Displays the ShinyText component with different sizes.",
+            },
+            source: {
+                code: `
+<ShinyText size="2xs">2xs</ShinyText>
+<ShinyText size="xs">xs</ShinyText>
+<ShinyText size="sm">sm</ShinyText>
+<ShinyText size="base">base</ShinyText>
+<ShinyText size="lg">lg</ShinyText>
+<ShinyText size="xl">xl</ShinyText>
+<ShinyText size="2xl">2xl</ShinyText>
+<ShinyText size="3xl">3xl</ShinyText>
+                `,
+            },
+        },
+    },
 };
 export const Weights: Story = {
     render: () => (
@@ -182,4 +287,46 @@ export const Weights: Story = {
             </ShinyText>
         </Stack>
     ),
+    parameters: {
+        docs: {
+            description: {
+                story: "Displays the ShinyText component with different font weights.",
+            },
+            source: {
+                code: `
+<ShinyText weight="thin">Thin</ShinyText>
+<ShinyText weight="normal">Normal</ShinyText>
+<ShinyText weight="medium">Medium</ShinyText>
+<ShinyText weight="semibold">Semibold</ShinyText>
+<ShinyText weight="bold">Bold</ShinyText>
+<ShinyText weight="black">Black</ShinyText>
+                `,
+            },
+        },
+    },
+};
+export const ButtonWithShinyText: Story = {
+    render: () => (
+        <Button variant="outlined" rounded animated>
+            <ShinyText size="lg" weight="normal">
+                Click Me
+            </ShinyText>
+        </Button>
+    ),
+    parameters: {
+        docs: {
+            description: {
+                story: "Displays a button with the ShinyText component inside, showing how it can be used in a real-world scenario.",
+            },
+            source: {
+                code: `
+<Button variant="outlined" rounded animated>
+    <ShinyText size="lg" weight="normal">
+        Click Me
+    </ShinyText>
+</Button>
+                `,
+            },
+        },
+    },
 };
