@@ -5,7 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+@import "../../shared/typography.css";
+
 .SpotlyUI-shiny-text {
+    font-family: var(--spotly-ui-font-family);
     background: linear-gradient(
         120deg,
         rgba(255, 255, 255, 0) 40%,
