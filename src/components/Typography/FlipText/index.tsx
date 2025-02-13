@@ -23,12 +23,15 @@ export const FlipText = forwardRef<HTMLParagraphElement, FlipTextProps>(
             weight = "normal",
             duration = 0.25,
             delay = 0.25,
+            className = "",
             ...restProps
         },
         ref
     ) => {
         const baseClass = `SpotlyUI-flip-text__letter SpotlyUI-flip-text--color-${color} SpotlyUI-flip-text--size-${size} SpotlyUI-flip-text--weight-${weight}`;
+
         const letters = children.split("");
+
         return (
             <motion.p
                 initial="initial"
@@ -51,7 +54,7 @@ export const FlipText = forwardRef<HTMLParagraphElement, FlipTextProps>(
                                     delay: delay * index,
                                 }}
                                 key={index}
-                                className={baseClass}
+                                className={`${baseClass} ${className}`}
                             >
                                 {letter === " " ? "\u00A0" : letter}
                             </motion.span>
