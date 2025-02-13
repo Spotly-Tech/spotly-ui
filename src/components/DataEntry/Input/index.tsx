@@ -21,16 +21,17 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             color = "default",
             type = "text",
             disabled = false,
+            className = "",
             ...restProps
         },
         ref
     ) => {
-        const disabledClass = disabled ? "SpotlyUI-input--disabled" : "";
         const baseClass = `SpotlyUI-input SpotlyUI-input--size-${inputSize} SpotlyUI-input--color-${color} SpotlyUI-input--type-${type}`;
+        const disabledClass = disabled ? "SpotlyUI-input--disabled" : "";
 
         return (
             <div
-                className={`SpotlyUI-input-wrapper ${withIcon ? `SpotlyUI-input-wrapper--with-icon SpotlyUI-input-wrapper--icon-${iconPosition}` : ""}`}
+                className={`SpotlyUI-input-wrapper ${withIcon ? `SpotlyUI-input-wrapper--with-icon SpotlyUI-input-wrapper--icon-${iconPosition}` : ""} `}
             >
                 {withIcon && icon && iconPosition === "start" && (
                     <span
@@ -41,7 +42,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
                 )}
                 <input
                     ref={ref}
-                    className={`${baseClass} ${disabledClass}`}
+                    className={`${baseClass} ${disabledClass} ${className}`}
                     type={type}
                     disabled={disabled}
                     aria-disabled={disabled}
