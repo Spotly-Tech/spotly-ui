@@ -7,7 +7,7 @@
 
 import React from "react";
 
-import { DividerComponent, DividerProps } from "@/utils/types";
+import { DividerComponent, DividerProps } from "@/utils/types/layout";
 
 import "./Divider.css";
 
@@ -22,9 +22,13 @@ export const Divider: DividerComponent = <C extends React.ElementType = "div">({
     orientation = "horizontal",
     variant = "full",
     m = "0.75rem",
+    className = "",
     ...restProps
 }: DividerProps<C>) => {
     const Component = as || "div";
+
+    const baseClass = `SpotlyUI-divider SpotlyUI-divider--thickness-${thickness} SpotlyUI-divider--orientation-${orientation} SpotlyUI-divider--variant-${variant} SpotlyUI-divider--textAlign-${textAlign}`;
+    const flexClass = flex ? "SpotlyUI-divider--flex" : "";
 
     const marginStyle =
         orientation === "horizontal" ? { margin: `${m} 0` } : { margin: `0 ${m}` };
@@ -43,7 +47,7 @@ export const Divider: DividerComponent = <C extends React.ElementType = "div">({
 
     return (
         <Component
-            className={`SpotlyUI-divider SpotlyUI-divider--thickness-${thickness} SpotlyUI-divider--orientation-${orientation} SpotlyUI-divider--variant-${variant} SpotlyUI-divider--textAlign-${textAlign} ${flex ? "SpotlyUI-divider--flex" : ""}`}
+            className={`${baseClass} ${flexClass} ${className}`}
             role="separator"
             aria-orientation={orientation}
             style={marginStyle}
