@@ -21,15 +21,17 @@ export const Row = forwardRef<HTMLDivElement, RowProps>(
             justify = "start",
             spacing = "none",
             wrap,
-            className,
+            className = "",
             ...restProps
         },
         ref
     ) => {
-        const baseClass = `SpotlyUI-row SpotlyUI-row--align-${align} SpotlyUI-row--justify-${justify} SpotlyUI-row--spacing-${spacing} ${wrap ? "SpotlyUI-row--wrap" : "SpotlyUI-row--nowrap"} ${className || ""}`;
         const Component = as || "div";
+
+        const baseClass = `SpotlyUI-row SpotlyUI-row--align-${align} SpotlyUI-row--justify-${justify} SpotlyUI-row--spacing-${spacing} ${wrap ? "SpotlyUI-row--wrap" : "SpotlyUI-row--nowrap"}`;
+
         return (
-            <Component ref={ref} className={baseClass} {...restProps}>
+            <Component ref={ref} className={`${baseClass} ${className}`} {...restProps}>
                 {children}
             </Component>
         );
