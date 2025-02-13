@@ -27,21 +27,22 @@ export const Text: TextComponent = forwardRef(
             italic = false,
             underline = false,
             children,
-            className,
+            className = "",
             ...restProps
         }: TextProps<C>,
         ref?: PolymorphicRef<C>
     ) => {
         const Component = as || "span";
 
+        const baseClass = `SpotlyUI-text SpotlyUI-text--color-${color} SpotlyUI-text--size-${size} SpotlyUI-text--weight-${weight} SpotlyUI-text--align-${align} `;
         const emphasisClass = emphasis === "low" ? `SpotlyUI-text--emphasis-low` : "";
-        const baseClass = `SpotlyUI-text SpotlyUI-text--color-${color} SpotlyUI-text--size-${size} SpotlyUI-text--weight-${weight} SpotlyUI-text--align-${align} ${emphasisClass}`;
         const italicClass = italic ? "SpotlyUI-text--italic" : "";
         const underlineClass = underline ? "SpotlyUI-text--underline" : "";
+
         return (
             <Component
                 ref={ref}
-                className={`${baseClass} ${italicClass} ${underlineClass} ${className || ""}`}
+                className={`${baseClass} ${italicClass} ${underlineClass} ${emphasisClass} ${className}`}
                 {...restProps}
             >
                 {children}
