@@ -7,7 +7,7 @@
 
 import { forwardRef } from "react";
 
-import { PolymorphicRef } from "@/utils/types";
+import { PolymorphicRef } from "@/utils/types/polymorphic";
 import { ShinyTextComponent, ShinyTextProps } from "@/utils/types/typography";
 
 import "@/components/shared/SharedTypography.css";
@@ -28,7 +28,7 @@ export const ShinyText: ShinyTextComponent = forwardRef(
             speed = 5,
             disabled = false,
             children,
-            className,
+            className = "",
             ...restProps
         }: ShinyTextProps<C>,
         ref?: PolymorphicRef<C>
@@ -41,9 +41,10 @@ export const ShinyText: ShinyTextComponent = forwardRef(
         const italicClass = italic ? "SpotlyUI-shiny-text--italic" : "";
         const underlineClass = underline ? "SpotlyUI-shiny-text--underline" : "";
         const disabledClass = disabled ? "SpotlyUI-shiny-text--disabled" : "";
+
         return (
             <Component
-                className={`${baseClass} ${italicClass} ${underlineClass} ${disabledClass} ${className || ""}`}
+                className={`${baseClass} ${italicClass} ${underlineClass} ${disabledClass} ${className}`}
                 style={{ color, animationDuration }}
                 ref={ref}
                 {...restProps}
