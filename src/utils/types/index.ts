@@ -6,7 +6,6 @@
  */
 
 export * from "./button";
-export * from "./divider";
 export * from "./feedback";
 export * from "./icon";
 export * from "./input";
