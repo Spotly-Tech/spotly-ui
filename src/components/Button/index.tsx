@@ -30,7 +30,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             disabled = false,
             animated = false,
             animation,
-            className,
+            className = "",
             ...props
         },
         ref
@@ -47,14 +47,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             whileHover: { scale: 1.02 },
             whileTap: { scale: 0.98 },
         };
-
         const animationProps = animated ? { ...defaultAnimations, ...animation } : {};
+
         return (
             <motion.button
                 ref={ref}
                 className={`${baseClass} ${disabledClass} ${loadingClass} ${
                     isIconButton ? "SpotlyUI-btn--icon" : ""
-                } ${className || ""} ${roundedClass}`}
+                } ${roundedClass} ${className} `}
                 disabled={disabled || isLoading}
                 aria-disabled={disabled || isLoading}
                 aria-busy={isLoading ? "true" : undefined}
