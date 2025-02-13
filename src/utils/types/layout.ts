@@ -7,35 +7,37 @@
 
 import { ComponentProps } from "react";
 
-import { PolymorphicComponentPropsWithRef } from "./polymorphic";
+import { PolymorphicComponentProps, PolymorphicComponentPropsWithRef } from "./polymorphic";
 
-export type BoxProps<C extends React.ElementType> = PolymorphicComponentPropsWithRef<C>;
-
-/* Box */
-export type BoxComponent = <C extends React.ElementType = "div">(
-    props: BoxProps<C>
-) => React.ReactElement | null;
-
-/* Shared */
+/* ======== SHARED PROPS ======== */
 type LayoutSharedProps = {
     align?: "start" | "center" | "end" | "stretch" | "baseline";
     justify?: "start" | "center" | "end" | "between" | "around" | "evenly";
     spacing?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
 };
 
-/* Stack */
+/* ======== BOX PROPS ======== */
+export type BoxProps<C extends React.ElementType> = PolymorphicComponentPropsWithRef<C> & {
+    className?: string;
+};
+/* ======== BOX COMPONENT ======== */
+export type BoxComponent = <C extends React.ElementType = "div">(
+    props: BoxProps<C>
+) => React.ReactElement | null;
+
+/* ======== STACK PROPS ======== */
 export type StackProps = BoxProps<"div"> &
     LayoutSharedProps & {
         direction?: "row" | "row-reverse" | "column" | "column-reverse";
     };
 
-/* Row */
+/* ======== ROW PROPS ======== */
 export type RowProps<C extends React.ElementType = "div"> = BoxProps<C> &
     LayoutSharedProps & {
         wrap?: boolean;
     };
 
-/* Column */
+/* ======== COL PROPS ======== */
 type ColDefaultValue =
     | 1
     | 2
@@ -78,3 +80,40 @@ export type ColProps = ComponentProps<"div"> &
         xl?: ColDefaultValue | "auto" | ColBreakpoint;
         xxl?: ColDefaultValue | "auto" | ColBreakpoint;
     };
+
+
+/* ======== DIVIDER PROPS ======== */
+type DividerBaseProps<C extends React.ElementType> = PolymorphicComponentProps<
+    C,
+    {
+        children?: React.ReactNode;
+        flex?: boolean;
+        thickness?: "thin" | "thick";
+        withSteps?: boolean;
+        variant?: "full" | "inset" | "middle";
+        orientation?: "horizontal" | "vertical";
+        textAlign?: "start" | "center" | "end";
+        m?: string;
+        className?: string;
+    }
+>;
+/* ======== DIVIDER STEP PROPS ======== */
+type DividerWithoutStepsProps<C extends React.ElementType> = PolymorphicComponentProps<
+    C,
+    DividerBaseProps<C> & { withSteps: false; alignSteps?: never }
+>;
+type DividerWithStepsProps<C extends React.ElementType> = PolymorphicComponentProps<
+    C,
+    DividerBaseProps<C> & { withSteps: true; alignSteps: number }
+>;
+type DividerStepsProps<C extends React.ElementType> =
+    | DividerWithStepsProps<C>
+    | DividerWithoutStepsProps<C>;
+/* ======== DIVIDER COMBINED PROPS ======== */
+export type DividerProps<C extends React.ElementType> =
+    | DividerBaseProps<C>
+    | DividerStepsProps<C>;
+/* ======== DIVIDER COMPONENT ======== */
+export type DividerComponent = <C extends React.ElementType = "div">(
+    props: DividerProps<C>
+) => React.ReactElement | null;
