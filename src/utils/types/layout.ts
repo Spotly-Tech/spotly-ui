@@ -7,7 +7,10 @@
 
 import { ComponentProps } from "react";
 
-import { PolymorphicComponentProps, PolymorphicComponentPropsWithRef } from "./polymorphic";
+import {
+    PolymorphicComponentProps,
+    PolymorphicComponentPropsWithRef,
+} from "./polymorphic";
 
 /* ======== SHARED PROPS ======== */
 type LayoutSharedProps = {
@@ -17,9 +20,10 @@ type LayoutSharedProps = {
 };
 
 /* ======== BOX PROPS ======== */
-export type BoxProps<C extends React.ElementType> = PolymorphicComponentPropsWithRef<C> & {
-    className?: string;
-};
+export type BoxProps<C extends React.ElementType> =
+    PolymorphicComponentPropsWithRef<C> & {
+        className?: string;
+    };
 /* ======== BOX COMPONENT ======== */
 export type BoxComponent = <C extends React.ElementType = "div">(
     props: BoxProps<C>
@@ -80,7 +84,6 @@ export type ColProps = ComponentProps<"div"> &
         xl?: ColDefaultValue | "auto" | ColBreakpoint;
         xxl?: ColDefaultValue | "auto" | ColBreakpoint;
     };
-
 
 /* ======== DIVIDER PROPS ======== */
 type DividerBaseProps<C extends React.ElementType> = PolymorphicComponentProps<
