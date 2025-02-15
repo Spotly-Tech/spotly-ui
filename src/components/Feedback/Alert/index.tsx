@@ -10,7 +10,7 @@ import { forwardRef } from "react";
 import { Button, Col, Row, Text } from "@/components";
 
 import { getActionColor, getDefaultIcon } from "@/utils/helpers/Alert";
-import { AlertProps } from "@/utils/types";
+import { AlertProps } from "@/utils/types/feedback";
 
 import "./Alert.css";
 
@@ -30,7 +30,8 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
         },
         ref
     ) => {
-        const baseClass = `SpotlyUI-alert SpotlyUI-alert--color-${color} SpotlyUI-alert--variant-${variant} ${fullWidth ? "SpotlyUI-alert--full-width" : ""} ${rounded ? "SpotlyUI-alert--rounded" : ""} ${className}`;
+        const baseClass = `SpotlyUI-alert SpotlyUI-alert--color-${color} SpotlyUI-alert--variant-${variant} ${fullWidth ? "SpotlyUI-alert--full-width" : ""} ${rounded ? "SpotlyUI-alert--rounded" : ""}`;
+
         const defaultIcon = getDefaultIcon({ color, variant });
         const alertIcon = icon || defaultIcon;
 
@@ -39,7 +40,7 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
                 ref={ref}
                 role="alert"
                 align="center"
-                className={`${baseClass}`}
+                className={`${baseClass} ${className}`}
                 spacing="sm"
                 {...restProps}
             >
