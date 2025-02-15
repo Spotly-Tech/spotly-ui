@@ -7,20 +7,20 @@
 
 import React, { forwardRef } from "react";
 
-import { PolymorphicRef } from "@/utils/types";
 import { BoxComponent, BoxProps } from "@/utils/types/layout";
+import { PolymorphicRef } from "@/utils/types/polymorphic";
 
 // @ts-expect-error - unexpected typing errors
 export const Box: BoxComponent = forwardRef(
     // @ts-expect-error - unexpected typing errors
     <C extends React.ElementType = "div">(
-        { as, children, ...restProps }: BoxProps<C>,
+        { as, children, className = "", ...restProps }: BoxProps<C>,
         ref?: PolymorphicRef<C>
     ) => {
         const Component = as || "div";
 
         return (
-            <Component ref={ref} {...restProps}>
+            <Component ref={ref} className={`${className}`} {...restProps}>
                 {children}
             </Component>
         );
