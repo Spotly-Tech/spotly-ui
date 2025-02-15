@@ -28,7 +28,7 @@ export const Col = forwardRef<HTMLDivElement, ColProps>(
             lg,
             xl,
             xxl,
-            className,
+            className = "",
             children,
             ...restProps
         },
@@ -37,7 +37,7 @@ export const Col = forwardRef<HTMLDivElement, ColProps>(
         return (
             <div
                 ref={ref}
-                className={`${getClassNames({ span, offset, order, xs, sm, md, lg, xl, xxl, align, justify, spacing })} ${className || ""}`}
+                className={`${getClassNames({ span, offset, order, xs, sm, md, lg, xl, xxl, align, justify, spacing })} ${className}`}
                 {...restProps}
             >
                 {children}
