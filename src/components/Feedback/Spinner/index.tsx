@@ -26,19 +26,22 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
             value = 0,
             thickness = "medium",
             speed = "medium",
-            ...props
+            className = "",
+            ...restProps
         },
         ref
     ) => {
         const baseClass = `SpotlyUI-spinner SpotlyUI-spinner--size-${size} SpotlyUI-spinner--color-${color} SpotlyUI-spinner--thickness-${thickness}`;
+
         const diameter = sizes[size];
         const spinSpeed = speeds[speed];
         const strokeWidth = thicknesses[thickness];
+
         return (
             <div
                 ref={ref}
                 className="SpotlyUI-spinner__wrapper"
-                {...props}
+                {...restProps}
                 role="img"
                 aria-label={variant === "specified" ? `${value}%` : "Loading"}
                 aria-live="polite"
@@ -50,7 +53,7 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
                         width={diameter}
                         height={diameter}
                         viewBox={`0 0 ${diameter} ${diameter}`}
-                        className={baseClass}
+                        className={`${baseClass} ${className}`}
                     >
                         <circle
                             className="SpotlyUI-spinner__circle"
