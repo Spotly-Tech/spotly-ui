@@ -5,5 +5,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-export { Spinner } from "./Spinner";
 export { Alert } from "./Alert";
+export { Ripple } from "./Ripple";
+export { Spinner } from "./Spinner";
