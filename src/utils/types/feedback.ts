@@ -48,3 +48,13 @@ export type AlertProps = ComponentProps<"div"> & {
     rounded?: boolean;
     onClose?: () => void;
 };
+
+/* ======== RIPPLE ======== */
+export type RippleProps = ComponentProps<"div"> & {
+    color?: string;
+    duration?: number;
+    size?: string;
+    scaleTo?: number;
+    className?: string;
+    children: React.ReactNode;
+};
