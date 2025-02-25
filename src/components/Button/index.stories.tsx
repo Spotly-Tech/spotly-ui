@@ -7,7 +7,8 @@
 
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Spinner } from "../Feedback";
+import { Ripple, Spinner } from "../Feedback";
+import { Text } from "../Typography";
 import { Button } from "./index";
 
 const meta: Meta<typeof Button> = {
@@ -293,6 +294,27 @@ export const States: Story = {
 <Button>Normal</Button>
 <Button isLoading>Loading</Button>
 <Button disabled>Disabled</Button>
+                `,
+            },
+        },
+    },
+};
+export const WithRipples: Story = {
+    render: () => (
+        <Ripple>
+            <Button variant="outlined">
+                <Text>Button with Ripples</Text>
+            </Button>
+        </Ripple>
+    ),
+    parameters: {
+        docs: {
+            description: {
+                story: "Showcases a button with ripples.",
+            },
+            source: {
+                code: `
+<Button withRipple>Button with Ripples</Button>
                 `,
             },
         },
