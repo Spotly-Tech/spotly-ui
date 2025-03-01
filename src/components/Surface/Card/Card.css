@@ -1,0 +1,43 @@
+/*
+ * Copyright (c) Spotly Tech
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@import "../../shared/colors.css";
+
+/* ======== BASE ======== */
+.SpotlyUI-card {
+    min-width: 245px;
+    max-width: 345px;
+}
+
+/* ======== VARIANTS ======== */
+.SpotlyUI-card--variant-solid {
+    background-color: var(--spotly-ui-default-dark-darker);
+}
+.SpotlyUI-card--variant-solid-outlined {
+    background-color: var(--spotly-ui-default-dark-darker);
+    border: 2px solid var(--spotly-ui-light-700);
+}
+
+/* ======== ELEVATION ======== */
+.SpotlyUI-card--elevation-0 {
+    box-shadow: none;
+}
+.SpotlyUI-card--elevation-1 {
+    box-shadow: 0 0 6px 1px var(--spotly-ui-default-dark-darker);
+}
+.SpotlyUI-card--elevation-2 {
+    box-shadow: 0 0 10px 2px var(--spotly-ui-default-dark-darker);
+}
+.SpotlyUI-card--elevation-3 {
+    box-shadow: 0 0 14px 3px var(--spotly-ui-default-dark-darker);
+}
+.SpotlyUI-card--elevation-4 {
+    box-shadow: 0 0 18px 4px var(--spotly-ui-default-dark-darker);
+}
+.SpotlyUI-card--elevation-5 {
+    box-shadow: 0 0 24px 5px var(--spotly-ui-default-dark-darker);
+}
