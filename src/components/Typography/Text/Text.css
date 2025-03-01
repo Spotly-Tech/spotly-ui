@@ -9,6 +9,7 @@
 
 /* ======== BASE ======== */
 .SpotlyUI-text {
+    margin: 0;
     display: block;
     font-family: var(--spotly-ui-font-family);
 }
