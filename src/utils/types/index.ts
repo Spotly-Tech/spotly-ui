@@ -11,4 +11,5 @@ export * from "./icon";
 export * from "./input";
 export * from "./layout";
 export * from "./polymorphic";
+export * from "./surface";
 export * from "./typography";

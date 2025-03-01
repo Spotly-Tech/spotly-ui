@@ -42,4 +42,3 @@ export type CardProps = SharedSurfaceProps &
 export type CardComponent = ForwardRefExoticComponent<
     CardProps & RefAttributes<HTMLDivElement>
 >;
-
