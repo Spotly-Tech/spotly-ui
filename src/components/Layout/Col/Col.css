@@ -9,6 +9,7 @@
 .SpotlyUI-col {
     display: flex;
     padding: 0;
+    flex-direction: column;
 }
 
 /* ======== SPAN ======== */
