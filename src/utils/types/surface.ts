@@ -42,3 +42,12 @@ export type CardProps = SharedSurfaceProps &
 export type CardComponent = ForwardRefExoticComponent<
     CardProps & RefAttributes<HTMLDivElement>
 >;
+
+/*======== CARD CONTENT ========*/
+export type CardContentProps = {
+    className?: string;
+    children?: React.ReactNode;
+};
+export type CardContentComponent = ForwardRefExoticComponent<
+    CardContentProps & RefAttributes<HTMLDivElement>
+>;
