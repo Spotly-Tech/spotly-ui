@@ -79,3 +79,13 @@ export type CardMediaProps<C extends React.ElementType> =
 export type CardMediaComponent = <C extends React.ElementType = "div">(
     props: CardMediaProps<C>
 ) => React.ReactElement | null;
+
+/*======== CARD ACTION ========*/
+export type CardActionProps = {
+    className?: string;
+    style?: React.CSSProperties;
+    children?: React.ReactNode;
+};
+export type CardActionComponent = ForwardRefExoticComponent<
+    CardActionProps & RefAttributes<HTMLDivElement>
+>;
