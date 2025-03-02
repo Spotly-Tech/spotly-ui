@@ -14,17 +14,10 @@ import "./CardAction.css";
 export const CardAction: CardActionComponent = forwardRef<
     HTMLDivElement,
     CardActionProps
->(({ children, className, style, ...restProps }, ref) => {
+>(({ children, className, ...restProps }, ref) => {
     const baseClass = `SpotlyUI-card-action`;
     return (
-        <div
-            ref={ref}
-            className={`${baseClass} ${className}`}
-            style={{
-                ...style,
-            }}
-            {...restProps}
-        >
+        <div ref={ref} className={`${baseClass} ${className}`} {...restProps}>
             {children}
         </div>
     );
