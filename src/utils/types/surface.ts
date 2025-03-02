@@ -9,6 +9,8 @@ import { ComponentProps, ForwardRefExoticComponent, RefAttributes } from "react"
 
 import { MotionProps } from "motion/react";
 
+import { PolymorphicComponentPropsWithRef } from "./polymorphic";
+
 /*======== SHARED SURFACE PROPS ========*/
 export type SharedSurfaceProps = ComponentProps<"div"> & {
     width?: string;
@@ -63,3 +65,17 @@ export type CardHeaderProps = {
 export type CardHeaderComponent = ForwardRefExoticComponent<
     CardHeaderProps & RefAttributes<HTMLDivElement>
 >;
+
+/*======== CARD MEDIA ========*/
+export type CardMediaProps<C extends React.ElementType> =
+    PolymorphicComponentPropsWithRef<
+        C,
+        {
+            image?: string;
+            className?: string;
+            style?: React.CSSProperties;
+        }
+    >;
+export type CardMediaComponent = <C extends React.ElementType = "div">(
+    props: CardMediaProps<C>
+) => React.ReactElement | null;
