@@ -7,3 +7,4 @@
 
 export { Card } from "./Card";
 export { CardContent } from "./Card/CardContent";
+export { CardHeader } from "./Card/CardHeader";
