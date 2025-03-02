@@ -1,0 +1,22 @@
+.SpotlyUI-card-header {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.SpotlyUI-card-header__avatar {
+    margin-right: 1rem;
+}
+
+.SpotlyUI-card-header__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: flex-start;
+}
+
+.SpotlyUI-card-header__action {
+    margin-left: auto;
+}
