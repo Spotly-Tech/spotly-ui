@@ -26,8 +26,10 @@ export const Text: TextComponent = forwardRef(
             align = "left",
             italic = false,
             underline = false,
+            lineHeight = 1,
             children,
             className = "",
+            style,
             ...restProps
         }: TextProps<C>,
         ref?: PolymorphicRef<C>
@@ -43,6 +45,7 @@ export const Text: TextComponent = forwardRef(
             <Component
                 ref={ref}
                 className={`${baseClass} ${italicClass} ${underlineClass} ${emphasisClass} ${className}`}
+                style={{ lineHeight, ...style }}
                 {...restProps}
             >
                 {children}
