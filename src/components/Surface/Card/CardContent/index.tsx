@@ -18,9 +18,9 @@ export const CardContent: CardContentComponent = forwardRef(
     ) => {
         const baseClass = `SpotlyUI-card-content`;
         return (
-            <div ref={ref} className={`${baseClass} ${className}`} {...restProps}>
+            <section ref={ref} className={`${baseClass} ${className}`} {...restProps}>
                 {children}
-            </div>
+            </section>
         );
     }
 );
