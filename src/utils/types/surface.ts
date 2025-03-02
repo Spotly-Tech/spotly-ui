@@ -51,3 +51,15 @@ export type CardContentProps = {
 export type CardContentComponent = ForwardRefExoticComponent<
     CardContentProps & RefAttributes<HTMLDivElement>
 >;
+
+/*======== CARD HEADER ========*/
+export type CardHeaderProps = {
+    avatar?: React.ReactNode;
+    title?: React.ReactNode;
+    subtitle?: React.ReactNode;
+    action?: React.ReactNode;
+    className?: string;
+};
+export type CardHeaderComponent = ForwardRefExoticComponent<
+    CardHeaderProps & RefAttributes<HTMLDivElement>
+>;
