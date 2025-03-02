@@ -19,6 +19,7 @@ export const Ripple = forwardRef<HTMLDivElement, RippleProps>(
         scaleTo = 6,
         className = "",
         children,
+        ...restProps
     }) => {
         const [ripples, setRipples] = useState<{ id: number; x: number; y: number }[]>(
             []
@@ -47,6 +48,7 @@ export const Ripple = forwardRef<HTMLDivElement, RippleProps>(
                 className={`${baseClass} ${className}`}
                 onClick={handleClick}
                 ref={containerRef}
+                {...restProps}
             >
                 {children}
                 {ripples.map(({ id, x, y }) => (
