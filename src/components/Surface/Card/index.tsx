@@ -18,7 +18,7 @@ export const Card: CardComponent = forwardRef(
         {
             width = "345px",
             height = "345px",
-            borderRadius = "0.25rem",
+            borderRadius = "1.5rem",
             variant = "solid",
             elevation = 0,
             hoverable = false,
