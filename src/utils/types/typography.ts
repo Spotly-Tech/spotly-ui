@@ -5,6 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+import { CSSProperties } from "react";
+
 import { PolymorphicComponentPropsWithRef } from "./polymorphic";
 
 /* ======== SHARED TEXT PROPS ======== */
@@ -21,7 +23,9 @@ export type SharedTypographyProps = {
         | "success";
     size?: "2xs" | "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl";
     weight?: "thin" | "normal" | "medium" | "semibold" | "bold" | "black";
+    lineHeight?: number;
     className?: string;
+    style?: CSSProperties;
 };
 
 /* ======== TEXT PROPS ======== */
