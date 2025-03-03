@@ -89,3 +89,13 @@ export type CardActionProps = {
 export type CardActionComponent = ForwardRefExoticComponent<
     CardActionProps & RefAttributes<HTMLDivElement>
 >;
+
+/*======== SPOTLIGHT CARD ========*/
+export type SpotlightCardProps = SharedSurfaceProps &
+    CardProps & {
+        spotlightColor?: string;
+        style?: React.CSSProperties;
+    };
+export type SpotlightCardComponent = ForwardRefExoticComponent<
+    SpotlightCardProps & RefAttributes<HTMLDivElement>
+>;
