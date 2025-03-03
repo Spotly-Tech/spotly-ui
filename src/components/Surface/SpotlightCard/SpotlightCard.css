@@ -1,0 +1,36 @@
+/*
+ * Copyright (c) Spotly Tech
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+.SpotlyUI-spotlight-card {
+    position: relative;
+    overflow: hidden;
+    --spotlight-x: 50%;
+    --spotlight-y: 50%;
+    --spotlight-color: rgba(255, 255, 255, 0.05);
+}
+
+.SpotlyUI-spotlight-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at var(--spotlight-x) var(--spotlight-y),
+        var(--spotlight-color),
+        transparent 80%
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.SpotlyUI-spotlight-card:hover::before,
+.SpotlyUI-spotlight-card:focus-within::before {
+    opacity: 0.6;
+}
