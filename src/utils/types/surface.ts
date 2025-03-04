@@ -94,6 +94,8 @@ export type CardActionComponent = ForwardRefExoticComponent<
 export type SpotlightCardProps = SharedSurfaceProps &
     CardProps & {
         spotlightColor?: string;
+        spotlightRadius?: number;
+        spotlightOpacity?: number;
         style?: React.CSSProperties;
     };
 export type SpotlightCardComponent = ForwardRefExoticComponent<
