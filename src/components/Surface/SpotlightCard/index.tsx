@@ -7,7 +7,7 @@
 
 import { useRef } from "react";
 
-import { SpotlightCardProps } from "@/utils/types";
+import { SpotlightCardProps } from "@/utils/types/surface";
 
 import { Card } from "../Card";
 
@@ -24,6 +24,8 @@ export const SpotlightCard = ({
     hoverDuration = 0.2,
     hoverEase = "easeInOut",
     spotlightColor = "rgba(255, 255, 255, 0.25)",
+    spotlightRadius = 60,
+    spotlightOpacity = 0.25,
     children,
     style,
     className = "",
@@ -35,11 +37,18 @@ export const SpotlightCard = ({
     const handleMouseMove = (e: React.MouseEvent) => {
         if (divRef.current) {
             const rect = divRef.current.getBoundingClientRect();
+
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
+
             divRef.current.style.setProperty("--spotlight-x", `${x}px`);
             divRef.current.style.setProperty("--spotlight-y", `${y}px`);
             divRef.current.style.setProperty("--spotlight-color", spotlightColor);
+            divRef.current.style.setProperty("--spotlight-radius", `${spotlightRadius}%`);
+            divRef.current.style.setProperty(
+                "--spotlight-opacity",
+                `${spotlightOpacity}`
+            );
         }
     };
 
