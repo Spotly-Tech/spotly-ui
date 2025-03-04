@@ -5,14 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+/*======== SPOTLIGHT CARD ========*/
 .SpotlyUI-spotlight-card {
     position: relative;
     overflow: hidden;
-    --spotlight-x: 50%;
-    --spotlight-y: 50%;
-    --spotlight-color: rgba(255, 255, 255, 0.05);
 }
 
+/*======== SPOTLIGHT EFFECT ========*/
 .SpotlyUI-spotlight-card::before {
     content: "";
     position: absolute;
@@ -23,14 +22,15 @@
     background: radial-gradient(
         circle at var(--spotlight-x) var(--spotlight-y),
         var(--spotlight-color),
-        transparent 80%
+        transparent var(--spotlight-radius)
     );
     opacity: 0;
     transition: opacity 0.5s ease;
     pointer-events: none;
 }
 
+/*======== TRIGGER SPOTLIGHT EFFECT ========*/
 .SpotlyUI-spotlight-card:hover::before,
 .SpotlyUI-spotlight-card:focus-within::before {
-    opacity: 0.6;
+    opacity: var(--spotlight-opacity);
 }
