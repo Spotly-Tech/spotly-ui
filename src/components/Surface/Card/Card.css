@@ -19,7 +19,7 @@
 }
 .SpotlyUI-card--variant-solid-outlined {
     background-color: var(--spotly-ui-default-dark-darker);
-    border: 2px solid var(--spotly-ui-light-700);
+    border: 1px solid var(--spotly-ui-light-700);
 }
 
 /* ======== ELEVATION ======== */
