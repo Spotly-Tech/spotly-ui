@@ -9,5 +9,5 @@ export { Button } from "./Button";
 export * from "./DataEntry";
 export * from "./Feedback";
 export * from "./Layout";
-export * from "./Typography";
 export * from "./Surface";
+export * from "./Typography";
