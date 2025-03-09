@@ -11,7 +11,7 @@ import { InputProps } from "@/utils/types/input";
 
 import "./Input.css";
 
-export const Input = forwardRef<HTMLInputElement, InputProps>(
+export const TextInput = forwardRef<HTMLInputElement, InputProps>(
     (
         {
             withIcon = false,
@@ -19,14 +19,13 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             iconPosition = "start",
             inputSize = "md",
             color = "default",
-            type = "text",
             disabled = false,
             className = "",
             ...restProps
         },
         ref
     ) => {
-        const baseClass = `SpotlyUI-input SpotlyUI-input--size-${inputSize} SpotlyUI-input--color-${color} SpotlyUI-input--type-${type}`;
+        const baseClass = `SpotlyUI-input SpotlyUI-input--size-${inputSize} SpotlyUI-input--color-${color}`;
         const disabledClass = disabled ? "SpotlyUI-input--disabled" : "";
 
         return (
@@ -43,7 +42,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
                 <input
                     ref={ref}
                     className={`${baseClass} ${disabledClass} ${className}`}
-                    type={type}
+                    type="text"
                     disabled={disabled}
                     aria-disabled={disabled}
                     aria-label={restProps.placeholder}

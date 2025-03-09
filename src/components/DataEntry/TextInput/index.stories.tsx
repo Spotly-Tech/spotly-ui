@@ -5,13 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { Input } from "@/components";
+import { TextInput } from "@/components";
 import type { Meta, StoryObj } from "@storybook/react";
 import { FaSearch } from "react-icons/fa";
 
-const meta: Meta<typeof Input> = {
-    title: "Data Entry/Input",
-    component: Input,
+const meta: Meta<typeof TextInput> = {
+    title: "Data Entry/TextInput",
+    component: TextInput,
     parameters: {
         layout: "centered",
     },
@@ -84,24 +84,24 @@ const meta: Meta<typeof Input> = {
 
 export default meta;
 
-type Story = StoryObj<typeof Input>;
+type Story = StoryObj<typeof TextInput>;
 
 export const Default: Story = {
-    render: (args) => <Input {...args} />,
+    render: (args) => <TextInput {...args} />,
     args: {
         placeholder: "Enter text",
     },
     parameters: {
         docs: {
             description: {
-                story: "Default Input.",
+                story: "Default TextInput.",
             },
         },
     },
 };
 
 export const Disabled: Story = {
-    render: (args) => <Input {...args} />,
+    render: (args) => <TextInput {...args} />,
     args: {
         placeholder: "Disabled input",
         disabled: true,
@@ -109,7 +109,7 @@ export const Disabled: Story = {
     parameters: {
         docs: {
             description: {
-                story: "Disabled Input.",
+                story: "Disabled TextInput.",
             },
         },
     },
@@ -117,7 +117,7 @@ export const Disabled: Story = {
 
 export const WithIcon: Story = {
     render: (args) => (
-        <Input
+        <TextInput
             withIcon
             icon={<FaSearch />}
             iconPosition="start"
@@ -133,7 +133,7 @@ export const WithIcon: Story = {
     parameters: {
         docs: {
             description: {
-                story: "Input with a search icon.",
+                story: "TextInput with a search icon.",
             },
         },
     },
