@@ -9,7 +9,7 @@ import { forwardRef } from "react";
 
 import { InputProps } from "@/utils/types/input";
 
-import "./Input.css";
+import "./TextInput.css";
 
 export const TextInput = forwardRef<HTMLInputElement, InputProps>(
     (
